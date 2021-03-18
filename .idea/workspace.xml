@@ -4,15 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ba0dbb1-a105-40b9-8f7b-dce998e8a391" name="Default Changelist" comment="création projet Symfony" />
+    <list default="true" id="0ba0dbb1-a105-40b9-8f7b-dce998e8a391" name="Default Changelist" comment="création projet Symfony">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/projet_symfony/composer.json</pharConfigPath>
-    <execution />
+    <execution>
+      <executable path="composer" />
+    </execution>
   </component>
   <component name="Git.Settings">
     <favorite-branches>
@@ -160,7 +164,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/front-end" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -168,13 +173,25 @@
       <recent name="C:\Users\louis\Documents\Github\BAC2\code projet dev III\front-end" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.index.php">
+    <configuration name="Kernel.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/code projet dev III/projet_symfony/src/Kernel.php" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="base.html.twig" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/code projet dev III/projet_symfony/templates/base.html.twig" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="connexion.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/code projet dev III/front-end/connexion.php" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/code projet dev III/projet_symfony/public/index.php" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.index.php" />
         <item itemvalue="JavaScript Debug.connexion.php" />
+        <item itemvalue="JavaScript Debug.base.html.twig" />
+        <item itemvalue="JavaScript Debug.Kernel.php" />
       </list>
     </recent_temporary>
   </component>
@@ -200,7 +217,17 @@
       <workItem from="1615392417024" duration="3602000" />
       <workItem from="1615457452379" duration="637000" />
       <workItem from="1615463584306" duration="1390000" />
-      <workItem from="1615466521547" duration="316000" />
+      <workItem from="1615466521547" duration="5530000" />
+      <workItem from="1615472062855" duration="3439000" />
+      <workItem from="1615475590005" duration="4044000" />
+      <workItem from="1615479646268" duration="15000" />
+      <workItem from="1615479703602" duration="621000" />
+      <workItem from="1615480464351" duration="755000" />
+      <workItem from="1615545853442" duration="1711000" />
+      <workItem from="1615888655364" duration="1170000" />
+      <workItem from="1615986291383" duration="1134000" />
+      <workItem from="1616092468242" duration="132000" />
+      <workItem from="1616092772061" duration="29000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1612622288257</created>
@@ -223,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615466686209</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="création projet Symfony">
+      <created>1615467094554</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1615467094554</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,7 +274,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/main" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
@@ -258,5 +292,9 @@
     <MESSAGE value="test commit branch work-on" />
     <MESSAGE value="création projet Symfony" />
     <option name="LAST_COMMIT_MESSAGE" value="création projet Symfony" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
