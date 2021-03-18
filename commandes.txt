@@ -1,3 +1,5 @@
 php -S localhost:8000 -t public
 
 symfony server:start
+
+php bin/console make:controller MainCrontroller
