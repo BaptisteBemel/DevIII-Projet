@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ba0dbb1-a105-40b9-8f7b-dce998e8a391" name="Default Changelist" comment="Controller et fichiers de connexion et d'inscription." />
+    <list default="true" id="0ba0dbb1-a105-40b9-8f7b-dce998e8a391" name="Default Changelist" comment="Controller et fichiers de connexion et d'inscription.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_symfony/.env" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_symfony/src/Controller/InscriptionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/src/Controller/InscriptionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_symfony/src/Controller/MainCrontrollerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/src/Controller/MainCrontrollerController.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,6 +42,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -229,6 +235,13 @@
       <workItem from="1616092772061" duration="29000" />
       <workItem from="1616100440008" duration="104000" />
       <workItem from="1616411481750" duration="74000" />
+      <workItem from="1616411645958" duration="46000" />
+      <workItem from="1616431144227" duration="37000" />
+      <workItem from="1616431293981" duration="46000" />
+      <workItem from="1616431349029" duration="87000" />
+      <workItem from="1616431474548" duration="2000" />
+      <workItem from="1616432724948" duration="12000" />
+      <workItem from="1616432787094" duration="24000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1612622288257</created>
@@ -272,7 +285,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616411546387</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Controller et fichiers de connexion et d'inscription.">
+      <created>1616411683928</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1616411683928</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
