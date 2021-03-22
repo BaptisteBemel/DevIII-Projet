@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ba0dbb1-a105-40b9-8f7b-dce998e8a391" name="Default Changelist" comment="vitrine début création" />
+    <list default="true" id="0ba0dbb1-a105-40b9-8f7b-dce998e8a391" name="Default Changelist" comment="Controller et fichiers de connexion et d'inscription." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -228,6 +228,7 @@
       <workItem from="1616092468242" duration="132000" />
       <workItem from="1616092772061" duration="29000" />
       <workItem from="1616100440008" duration="104000" />
+      <workItem from="1616411481750" duration="74000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1612622288257</created>
@@ -264,7 +265,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616100512816</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Controller et fichiers de connexion et d'inscription.">
+      <created>1616411546387</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1616411546387</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,7 +307,8 @@
     <MESSAGE value="test commit branch work-on" />
     <MESSAGE value="création projet Symfony" />
     <MESSAGE value="vitrine début création" />
-    <option name="LAST_COMMIT_MESSAGE" value="vitrine début création" />
+    <MESSAGE value="Controller et fichiers de connexion et d'inscription." />
+    <option name="LAST_COMMIT_MESSAGE" value="Controller et fichiers de connexion et d'inscription." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
