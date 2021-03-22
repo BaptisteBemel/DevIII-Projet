@@ -15,22 +15,4 @@ class MainCrontrollerController extends AbstractController
             'controller_name' => 'MainController',
         ]);
     }
-
-    #[Route('/inscription', name:'inscription')]
-    public function inscription()
-    {
-        return $this->render('main_crontroller/inscription.html.twig');
-    }
-
-    #[Route('/connexion', name:'connexion')]
-    public function connexion()
-    {
-        return $this->render('main_crontroller/connexion.html.twig');
-    }
-
-    #[Route('/connexion/mdp_oublie', name:'mdp_oublie')]
-    public function mdp_oublie()
-    {
-        return $this->render('main_crontroller/mdp_oublie.html.twig');
-    }
 }
