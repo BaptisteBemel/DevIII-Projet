@@ -1,6 +1,6 @@
 doctrine:
     dbal:
-        driver: 'mdo_mysql'
+        driver: 'pdo_mysql'
         server_version: 'mariadb-10.5.8'
         charset: UTF8
         url: "mysql://ephec:Ephec123@rf273562-001.dbaas.ovh.net:35156/ephec_projet_dev3"
