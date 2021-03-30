@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ba0dbb1-a105-40b9-8f7b-dce998e8a391" name="Default Changelist" comment="Controller Api début">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="0ba0dbb1-a105-40b9-8f7b-dce998e8a391" name="Default Changelist" comment="réorganisation dossiers/fichiers" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,7 +37,6 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -244,6 +241,7 @@
       <workItem from="1617029648055" duration="44000" />
       <workItem from="1617050697065" duration="2000" />
       <workItem from="1617097583358" duration="601000" />
+      <workItem from="1617109474307" duration="136000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1612622288257</created>
@@ -301,7 +299,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617029479515</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="réorganisation dossiers/fichiers">
+      <created>1617109520977</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1617109520977</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,7 +343,8 @@
     <MESSAGE value="vitrine début création" />
     <MESSAGE value="Controller et fichiers de connexion et d'inscription." />
     <MESSAGE value="Controller Api début" />
-    <option name="LAST_COMMIT_MESSAGE" value="Controller Api début" />
+    <MESSAGE value="réorganisation dossiers/fichiers" />
+    <option name="LAST_COMMIT_MESSAGE" value="réorganisation dossiers/fichiers" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
