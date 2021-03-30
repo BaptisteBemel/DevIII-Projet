@@ -9,27 +9,6 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 class SecurityController extends AbstractController {
 
-    #[Route('/connexion', name:'connexion')]
-    public function connexion()
-    {
-        return $this->render('Security/connexion.html.twig');
-    }
-
-    #[Route('/connexion/mdp_oublie', name:'mdp_oublie')]
-    public function mdp_oublie()
-    {
-        return $this->render('Security/mdp_oublie.html.twig');
-    }
-
-    
-
-    /**
-     * @Route("/home", name="home")
-     */
-    public function home(AuthenticationUtils $authenticationUtils): Response
-    {
-        return new Response("Vous êtes connecté !");
-    }
 
     /**
      * @Route("/login", name="app_login")

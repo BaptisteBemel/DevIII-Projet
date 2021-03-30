@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ba0dbb1-a105-40b9-8f7b-dce998e8a391" name="Default Changelist" comment="Controller et fichiers de connexion et d'inscription.">
+    <list default="true" id="0ba0dbb1-a105-40b9-8f7b-dce998e8a391" name="Default Changelist" comment="Controller Api début">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/.env" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/src/Controller/InscriptionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/src/Controller/InscriptionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/src/Controller/MainCrontrollerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/src/Controller/MainCrontrollerController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +164,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/front-end" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -242,6 +239,11 @@
       <workItem from="1616431474548" duration="2000" />
       <workItem from="1616432724948" duration="12000" />
       <workItem from="1616432787094" duration="24000" />
+      <workItem from="1617029430752" duration="61000" />
+      <workItem from="1617029590186" duration="30000" />
+      <workItem from="1617029648055" duration="44000" />
+      <workItem from="1617050697065" duration="2000" />
+      <workItem from="1617097583358" duration="601000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1612622288257</created>
@@ -292,7 +294,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616411683928</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Controller Api début">
+      <created>1617029479514</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1617029479515</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,7 +337,8 @@
     <MESSAGE value="création projet Symfony" />
     <MESSAGE value="vitrine début création" />
     <MESSAGE value="Controller et fichiers de connexion et d'inscription." />
-    <option name="LAST_COMMIT_MESSAGE" value="Controller et fichiers de connexion et d'inscription." />
+    <MESSAGE value="Controller Api début" />
+    <option name="LAST_COMMIT_MESSAGE" value="Controller Api début" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
