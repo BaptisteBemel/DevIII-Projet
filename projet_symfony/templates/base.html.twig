@@ -25,14 +25,22 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/register">Inscription</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/login">Connexion</a>
-                    </li>
+                    {% if not is_granted('IS_AUTHENTICATED_FULLY') %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="/register">Inscription</a>
+                        </li>
+                    {% endif %}
                     <li class="nav-item">
                         <a class="nav-link" href="/faq">FAQ</a>
+                    </li>
+                </ul>
+                <ul class="navbar-naw ml-auto">
+                    <li class="nav-item">
+                    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                        <a class="nav-link" href="/logout">Se déconnecter</a> 
+                    {% else %}
+                        <a class="nav-link" href="/login">Se connecter</a>
+                    {% endif %}
                     </li>
                 </ul>
             </div>
