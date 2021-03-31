@@ -1,0 +1,13 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+    {{ form_start(changeForm) }}
+        {{ form_row(changeForm.email) }}
+        {{ form_row(changeForm.plainPassword) }}
+        {{ form_row(changeForm) }}
+
+        <button type="submit" class="btn">Confirmer</button>
+    {{ form_end(registrationForm) }}
+
+{% endblock %}
