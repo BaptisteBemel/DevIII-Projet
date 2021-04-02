@@ -2,14 +2,18 @@
 
 namespace App\Entity;
 
-use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use App\Repository\UserRepository;
+use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
- * @UniqueEntity(fields={"email"}, message="There is already an account with this email")
+ * @UniqueEntity(
+ * fields= {"email"}, 
+ * message="Veuillez utiliser une adresse mail non-utilisée !"
+ * )
  */
 class User implements UserInterface
 {
@@ -21,20 +25,53 @@ class User implements UserInterface
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=180, unique=true)
+     * @ORM\Column(type="string", length=255)
+     * @Assert\Email
      */
     private $email;
 
     /**
-     * @ORM\Column(type="json")
+     * @ORM\Column(type="string", length=255)
      */
-    private $roles = [];
+    private $nom;
 
     /**
-     * @var string The hashed password
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string", length=255)
+     */
+    private $prenom;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $adresse;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $numero_tel;
+
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $situation_scolaire;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $role;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     * @Assert\Length(min="8", minMessage="Veuillez entrer un mot de passe d'au moins 8 caractères !")
      */
     private $password;
+
+    /**
+     * 
+     *
+     * @Assert\EqualTo(propertyPath="password", message="Vos mots de passe ne sont pas identiques !")
+     */
+    public $confirm_password;
 
     public function getId(): ?int
     {
@@ -53,41 +90,81 @@ class User implements UserInterface
         return $this;
     }
 
-    /**
-     * A visual identifier that represents this user.
-     *
-     * @see UserInterface
-     */
-    public function getUsername(): string
+    public function getNom(): ?string
     {
-        return (string) $this->email;
+        return $this->nom;
     }
 
-    /**
-     * @see UserInterface
-     */
-    public function getRoles(): array
+    public function setNom(string $nom): self
     {
-        $roles = $this->roles;
-        // guarantee every user at least has ROLE_USER
-        $roles[] = 'ROLE_USER';
-
-        return array_unique($roles);
-    }
-
-    public function setRoles(array $roles): self
-    {
-        $this->roles = $roles;
+        $this->nom = $nom;
 
         return $this;
     }
 
-    /**
-     * @see UserInterface
-     */
-    public function getPassword(): string
+    public function getPrenom(): ?string
     {
-        return (string) $this->password;
+        return $this->prenom;
+    }
+
+    public function setPrenom(string $prenom): self
+    {
+        $this->prenom = $prenom;
+
+        return $this;
+    }
+
+    public function getAdresse(): ?string
+    {
+        return $this->adresse;
+    }
+
+    public function setAdresse(string $adresse): self
+    {
+        $this->adresse = $adresse;
+
+        return $this;
+    }
+
+    public function getNumeroTel(): ?string
+    {
+        return $this->numero_tel;
+    }
+
+    public function setNumeroTel(?string $numero_tel): self
+    {
+        $this->numero_tel = $numero_tel;
+
+        return $this;
+    }
+
+    public function getSituationScolaire(): ?string
+    {
+        return $this->situation_scolaire;
+    }
+
+    public function setSituationScolaire(string $situation_scolaire): self
+    {
+        $this->situation_scolaire = $situation_scolaire;
+
+        return $this;
+    }
+
+    public function getRole(): ?string
+    {
+        return $this->role;
+    }
+
+    public function setRole(string $role): self
+    {
+        $this->role = $role;
+
+        return $this;
+    }
+
+    public function getPassword(): ?string
+    {
+        return $this->password;
     }
 
     public function setPassword(string $password): self
@@ -97,23 +174,23 @@ class User implements UserInterface
         return $this;
     }
 
-    /**
-     * Returning a salt is only needed, if you are not using a modern
-     * hashing algorithm (e.g. bcrypt or sodium) in your security.yaml.
-     *
-     * @see UserInterface
-     */
-    public function getSalt(): ?string
-    {
-        return null;
-    }
-
-    /**
-     * @see UserInterface
-     */
     public function eraseCredentials()
     {
-        // If you store any temporary, sensitive data on the user, clear it here
-        // $this->plainPassword = null;
+        
+    }
+
+    public function getSalt()
+    {
+        
+    }
+
+    public function getRoles()
+    {
+        return ['ROLE_USER'];
+    }
+
+    public function getUsername()
+    {
+        
     }
 }
