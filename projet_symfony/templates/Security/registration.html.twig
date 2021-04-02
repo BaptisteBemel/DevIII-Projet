@@ -1,0 +1,18 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <h1>Inscription</h1>
+
+    {{form_start(form) }}
+    {{ form_row(form.email, {'label': 'Adresse Mail', 'attr':{'placeholder':'exemple@gmail.com'}})}}
+    {{ form_row(form.nom, {'label': 'Nom', 'attr':{'placeholder':'Schamroth'}})}}
+    {{ form_row(form.prenom, {'label': 'Prénom', 'attr':{'placeholder':'Arthur'}})}}
+    {{ form_row(form.adresse, {'label': 'Adresse', 'attr':{'placeholder':'1 rue de l\'exemple 1230 Exemple'}})}}
+    {{ form_row(form.numero_tel, {'label': 'Numéro de téléphone', 'attr':{'placeholder':'0410 10 10 10'}})}}
+    {{ form_row(form.situation_scolaire, {'label': 'Situation Scolaire', 'attr':{'placeholder':'Elève en deuxième année en technologie de l\'informatique ...'}})}}
+    {{ form_row(form.role, {'label': 'Parent/Elève', 'attr':{'placeholder':'Parent/Elève'}})}}
+    {{ form_row(form.password, {'label': 'Mot de passe', 'attr':{'placeholder':'exemple123'}})}}
+    {{ form_row(form.confirm_password, {'label': 'Répéter Mot de passe', 'attr':{'placeholder':'exemple123'}})}}
+    <button type="submit" class="btn btn-success">Inscription</button>
+    {{form_end(form) }}
+{% endblock %}
