@@ -1,0 +1,17 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "rf273562-001.dbaas.ovh.net",
+            "port": 35156,
+            "driver": "MySQL",
+            "name": "ProjetDevIII",
+            "database": "ephec_projet_dev3",
+            "username": "ephec",
+            "password": "Ephec123"
+        }
+    ]
+}

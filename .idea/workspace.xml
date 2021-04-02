@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ba0dbb1-a105-40b9-8f7b-dce998e8a391" name="Default Changelist" comment="ajout certains fichiers">
-      <change beforePath="$PROJECT_DIR$/.idea/DevIII-Projet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DevIII-Projet.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/src/Controller/AfficherFaq.php" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/src/Controller/AfficherFaq.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -250,6 +248,7 @@
       <workItem from="1617097583358" duration="601000" />
       <workItem from="1617109474307" duration="136000" />
       <workItem from="1617367384446" duration="701000" />
+      <workItem from="1617375787678" duration="1048000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1612622288257</created>
@@ -328,7 +327,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617367483017</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Ajout de la section commentaire (il faut corriger quelques points de boostrap)">
+      <created>1617375834335</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1617375834335</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -368,7 +374,8 @@
     <MESSAGE value="réorganisation dossiers/fichiers" />
     <MESSAGE value="page d'inscription complète + gérer db" />
     <MESSAGE value="ajout certains fichiers" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajout certains fichiers" />
+    <MESSAGE value="Ajout de la section commentaire (il faut corriger quelques points de boostrap)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout de la section commentaire (il faut corriger quelques points de boostrap)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
