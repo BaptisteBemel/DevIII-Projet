@@ -1,0 +1,42 @@
+{% extends "base.html.twig" %}
+
+
+{% block body %}
+    <div class="jumbotron">
+        <h1 class="display-3">Espace commentaires</h1>
+        <p class="lead">Déposez un commentaire, avis, recommandation sur les cours de M.Vanzeveren.</p>
+        <hr class="my-4">
+        <p>Veuillez prendre bonne note des règles de commantaires ci-dessous.</p>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="#" role="button">Règles</a>
+        </p>
+    </div>
+    <section id="liste_commentaires">
+        <div class="comments">
+            {% for comment in commentaires %}
+            <div class="row">
+                <div class="col">
+                    {{comment.author}} (<small>{{comment.createdAt | date('d/m/Y à H:i')}}</small>)
+                </div>
+                <div class="col">
+                    {{comment.content | raw}}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </section>
+    {% if app.user %}
+    <section id="ajout_commentaires">
+        {{form_start(commentForm)}}
+        {{form_row(commentForm.author, {'attr': {'placeholder': 'Votre nom et prénom'}})}}
+        {{form_row(commentForm.content, {'attr': {'placeholder': 'Votre commentaire...'}})}}
+
+        <button type='submit' class='btn btn-success'>Envoyer commentaire</button>
+        {{form_end(commentForm)}}
+    </section>
+
+    {% else %}
+        <h2>Vous devez vous connecter afin d'ajouter un commentaire !</h2>
+        <a href="{{path('security_login')}}" class="btn btn-primary">Connnexion</a>
+    {% endif %}
+{% endblock %}

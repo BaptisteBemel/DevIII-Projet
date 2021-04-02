@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ba0dbb1-a105-40b9-8f7b-dce998e8a391" name="Default Changelist" comment="réorganisation dossiers/fichiers" />
+    <list default="true" id="0ba0dbb1-a105-40b9-8f7b-dce998e8a391" name="Default Changelist" comment="ajout certains fichiers">
+      <change beforePath="$PROJECT_DIR$/.idea/DevIII-Projet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DevIII-Projet.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_symfony/src/Controller/AfficherFaq.php" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/src/Controller/AfficherFaq.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -149,6 +153,9 @@
       <path value="$PROJECT_DIR$/projet_symfony/vendor/psr/cache" />
       <path value="$PROJECT_DIR$/projet_symfony/vendor/composer" />
       <path value="$PROJECT_DIR$/projet_symfony/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/symfony/google-mailer" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/symfonycasts/verify-email-bundle" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/symfony/webpack-encore-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1o70ERPrY0NakaPLXSas54IPV58" />
@@ -242,6 +249,7 @@
       <workItem from="1617050697065" duration="2000" />
       <workItem from="1617097583358" duration="601000" />
       <workItem from="1617109474307" duration="136000" />
+      <workItem from="1617367384446" duration="701000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1612622288257</created>
@@ -306,7 +314,21 @@
       <option name="project" value="LOCAL" />
       <updated>1617109520977</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="page d'inscription complète + gérer db">
+      <created>1617367447777</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1617367447778</updated>
+    </task>
+    <task id="LOCAL-00011" summary="ajout certains fichiers">
+      <created>1617367483017</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1617367483017</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,7 +366,9 @@
     <MESSAGE value="Controller et fichiers de connexion et d'inscription." />
     <MESSAGE value="Controller Api début" />
     <MESSAGE value="réorganisation dossiers/fichiers" />
-    <option name="LAST_COMMIT_MESSAGE" value="réorganisation dossiers/fichiers" />
+    <MESSAGE value="page d'inscription complète + gérer db" />
+    <MESSAGE value="ajout certains fichiers" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajout certains fichiers" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
