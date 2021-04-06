@@ -1,57 +1,80 @@
 {% extends "base.html.twig" %}
 
-{% block body %}
-    <h1>Inscription</h1><br>
+{% block body %}<br>
+    <h1>Inscription</h1><br><br>
 
     {{form_start(form) }}
-    <div style="width: 400px">
+    <div  class="container">
 
-        <div style="width: 200px"> 
-        <h5>Addresse Mail: </h5>
-        {{ form_row(form.email, {'label': ' ', 'attr':{'placeholder':'exemple@gmail.com'}})}}<br>
+        <div class="row">
+
+            <div class="col">  
+            <h5>Addresse Mail :</h5>
+            {{ form_row(form.email, {'label': ' ', 'attr':{'placeholder':'exemple@gmail.com'}})}}<br>
+            </div>
+
+            <div class="col">
+            <h5>Situation Scolaire :</h5>
+            {{ form_row(form.situation_scolaire, {'label': ' ', 'attr':{'placeholder':'Elève en deuxième année en technologie de l\'informatique ...'}})}}<br>
+            </div>
+
         </div>
 
-        <div style="width: 200px">
-        <h5>Nom :</h5>
-        {{ form_row(form.nom, {'label': ' ', 'attr':{'placeholder':'Schamroth'}})}}<br>
+        <div class="row">
+
+            <div class="col">
+            <h5>Nom :</h5>
+            {{ form_row(form.nom, {'label': ' ', 'attr':{'placeholder':'Schamroth'}})}}<br>
+            </div>
+
+            <div class="col">
+            <h5>Parent/élève :</h5>
+            {{ form_row(form.role, {'label': ' ', 'attr':{'placeholder':'Parent/Elève'}})}}<br>
+            </div>
+
         </div>
 
-        <div>
-        <h5>Prénom  :</h5>
-        {{ form_row(form.prenom, {'label': ' ', 'attr':{'placeholder':'Arthur'}})}}<br>
+        <div class="row">
+
+            <div class="col">
+            <h5>Prénom  :</h5>
+            {{ form_row(form.prenom, {'label': ' ', 'attr':{'placeholder':'Arthur'}})}}<br>
+            </div>
+
+            <div class="col">
+            <h5>Mot de passe :</h5>
+            {{ form_row(form.password, {'label': ' ', 'attr':{'placeholder':'exemple123'}})}}<br>
+            </div>
+
         </div>
 
-        <div>
-        <h5>Adresse : </h5>
-        {{ form_row(form.adresse, {'label': ' ', 'attr':{'placeholder':'1 rue de l\'exemple 1230 Exemple'}})}}<br>
+        <div class="row">
+
+            <div class="col">
+            <h5>Adresse : </h5>
+            {{ form_row(form.adresse, {'label': ' ', 'attr':{'placeholder':'1 rue de l\'exemple 1230 Exemple'}})}}<br>
+            </div>
+
+            <div class="col">
+            <h5>Répéter Mot de passe  :</h5>
+            {{ form_row(form.confirm_password, {'label': ' ', 'attr':{'placeholder':'exemple123'}})}}<br>
+            </div>
+
         </div>
 
-        <div>
-        <h5>Numéro de téléphone  :</h5>
-        {{ form_row(form.numero_tel, {'label': ' ', 'attr':{'placeholder':'0410 10 10 10'}})}}<br>
+
+        <div class="row">
+            
+            <div class="col">
+            <h5>Numéro de téléphone  :</h5>
+            {{ form_row(form.numero_tel, {'label': ' ', 'attr':{'placeholder':'0410 10 10 10'}})}}<br>
+            </div>
+
         </div>
 
-        <div>
-        <h5>Situation Scolaire :</h5>
-        {{ form_row(form.situation_scolaire, {'label': ' ' , 'attr':{'placeholder':'Elève en deuxième année en technologie de l\'informatique ...'}})}}<br>
-        </div>
-
-        <div>
-        <h5>Parent/élève :</h5>
-        {{ form_row(form.role, {'label': ' ', 'attr':{'placeholder':'Parent/Elève'}})}}<br>
-        </div>
-
-        <div>
-        <h5>Mot de passe :</h5>
-        {{ form_row(form.password, {'label': ' ', 'attr':{'placeholder':'exemple123'}})}}<br>
-        </div>
-
-        <div>
-        <h5>Répéter Mot de passe  :</h5>
-        {{ form_row(form.confirm_password, {'label': ' ', 'attr':{'placeholder':'exemple123'}})}}<br>
-        </div>
-
+        <br>
         <button type="submit" class="btn btn-success">Inscription</button>
+        <br><br>
 
     </div>
     {{form_end(form) }}

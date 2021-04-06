@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ba0dbb1-a105-40b9-8f7b-dce998e8a391" name="Default Changelist" comment="ajout certains fichiers" />
+    <list default="true" id="0ba0dbb1-a105-40b9-8f7b-dce998e8a391" name="Default Changelist" comment="mise en forme 1 formulaire inscription" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -247,6 +247,7 @@
       <workItem from="1617109474307" duration="136000" />
       <workItem from="1617367384446" duration="701000" />
       <workItem from="1617375787678" duration="1048000" />
+      <workItem from="1617703163118" duration="52000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1612622288257</created>
@@ -332,7 +333,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617375834335</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="mise en forme 1 formulaire inscription">
+      <created>1617703196856</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1617703196856</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -373,7 +381,8 @@
     <MESSAGE value="page d'inscription complète + gérer db" />
     <MESSAGE value="ajout certains fichiers" />
     <MESSAGE value="Ajout de la section commentaire (il faut corriger quelques points de boostrap)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout de la section commentaire (il faut corriger quelques points de boostrap)" />
+    <MESSAGE value="mise en forme 1 formulaire inscription" />
+    <option name="LAST_COMMIT_MESSAGE" value="mise en forme 1 formulaire inscription" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
