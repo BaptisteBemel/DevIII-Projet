@@ -13,7 +13,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 
 class commentaireController extends AbstractController{
-    #[Route('/commentaires', name: 'commentaires')]
+    /**
+     * @Route("/commentaires", name="commentaires", methods={"GET"})  
+     */
+    //#[Route('/commentaires', name: 'commentaires')]
     public function comment(Request $request, EntityManagerInterface $manager): Response
     {   
         $comment = new Comment();

@@ -7,6 +7,7 @@
            and uncomment the following Encore helpers to start using Symfony UX #}
         {% block stylesheets %}
             <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
+            
         {% endblock %}
 
         {% block javascripts %}
@@ -39,6 +40,9 @@
                             }}" href="/">
                             Espace élève</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/messagerie">Messagerie</a>
+                    </li>
                 </ul>
                 <ul class="navbar-naw ml-auto">
                     <li class="nav-item">
@@ -54,5 +58,7 @@
         <div class="container">
             {% block body %}{% endblock %}
         </div>
+        <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
     </body>
 </html>
