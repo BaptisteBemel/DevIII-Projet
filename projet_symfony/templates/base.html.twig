@@ -7,7 +7,7 @@
            and uncomment the following Encore helpers to start using Symfony UX #}
         {% block stylesheets %}
             <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
-            
+            <link rel="stylesheet" href="./main.css">
         {% endblock %}
 
         {% block javascripts %}
@@ -34,14 +34,14 @@
                         <a class="nav-link" href="/faq">FAQ</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="/messagerie">Messagerie</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link {{ 
                             is_granted('IS_AUTHENTICATED_FULLY') == false 
                             ? 'disabled'
                             }}" href="/">
                             Espace élève</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/messagerie">Messagerie</a>
                     </li>
                 </ul>
                 <ul class="navbar-naw ml-auto">
