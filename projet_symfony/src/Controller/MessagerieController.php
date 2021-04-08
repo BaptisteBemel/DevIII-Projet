@@ -15,7 +15,7 @@ class MessagerieController extends AbstractController{
     //#[Route('/messagerie', name: 'messagerie')]
     public function messagerie(): Response
     {
-        return $this->render('./messagerie/messagerie.html.twig', [
+        return $this->render('./messagerie/messagerie.html', [
             'controller_name' => 'messagerieController',
         ]);
     }

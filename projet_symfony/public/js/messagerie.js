@@ -7,14 +7,23 @@ class messages extends React.Component {
         super(props);
         this.state = {
             isConnected: 0,
-            whoIsIt: 0 //0 == non-conecté, 1 == élève, 2 == professeur
+            whoIsIt: 0, //0 == non-conecté, 1 == élève, 2 == professeur
+            hasMail: 1 //0 == non, 1 == oui
         }
     }
 
+    /*makeMail(numberOfMail) {
+        for(let i = 0; i < numberOfMail; i++) {
+            React.createElement("button",
+        { className: "mailButton" },
+        i)
+        } 
+    }*/
+
     render() {
-        return React.createElement(button,
-        {id: "id"},
-        "Bouton");
+        return this.state.hasMail ? React.createElement("button",
+        { className: "mailButton" },
+        "Bouton") : ""; 
     }
 }
 
@@ -33,7 +42,7 @@ class mailContenu extends React.Component {
 }
 
 let mail = gid("mailList");
-ReactDOM.render(new messages(), mail);
+ReactDOM.render(React.createElement(messages), mail);
 
 let contenu = gid("mailContenu");
 ReactDOM.render(mailContenu, contenu);

@@ -1,31 +1,21 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {# Run `composer require symfony/webpack-encore-bundle`
-           and uncomment the following Encore helpers to start using Symfony UX #}
-        {% block stylesheets %}
-            <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
-        {% endblock %}
-
-        {% block javascripts %}
-            {#{{ encore_entry_script_tags('app') }}#}
-        {% endblock %}
-    </head>
-    <body>
+<head>
+    <link href="https://bootswatch.com/4/flatly/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css" type="text/css">
+</head>
+<body>
+    <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="font-size: 25px;">
-
             <div class="collapse navbar-collapse" id="navbarColor01">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="/">Home</a>
                     </li>
-                    {% if not is_granted('IS_AUTHENTICATED_FULLY') %}
-                        <li class="nav-item">
-                            <a class="nav-link" href="/inscription">Inscription</a>
-                        </li>
-                    {% endif %}
+                    <!--Si non-connecté alors apparait le boutton-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="/inscription">Inscription</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/commentaires">Commentaires</a>
                     </li>
@@ -45,19 +35,25 @@
                 </ul>
                 <ul class="navbar-naw ml-auto">
                     <li class="nav-item">
-                    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                    <!--Si connecté alors boutton déco, sinon => connexion-->
                         <a class="nav-link" href="/deconnexion">Se déconnecter</a> 
-                    {% else %}
                         <a class="nav-link" href="/connexion">Se connecter</a>
-                    {% endif %}
                     </li>
                 </ul>
             </div>
         </nav>
-        <div class="container">
-            {% block body %}{% endblock %}
+    </header>
+    <h1>Vos messages</h1>
+    <section>
+        <div class="sectionMail">
+            <div class="scrollListMail" id="mailList">
+            </div> 
+            <div class="contentMail" id="mailContenu">
+            </div>
         </div>
-        <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
-        <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
-    </body>
+    </section>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="/js/messagerie.js"></script>
+</body>
 </html>

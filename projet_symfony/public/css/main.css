@@ -1,0 +1,29 @@
+section div div.scrollListMail {
+    width: 300px;
+    height: 675px;
+    overflow-y: auto;
+    border: solid gray 1px;
+    float: left;
+}
+
+div button.mailButton {
+    width: 100%;
+    height: 75px;
+    text-align: left;
+    background-color: white;
+}
+
+section div div.contentMail {
+    border: solid grey 1px;
+    min-width: 700px;
+    max-width: 1500px;
+    height: 675px;
+    float: left;
+}
+
+section div.sectionMail {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+}
