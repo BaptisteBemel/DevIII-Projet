@@ -12,18 +12,18 @@ class messages extends React.Component {
         }
     }
 
-    /*makeMail(numberOfMail) {
+    makeMail(numberOfMail) {
+        let listMail = [];
         for(let i = 0; i < numberOfMail; i++) {
-            React.createElement("button",
+           listMail.push(React.createElement("button",
         { className: "mailButton" },
-        i)
-        } 
-    }*/
+        i));
+        }
+        return listMail;
+    }
 
     render() {
-        return this.state.hasMail ? React.createElement("button",
-        { className: "mailButton" },
-        "Bouton") : ""; 
+        return this.state.hasMail ? this.makeMail(15) : "";
     }
 }
 
