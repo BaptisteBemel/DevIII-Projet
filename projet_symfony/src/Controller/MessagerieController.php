@@ -10,7 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class MessagerieController extends AbstractController{
     
     /**
-     * @Route("/messagerie", name="messagerie", methods={"GET"})  
+     * @Route("/messagerie", name="messagerie")  
      */
     //#[Route('/messagerie', name: 'messagerie')]
     public function messagerie(): Response

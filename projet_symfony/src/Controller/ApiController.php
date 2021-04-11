@@ -10,7 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class ApiController extends AbstractController
 {
     /**
-     * @Route("/api/user", name="api_user_index", methods={"GET"})  
+     * @Route("/api/user", name="api_user_index")  
      */
     
     public function index(UserRepository $userRepository): Response
@@ -25,7 +25,7 @@ class ApiController extends AbstractController
     }
 
     /**
-     * @Route("/api/main.css", name="api_css", methods={"GET"})  
+     * @Route("/api/main.css", name="api_css")  
      */
 
     public function css(): Response

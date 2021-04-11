@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ba0dbb1-a105-40b9-8f7b-dce998e8a391" name="Default Changelist" comment="mise en forme 1 formulaire inscription" />
+    <list default="true" id="0ba0dbb1-a105-40b9-8f7b-dce998e8a391" name="Default Changelist" comment="mise en forme 1 formulaire inscription">
+      <change beforePath="$PROJECT_DIR$/projet_symfony/config/packages/routing.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/config/packages/routing.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_symfony/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_symfony/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_symfony/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/public/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_symfony/src/Controller/ApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/src/Controller/ApiController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_symfony/src/Controller/MainCrontrollerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/src/Controller/MainCrontrollerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_symfony/src/Controller/MessagerieController.php" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/src/Controller/MessagerieController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_symfony/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/src/Controller/SecurityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_symfony/src/Controller/commentaireController.php" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/src/Controller/commentaireController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_symfony/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_symfony/templates/change_profile/change.html.twig" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -248,6 +260,7 @@
       <workItem from="1617367384446" duration="701000" />
       <workItem from="1617375787678" duration="1048000" />
       <workItem from="1617703163118" duration="52000" />
+      <workItem from="1618140735334" duration="628000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1612622288257</created>

@@ -11,7 +11,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class MainCrontrollerController extends AbstractController
 {
     /**
-     * @Route("/", name="main_crontroller", methods={"GET"})  
+     * @Route("/", name="main_crontroller")  
      */
     //#[Route('/', name: 'main_crontroller')]
     public function index(): Response
