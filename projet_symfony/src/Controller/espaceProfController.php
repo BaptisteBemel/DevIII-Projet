@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\User;
 use App\Repository\UserRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -19,9 +20,7 @@ class espaceProfController extends AbstractController
     #[Route('/profils_eleves', name: 'profils_eleves')]
     public function profils(UserRepository $userRepository): Response
     {
-        $users = $userRepository->findAll();
-
-        $profils = $this->json($users, 200, []);
+        $profils = $this->getDoctrine()->getRepository(User::class)->findAll();
 
         return $this->render('./espace_prof/profils_eleves.html.twig', ['profils' => $profils]);
     }

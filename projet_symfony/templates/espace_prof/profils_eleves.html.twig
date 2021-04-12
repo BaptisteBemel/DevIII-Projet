@@ -3,6 +3,15 @@
 
 {% block body %}
 
-{{profils}}
+{% for profil in profils %}
+
+<br>    
+<div class="jumbotron">
+Prenom : {{profil.prenom}} <br> Nom : {{profil.nom}} <br> Email : {{profil.email}}
+<br>Adresse : {{profil.adresse}} <br> Numéro de téléphone : {{profil.numerotel}}
+<br> Situation scolaire : {{profil.situationscolaire}} <br> Parent/élève : {{profil.role    }}
+</div>
+
+{% endfor %}
 
 {% endblock %}
