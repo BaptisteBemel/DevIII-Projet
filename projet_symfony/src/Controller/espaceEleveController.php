@@ -8,6 +8,8 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+use Symfony\Component\Security\Core\Validator\Constraints\UserPassword;
 
 class espaceEleveController extends AbstractController
 {
@@ -17,13 +19,13 @@ class espaceEleveController extends AbstractController
         return $this->render('./espace_eleve/espace_eleve.html.twig');
     }
 
-    #[Route('/profil_eleve', name: 'profil_eleve')]
+    #[Route('/espace_eleve/profil_eleve', name: 'profil_eleve')]
     public function profil(): Response
     {
         return $this->render('./profil_eleve/profil_eleve.html.twig');
     }
 
-    #[Route('/modif_profil', name: 'modif_profil')]
+    #[Route('/espace_eleve/profil_eleve/modif_profil', name: 'modif_profil')]
     public function edit_profil(Request $request): Response
     {
         $user = $this->getUser();
@@ -37,11 +39,35 @@ class espaceEleveController extends AbstractController
             $em->flush();
 
             $this->addFlash('message', 'Profil mis à jour');
-            return $this->redirectToRoute('commmentaires');
+            return $this->redirectToRoute('profil_eleve');
         }
 
-        return $this->render('modif_profil/modif_profil.html.twig', [
+        return $this->render('./espace_eleve/modif_prof.html.twig', [
             'form' => $form->createView(),
         ]);
     }
+
+    #[Route('/espace_eleve/profil_eleve/modif_mdp', name: 'modif_mdp')]
+    public function edit_mdp(Request $request, UserPasswordEncoderInterface $passwordEncoder)
+    {
+        if($request->isMethod('POST')){
+            $em = $this->getDoctrine()->getManager();
+
+            $user = $this->getUser();
+
+            if($request->request->get('pass') == $request->request->get('pass2')){
+                $user->setPassword($passwordEncoder->encodePassword($user, $request->request->get('pass')));
+                $em->flush();
+                $this->addFlash("message", "Mot de Passe mis à jour !");
+
+                return $this->redirectToRoute("profil_eleve");
+            }
+            else{
+                $this->addFlash("error", "Veuillez entrer deux fois le même mot de passe !");
+            }
+        }
+
+        return $this->render('./espace_eleve/modif_mdp.html.twig');
+    }
+
 }
