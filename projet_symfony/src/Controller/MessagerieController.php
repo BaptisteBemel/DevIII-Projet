@@ -15,7 +15,7 @@ class MessagerieController extends AbstractController{
     //#[Route('/messagerie', name: 'messagerie')]
     public function messagerie(): Response
     {
-        return $this->render('./messagerie/messagerie.html', [
+        return $this->render('./espace_prof/messagerie.html', [
             'controller_name' => 'messagerieController',
         ]);
     }

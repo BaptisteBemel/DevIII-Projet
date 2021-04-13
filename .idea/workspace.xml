@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ba0dbb1-a105-40b9-8f7b-dce998e8a391" name="Default Changelist" comment="mise en forme 1 formulaire inscription">
-      <change beforePath="$PROJECT_DIR$/projet_symfony/config/packages/routing.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/config/packages/routing.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/public/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/src/Controller/ApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/src/Controller/ApiController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/src/Controller/MainCrontrollerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/src/Controller/MainCrontrollerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/src/Controller/MessagerieController.php" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/src/Controller/MessagerieController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/src/Controller/SecurityController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/src/Controller/commentaireController.php" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/src/Controller/commentaireController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/templates/change_profile/change.html.twig" beforeDir="false" />
-    </list>
+    <list default="true" id="0ba0dbb1-a105-40b9-8f7b-dce998e8a391" name="Default Changelist" comment="Espace prof v1" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -261,6 +249,9 @@
       <workItem from="1617375787678" duration="1048000" />
       <workItem from="1617703163118" duration="52000" />
       <workItem from="1618140735334" duration="628000" />
+      <workItem from="1618224957605" duration="38000" />
+      <workItem from="1618226225269" duration="26000" />
+      <workItem from="1618226292303" duration="28000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1612622288257</created>
@@ -353,7 +344,21 @@
       <option name="project" value="LOCAL" />
       <updated>1617703196856</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Espace prof v1">
+      <created>1618226240655</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1618226240655</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Espace prof v1">
+      <created>1618226312536</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1618226312536</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -395,7 +400,8 @@
     <MESSAGE value="ajout certains fichiers" />
     <MESSAGE value="Ajout de la section commentaire (il faut corriger quelques points de boostrap)" />
     <MESSAGE value="mise en forme 1 formulaire inscription" />
-    <option name="LAST_COMMIT_MESSAGE" value="mise en forme 1 formulaire inscription" />
+    <MESSAGE value="Espace prof v1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Espace prof v1" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
