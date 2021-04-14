@@ -38,7 +38,7 @@
                         <a class="nav-link {{ 
                             is_granted('IS_AUTHENTICATED_FULLY') == false ? 'disabled'}}" href="/espace_eleve">Espace élève</a>
                     </li>
-                    {% if is_granted('ROLE_ADMIN') %}<a>Coucou</a>{% endif %}
+                    {% if is_granted("ROLE_USER") %}<a>Coucou</a>{% endif %}
                 </ul>
                 <ul class="navbar-naw ml-auto">
                     <li class="nav-item">

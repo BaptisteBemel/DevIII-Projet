@@ -3,10 +3,11 @@
 namespace App\Form;
 
 use App\Entity\User;
+use Doctrine\DBAL\Types\JsonType;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 
 class RegistrationType extends AbstractType
 {
@@ -19,7 +20,7 @@ class RegistrationType extends AbstractType
             ->add('adresse')
             ->add('numero_tel')
             ->add('situation_scolaire')
-            ->add('role')
+            ->add('roles')
             ->add('password', PasswordType::class)
             ->add('confirm_password', PasswordType::class)
         ;

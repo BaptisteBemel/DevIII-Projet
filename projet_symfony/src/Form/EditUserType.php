@@ -37,7 +37,7 @@ class EditUserType extends AbstractType
             'attr' => ['class'=>'form-control'],])
             
             
-            ->add('role', ChoiceType::class, [
+            ->add('roles', ChoiceType::class, [
                 'choices' => [
                     'Utilisateur' => ["ROLE_USER"],
                     'Editeur' => ['ROLE_EDITOR'],

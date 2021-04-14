@@ -4,11 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ba0dbb1-a105-40b9-8f7b-dce998e8a391" name="Default Changelist" comment="mise en forme 1 formulaire inscription">
+    <list default="true" id="0ba0dbb1-a105-40b9-8f7b-dce998e8a391" name="Default Changelist" comment="Ajout modification élève depuis admin (a finir, roles non pris en compte)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projet_symfony/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/src/Controller/espaceProfController.php" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/src/Controller/espaceProfController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_symfony/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/src/Controller/SecurityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_symfony/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_symfony/src/Form/EditUserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/src/Form/EditUserType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_symfony/src/Form/RegistrationType.php" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/src/Form/RegistrationType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_symfony/templates/Security/registration.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/templates/Security/registration.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projet_symfony/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_symfony/templates/espace_prof/profils_eleves.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/templates/espace_prof/profils_eleves.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_symfony/templates/profil_eleve/profil_eleve.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/templates/profil_eleve/profil_eleve.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -254,6 +260,8 @@
       <workItem from="1617375787678" duration="1048000" />
       <workItem from="1617703163118" duration="52000" />
       <workItem from="1618140735334" duration="628000" />
+      <workItem from="1618331165825" duration="100000" />
+      <workItem from="1618403626931" duration="604000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1612622288257</created>
@@ -346,7 +354,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617703196856</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Ajout modification élève depuis admin (a finir, roles non pris en compte)">
+      <created>1618331209680</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1618331209680</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -388,7 +403,8 @@
     <MESSAGE value="ajout certains fichiers" />
     <MESSAGE value="Ajout de la section commentaire (il faut corriger quelques points de boostrap)" />
     <MESSAGE value="mise en forme 1 formulaire inscription" />
-    <option name="LAST_COMMIT_MESSAGE" value="mise en forme 1 formulaire inscription" />
+    <MESSAGE value="Ajout modification élève depuis admin (a finir, roles non pris en compte)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout modification élève depuis admin (a finir, roles non pris en compte)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
