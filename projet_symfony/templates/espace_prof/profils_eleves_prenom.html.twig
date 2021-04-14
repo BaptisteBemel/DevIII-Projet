@@ -1,7 +1,5 @@
 {% extends 'base.html.twig' %}
 
-
-
 {% block body %}
 
     <br>
@@ -16,6 +14,17 @@
 
     <br>
 
+    {% for profil in profils | sort((a, b) => a.prenom <=> b.prenom) %}
+
+        <br>
+        <div class="jumbotron">
+            <b>Prenom :</b> {{profil.prenom}} <br> <b>Nom :</b> {{profil.nom}} <br> <b>Email :</b> {{profil.email}}
+            <br> <b>Adresse :</b> {{profil.adresse}} <br> <b>Numéro de téléphone :</b> {{profil.numerotel}}
+            <br> <b>Situation scolaire :</b> {{profil.situationscolaire}} <br> <b>Parent/élève :</b> {{profil.role}}
+        </div>
+
+    {% endfor %}
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
             crossorigin="anonymous"></script>
@@ -25,4 +34,5 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
-{% endblock %}  
+
+{% endblock %}
