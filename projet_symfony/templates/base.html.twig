@@ -13,6 +13,8 @@
 
         {% block javascripts %}
             {#{{ encore_entry_script_tags('app') }}#}
+            <script src="./App.js"></script> <!-- peut-être à enlever prcq ça a pas l'air de passer -->
+            <script src="./NavBar.js"></script>
         {% endblock %}
     </head>
     <header>
@@ -38,6 +40,10 @@
                         <a class="nav-link {{ 
                             is_granted('IS_AUTHENTICATED_FULLY') == false ? 'disabled'}}" href="/espace_eleve">Espace élève</a>
                     </li>
+                    <li class="nav-item">
+                        <p class="nav-link {{ 
+                            is_granted('IS_AUTHENTICATED_FULLY') == false ? 'disabled'}}" onclick="Calendrier()">Calendrier</p>
+                    </li>                    
                     {% if is_granted("ROLE_USER") %}<a>Coucou</a>{% endif %}
                 </ul>
                 <ul class="navbar-naw ml-auto">
