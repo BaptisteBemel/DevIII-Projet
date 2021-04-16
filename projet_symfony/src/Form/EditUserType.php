@@ -40,11 +40,12 @@ class EditUserType extends AbstractType
             ->add('roles', ChoiceType::class, [
                 'choices' => [
                     'Utilisateur' => ["ROLE_USER"],
-                    'Editeur' => ['ROLE_EDITOR'],
-                    'Administrateur' => ['ROLE_ADMIN']
+                    'Editeur' => ["ROLE_EDITOR"],
+                    'Administrateur' => ["ROLE_ADMIN"]
                 ],
                 'expanded'=>true,
-                'label'=>'Rôles'
+                'label'=>'Rôles',
+                'mapped'=>false
             ])
             ->add('Valider', SubmitType::class)
             ;
