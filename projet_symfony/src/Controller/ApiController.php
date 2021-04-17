@@ -23,18 +23,4 @@ class ApiController extends AbstractController
             'controller_name' => 'ApiController',
         ]);
     }
-<<<<<<< HEAD
-=======
-
-    /**
-     * @Route("/api/main.css", name="api_css")  
-     */
-
-    public function css(): Response
-    {
-        return $this->render('api/main.css', [
-            'controller_name' => 'ApiCSSController',
-        ]);
-    }
->>>>>>> 060c043016cd766857fa17122c9b19a9a4673282
 }

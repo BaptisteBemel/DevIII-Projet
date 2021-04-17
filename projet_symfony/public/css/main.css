@@ -23,4 +23,11 @@ div.sectionMail {
     margin: auto;
     width: 100%;
     background-color: red;
+=======
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+>>>>>>> 060c043016cd766857fa17122c9b19a9a4673282
 }
