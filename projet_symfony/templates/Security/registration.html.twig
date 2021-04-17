@@ -14,8 +14,8 @@
             </div>
 
             <div class="col">
-            <h5>Situation Scolaire :</h5>
-            {{ form_row(form.situation_scolaire, {'label': ' ', 'attr':{'placeholder':'Elève en deuxième année en technologie de l\'informatique ...'}})}}<br>
+            <h5>Numéro de téléphone  :</h5>
+            {{ form_row(form.numero_tel, {'label': ' ', 'attr':{'placeholder':'0410 10 10 10'}})}}<br>
             </div>
 
         </div>
@@ -29,7 +29,7 @@
 
             <div class="col">
             <h5>Parent/élève :</h5>
-            {{ form_row(form.role, {'label': ' ', 'attr':{'placeholder':'Parent/Elève'}})}}<br>
+            {{ form_row(form.roles, {'label': ' ', 'attr':{'placeholder':'Parent/Elève'}})}}<br>
             </div>
 
         </div>
@@ -64,11 +64,12 @@
 
 
         <div class="row">
-            
+
             <div class="col">
-            <h5>Numéro de téléphone  :</h5>
-            {{ form_row(form.numero_tel, {'label': ' ', 'attr':{'placeholder':'0410 10 10 10'}})}}<br>
+            <h5>Situation Scolaire :</h5>
+            {{ form_row(form.situation_scolaire, {'label': ' ', 'attr':{'placeholder':'Elève en deuxième année en technologie de l\'informatique ...'}})}}<br>
             </div>
+            
 
         </div>
 

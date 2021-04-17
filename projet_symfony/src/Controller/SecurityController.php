@@ -9,12 +9,13 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class SecurityController extends AbstractController
 {
     /**
-     * @Route("/inscription", name="security_registration", methods={"GET"})  
+     * @Route("/inscription", name="security_registration")  
      */
     //#[Route('/inscription', name: 'security_registration')]
     public function registration(Request $request, EntityManagerInterface $manager, UserPasswordEncoderInterface $encoder){
@@ -28,10 +29,10 @@ class SecurityController extends AbstractController
             $hash = $encoder->encodePassword($user, $user->getPassword());
 
             $user->setPassword($hash);
-
+            
             $manager->persist($user);
             $manager->flush();
-
+            
             return $this->redirectToRoute('security_login');
         }
 

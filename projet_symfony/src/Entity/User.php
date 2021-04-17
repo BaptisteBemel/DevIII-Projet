@@ -10,10 +10,6 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
- * @UniqueEntity(
- * fields= {"email"}, 
- * message="Veuillez utiliser une adresse mail non-utilisée !"
- * )
  */
 class User implements UserInterface
 {
@@ -56,9 +52,9 @@ class User implements UserInterface
     private $situation_scolaire;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="json")
      */
-    private $role;
+    private $roles = [];
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -131,7 +127,7 @@ class User implements UserInterface
         return $this->numero_tel;
     }
 
-    public function setNumeroTel(?string $numero_tel): self
+    public function setNumeroTel(string $numero_tel): self
     {
         $this->numero_tel = $numero_tel;
 
@@ -150,14 +146,19 @@ class User implements UserInterface
         return $this;
     }
 
-    public function getRole(): ?string
-    {
-        return $this->role;
+    public function getRoles(): array
+    {   
+        
+        $roles = $this->roles;
+        // guarantee every user at least has ROLE_USER
+        $roles[] = 'ROLE_USER';
+
+        return array_unique($roles);
     }
 
-    public function setRole(string $role): self
+    public function setRoles(string $roles): self
     {
-        $this->role = $role;
+        $this->roles = $roles;
 
         return $this;
     }
@@ -182,11 +183,6 @@ class User implements UserInterface
     public function getSalt()
     {
         
-    }
-
-    public function getRoles()
-    {
-        return ['ROLE_USER'];
     }
 
     public function getUsername()

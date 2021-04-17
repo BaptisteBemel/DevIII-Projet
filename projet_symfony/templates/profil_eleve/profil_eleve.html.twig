@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <main>
+        <div class="grix xs7 container">
+            {% for message in app.flashes('message') %}
+                <div class="col-xs4">
+                    <div class="alert alert-success" role="alert">
+                        {{message}}
+                    </div>
+                </div>
+            {% endfor %}
+
+            <div class="col-xs6"><h1>Profil de {{app.user.prenom}} {{app.user.nom}} </h1></div>
+            <div class="col-xs5">Nom : {{app.user.nom}}</div>
+            <div class="col-xs5">Prénom : {{app.user.prenom}}</div>
+            <div class="col-xs5">Adresse Mail : {{app.user.email}}</div>
+            <div class="col-xs5">Adresse : {{app.user.adresse}}</div>
+            <div class="col-xs5">Situation Scolaire : {{app.user.situation_scolaire}}</div>
+            <div class="col-xs5">Numéro de Téléphone : {{app.user.numerotel}}</div>
+            <div class="col-xs5">
+                <a class="btn btn-primary" href="/espace_eleve/profil_eleve/modif_profil" role="button">Modifier Profil</a>
+                <a class="btn btn-primary" href="/espace_eleve/profil_eleve/modif_mdp" role="button">Modifier MDP</a>
+            </div>
+
+        </div>
+    </main>
+	
+
+{% endblock %}
