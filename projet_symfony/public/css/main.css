@@ -20,6 +20,7 @@ section div div.contentMail {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 div.sectionMail {
     margin: auto;
     width: 100%;
@@ -32,10 +33,15 @@ div.sectionMail {
     min-height: 100vh;
 >>>>>>> 060c043016cd766857fa17122c9b19a9a4673282
 =======
+=======
+>>>>>>> parent of 2d67b37 ( Changes to be committed:)
 section div.sectionMail {
     margin-left: auto;
     margin-right: auto;
     display: block;
     text-align: center;
+<<<<<<< HEAD
+>>>>>>> parent of 2d67b37 ( Changes to be committed:)
+=======
 >>>>>>> parent of 2d67b37 ( Changes to be committed:)
 }
