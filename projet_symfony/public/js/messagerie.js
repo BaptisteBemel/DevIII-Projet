@@ -16,10 +16,16 @@ class messages extends React.Component {
         let listMail = [];
         for(let i = 0; i < numberOfMail; i++) {
            listMail.push(React.createElement("button",
-        { className: "mailButton" },
+        { className: "mailButton" , onclick: this.showContent(), key: i},
         i));
         }
         return listMail;
+    }
+
+    showContent() {
+        let nameMail = "123"
+        let contenuDiv = gid("mailContenu");
+        contenuDiv.innerHTML = "<p>" + nameMail + "</p>";
     }
 
     render() {
