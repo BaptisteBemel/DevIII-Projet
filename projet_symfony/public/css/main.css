@@ -19,6 +19,7 @@ section div div.contentMail {
     float: left;
 }
 
+<<<<<<< HEAD
 div.sectionMail {
     margin: auto;
     width: 100%;
@@ -30,4 +31,11 @@ div.sectionMail {
     align-items: center;
     min-height: 100vh;
 >>>>>>> 060c043016cd766857fa17122c9b19a9a4673282
+=======
+section div.sectionMail {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+>>>>>>> parent of 2d67b37 ( Changes to be committed:)
 }
