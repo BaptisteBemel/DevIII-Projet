@@ -7,6 +7,7 @@ use Doctrine\DBAL\Types\JsonType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 
 class RegistrationType extends AbstractType
@@ -20,16 +21,26 @@ class RegistrationType extends AbstractType
             ->add('adresse')
             ->add('numero_tel')
             ->add('situation_scolaire')
-            ->add('roles')
+            ->add('roles', ChoiceType::class, [
+                'choices' => [
+                    'Utilisateur' => ["ROLE_USER"],
+                    'Editeur' => ["ROLE_EDITOR"],
+                    'Administrateur' => ["ROLE_ADMIN"]
+                ],
+                'expanded'=>true,
+                'label'=>'Rôles',
+                'mapped'=>false
+            ])
             ->add('password', PasswordType::class)
             ->add('confirm_password', PasswordType::class)
         ;
+        
     }
 
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => User::class,
+            'data_class' => User::class
         ]);
     }
 }

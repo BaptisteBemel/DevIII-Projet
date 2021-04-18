@@ -3,9 +3,45 @@ body{
     padding: 0;
 }
 
+<<<<<<< HEAD
+div button.mailButton {
+    width: 100%;
+    height: 75px;
+    text-align: left;
+    background-color: white;
+}
+
+section div div.contentMail {
+    border: solid grey 1px;
+    min-width: 700px;
+    max-width: 1500px;
+    height: 675px;
+    float: left;
+}
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+div.sectionMail {
+    margin: auto;
+    width: 100%;
+    background-color: red;
+=======
 .box{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+>>>>>>> 060c043016cd766857fa17122c9b19a9a4673282
+=======
+=======
+>>>>>>> parent of 2d67b37 ( Changes to be committed:)
+section div.sectionMail {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+<<<<<<< HEAD
+>>>>>>> parent of 2d67b37 ( Changes to be committed:)
+=======
+>>>>>>> parent of 2d67b37 ( Changes to be committed:)
 }
