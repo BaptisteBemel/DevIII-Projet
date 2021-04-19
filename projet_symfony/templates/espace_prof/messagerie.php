@@ -43,17 +43,19 @@
             </div>
         </nav>
     </header>
-    <h2>Vos messages</h2>
+    <h1>Vos messages</h1>
     <section>
         <div class="sectionMail">
-            <div class="scrollListMail" id="mailList"></div> 
-            <div class="contentMail" id="mailContenu"></div>
+            <div class="scrollListMail" id="mailList">
+            </div> 
+            <div class="contentMail" id="mailContenu">
+            </div>
         </div>
     </section>
     <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
     <script src="/js/messagerie.js"></script>
-    <!--Babel est le compilateur pour React JSX-->
+
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </body>
 </html>
