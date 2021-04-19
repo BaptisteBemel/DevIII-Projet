@@ -9,5 +9,10 @@
 {% block body %}
     <div class="jumbotron">
         <p>test</p>
+        {% if is_granted("ROLE_USER") %}
+            <div id="ajoutDisponibilites">
+                <button>Ajouter des disponibilites</button>
+            </div>
+        {% endif %}
     </div>
 {% endblock %}
