@@ -39,3 +39,10 @@ div.sectionMail {
     align-items: center;
     min-height: 100vh;
 }
+
+section div.sectionMail {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+}
