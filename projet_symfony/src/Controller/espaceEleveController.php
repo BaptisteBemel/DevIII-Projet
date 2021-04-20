@@ -27,7 +27,7 @@ class espaceEleveController extends AbstractController
 
     #[Route('/espace_eleve/profil_eleve/modif_profil', name: 'modif_profil')]
     public function edit_profil(Request $request): Response
-    {
+    {   
         $user = $this->getUser();
         $form = $this->createForm(EditProfileType::class, $user);
 
