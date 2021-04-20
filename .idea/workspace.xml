@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ba0dbb1-a105-40b9-8f7b-dce998e8a391" name="Default Changelist" comment="erreur avec la connexion et l'inscription corrigées v2">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/src/Controller/Admin/espaceProfController.php" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/src/Controller/Admin/espaceProfController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/src/Form/EditUserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/src/Form/EditUserType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/templates/espace_prof/espace_prof.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/templates/espace_prof/espace_prof.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/templates/espace_prof/profils_eleves.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/templates/espace_prof/profils_eleves.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/templates/espace_prof/profils_eleves_nom.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/templates/espace_prof/profils_eleves_nom.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/templates/espace_prof/profils_eleves_prenom.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/templates/espace_prof/profils_eleves_prenom.html.twig" afterDir="false" />
-    </list>
+    <list default="true" id="f8ff665c-929c-4fab-be3f-184eeed1395a" name="Default Changelist" comment="modification des comptes via admin terminé. Du coup, tout marche" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
