@@ -52,9 +52,9 @@ class User implements UserInterface
     private $situation_scolaire;
 
     /**
-     * @ORM\Column(type="json")
+     * @ORM\Column(type="string", length=255)
      */
-    private $roles = [];
+    private $roles;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -146,12 +146,17 @@ class User implements UserInterface
         return $this;
     }
 
+    /**
+     * @see UserInterface
+     */
     public function getRoles(): array
     {   
         
         $roles = $this->roles;
+        $roles = array($roles);
         // guarantee every user at least has ROLE_USER
-        $roles[] = 'ROLE_USER';
+        
+
 
         return array_unique($roles);
     }
@@ -177,16 +182,27 @@ class User implements UserInterface
 
     public function eraseCredentials()
     {
-        
     }
 
-    public function getSalt()
+    /**
+     * Returning a salt is only needed, if you are not using a modern
+     * hashing algorithm (e.g. bcrypt or sodium) in your security.yaml.
+     *
+     * @see UserInterface
+     */
+    public function getSalt(): ?string
     {
-        
+        return null;
     }
 
-    public function getUsername()
+    /**
+     * A visual identifier that represents this user.
+     *
+     * @see UserInterface
+     */
+    public function getUsername(): string
     {
-        
+        return (string) $this->email;
     }
+    
 }

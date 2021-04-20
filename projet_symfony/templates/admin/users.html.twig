@@ -4,20 +4,19 @@
 
 {% block body %}
     <h1>Liste des utilisateurs</h1>
-    <table>
+    <table class="table">
         <thead>
             <th>ID</th>
             <th>Email</th>
             <th>Rôles</th>
+            <th>Administration</th>
         </thead>
         <tbody>
-            {# On boucle sur les utilisateurs #}
             {% for user in users %}
                 <tr>
                     <td>{{ user.id }}</td>
                     <td>{{ user.email }}</td>
                     <td>
-                        {# On boucle sur les rôles #}
                         {% for role in user.roles %}
                             {% if role == "ROLE_USER" %}
                                 Utilisateur
