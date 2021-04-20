@@ -54,12 +54,7 @@ class User implements UserInterface
     /**
      * @ORM\Column(type="simple_array", length=255)
      */
-    private $roles;
-
-    public function __construct()
-    {
-        $this->roles = array('ROLE_USER');
-    }
+    private $roles = ['ROLE_USER'];
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -165,7 +160,7 @@ class User implements UserInterface
         return array_unique($roles);
     }
 
-    public function setRoles(array $roles): self
+    public function setRoles(string $roles): self
     {
         $this->roles = $roles;
 

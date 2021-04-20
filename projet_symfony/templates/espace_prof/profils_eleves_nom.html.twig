@@ -7,8 +7,8 @@
         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Trier par
             <span class="caret"></span></button>
         <ul class="dropdown-menu">
-            <li><a href="/profils_eleves_prenom">Prénom</a></li>
-            <li><a href="/profils_eleves_nom">Nom</a></li>
+            <li><a href="/espace_prof/profils_eleves_prenom">Prénom</a></li>
+            <li><a href="/espace_prof/profils_eleves_nom">Nom</a></li>
         </ul>
     </div>
 
@@ -16,11 +16,15 @@
 
     {% for profil in profils | sort((a, b) => a.nom <=> b.nom) %}
 
-        <br>
-        <div class="jumbotron">
-            <b>Prenom :</b> {{profil.prenom}} <br> <b>Nom :</b> {{profil.nom}} <br> <b>Email :</b> {{profil.email}}
-            <br> <b>Adresse :</b> {{profil.adresse}} <br> <b>Numéro de téléphone :</b> {{profil.numerotel}}
-        </div>
+        {% if profil.roles == ["ROLE_USER"] %}
+
+            <br>
+            <div class="jumbotron">
+                <b>Prenom :</b> {{profil.prenom}} <br> <b>Nom :</b> {{profil.nom}} <br> <b>Email :</b> {{profil.email}}
+                <br> <b>Adresse :</b> {{profil.adresse}} <br> <b>Numéro de téléphone :</b> {{profil.numerotel}}
+            </div>
+
+        {% endif %}
 
     {% endfor %}
 

@@ -21,7 +21,7 @@ class espaceProfController extends AbstractController
         return $this->render('./espace_prof/espace_prof.html.twig');
     }
 
-    #[Route('/profils_eleves', name: 'profils_eleves')]
+    #[Route('/espace_prof/profils_eleves', name: 'profils_eleves')]
     public function profils(UserRepository $userRepository): Response
     {
         $profils = $this->getDoctrine()->getRepository(User::class)->findAll();
@@ -29,7 +29,7 @@ class espaceProfController extends AbstractController
         return $this->render('./espace_prof/profils_eleves.html.twig', ['profils' => $profils]);
     }
 
-    #[Route('/profils_eleves_prenom', name: 'profils_eleves_prenom')]
+    #[Route('/espace_prof/profils_eleves_prenom', name: 'profils_eleves_prenom')]
     public function profilsPrenom(UserRepository $userRepository): Response
     {
         $profils = $this->getDoctrine()->getRepository(User::class)->findAll();
@@ -37,7 +37,7 @@ class espaceProfController extends AbstractController
         return $this->render('./espace_prof/profils_eleves_prenom.html.twig', ['profils' => $profils]);
     }
 
-    #[Route('/profils_eleves_nom', name: 'profils_eleves_nom')]
+    #[Route('/espace_prof/profils_eleves_nom', name: 'profils_eleves_nom')]
     public function profilsNom(UserRepository $userRepository): Response
     {
         $profils = $this->getDoctrine()->getRepository(User::class)->findAll();
