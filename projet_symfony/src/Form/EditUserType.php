@@ -4,12 +4,13 @@ namespace App\Form;
 
 use App\Entity\User;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class EditUserType extends AbstractType
 {
@@ -36,8 +37,13 @@ class EditUserType extends AbstractType
             'required'=>true,
             'attr' => ['class'=>'form-control'],])
             
+            ->add($builder->create('roles', ChoiceType::class, array(
+                'multiple'=>true,
+                'expanded'=>true,
+                'choices'=> array('ROLE_ADMIN' => 'ROLE_ADMIN', 'ROLE_USER'=>'ROLE_USER')
+            ))
+            )
             
-            ->add('roles', TextType::class)
             ->add('Valider', SubmitType::class)
             ;
     }

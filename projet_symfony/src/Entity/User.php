@@ -54,7 +54,12 @@ class User implements UserInterface
     /**
      * @ORM\Column(type="simple_array", length=255)
      */
-    private $roles = [];
+    private $roles;
+
+    public function __construct()
+    {
+        $this->roles = array('ROLE_USER');
+    }
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -153,7 +158,6 @@ class User implements UserInterface
     {   
         
         $roles = $this->roles;
-        $roles[] = 'ROLE_USER';
         // guarantee every user at least has ROLE_USER
         
 
@@ -161,7 +165,7 @@ class User implements UserInterface
         return array_unique($roles);
     }
 
-    public function setRoles(string $roles): self
+    public function setRoles(array $roles): self
     {
         $this->roles = $roles;
 
