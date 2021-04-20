@@ -20,7 +20,7 @@ class RegistrationType extends AbstractType
             ->add('prenom')
             ->add('adresse')
             ->add('numero_tel')
-            ->add('situation_scolaire')
+            ->add('situationscolaire')
             ->add('roles')
             ->add('password', PasswordType::class)
             ->add('confirm_password', PasswordType::class)

@@ -52,9 +52,9 @@ class User implements UserInterface
     private $situation_scolaire;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="simple_array", length=255)
      */
-    private $roles;
+    private $roles = [];
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -153,7 +153,7 @@ class User implements UserInterface
     {   
         
         $roles = $this->roles;
-        $roles = array($roles);
+        $roles[] = 'ROLE_USER';
         // guarantee every user at least has ROLE_USER
         
 
