@@ -8,14 +8,19 @@
         <thead>
             <th>ID</th>
             <th>Email</th>
+            <th>Prénom</th>
+            <th>Nom</th>
             <th>Rôles</th>
             <th>Administration</th>
+            <th>Supprimer</th>
         </thead>
         <tbody>
             {% for user in users %}
                 <tr>
                     <td>{{ user.id }}</td>
                     <td>{{ user.email }}</td>
+                    <td>{{user.nom}}</td>
+                    <td>{{user.prenom}}</td>
                     <td>
                         {% for role in user.roles %}
                             {% if role == "ROLE_USER" %}
@@ -27,8 +32,8 @@
                             {% endif %}
                         {% endfor %}
                     </td>
-
-                    <td><a href="{{ path('admin_modifier_utilisateur', {'id': user.id}) }}">Modifier</a></td>
+                    <td><a href="{{ path('admin_modifier_utilisateur', {'id': user.id}) }}" class="btn btn-outline-success">Modifier</a></td>
+                    <td><a onclick="return confirm('Êtes-vous sûrs de vouloir supprimer cet utilisateur ?')" href="{{ path('admin_supprimer_utilisateur', {'id': user.id}) }}" class="btn btn-outline-danger">Supprimer</a></td>
                 </tr>
                 
             {% else %}

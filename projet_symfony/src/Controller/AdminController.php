@@ -13,18 +13,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class AdminController extends AbstractController
 {
-    /**
-     * @IsGranted("ROLE_ADMIN")
-     */
-    #[Route('/admin', name: 'admin')]
-    public function index(): Response
-    {
-        return $this->render('admin/index.html.twig', [
-            'controller_name' => 'AdminController',
-        ]);
-    }
-
-    #[Route("/admin/utilisateurs", name: "admin_utilisateurs")]
+    #[Route("/espace_prof/utilisateurs", name: "admin_utilisateurs")]
     public function usersList(UserRepository $users)
     {
     return $this->render('admin/users.html.twig', [
@@ -32,7 +21,7 @@ class AdminController extends AbstractController
     ]);
     }
 
-    #[Route("/admin/utilisateurs/modifier/{id}", name: "admin_modifier_utilisateur")]
+    #[Route("/espace_prof/utilisateurs/modifier/{id}", name: "admin_modifier_utilisateur")]
     public function editUser(User $user, Request $request){
         $form = $this->createForm(EditUserType::class, $user);
         $form->handleRequest($request);
@@ -51,4 +40,17 @@ class AdminController extends AbstractController
         ]);
     }
 
+    /**
+     * @param User $user
+     * @return RedirectResponse
+     */
+    #[Route("/espace_prof/utilisateurs/supprimer/{id}", name: "admin_supprimer_utilisateur")]
+    public function supprimer_utilisateur(User $user)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($user);
+        $em->flush();
+
+        return $this->redirectToRoute("admin_utilisateurs");
+    }
 }
