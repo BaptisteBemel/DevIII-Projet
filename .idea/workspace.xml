@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8ff665c-929c-4fab-be3f-184eeed1395a" name="Default Changelist" comment="ajout img background">
+    <list default="true" id="f8ff665c-929c-4fab-be3f-184eeed1395a" name="Default Changelist" comment="Première amélioration du rendu glogal du site (home, inscription, connexion, espace élève)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/public/img/tableau.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/src/Form/EditProfileType.php" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/src/Form/EditProfileType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/templates/Security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/templates/Security/login.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/templates/Security/registration.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/templates/Security/registration.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/templates/espace_eleve/espace_eleve.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/templates/espace_eleve/espace_eleve.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/templates/espace_eleve/modif_mdp.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/templates/espace_eleve/modif_mdp.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/templates/espace_eleve/modif_prof.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/templates/espace_eleve/modif_prof.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projet_symfony/templates/main_crontroller/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/templates/main_crontroller/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projet_symfony/templates/profil_eleve/profil_eleve.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/templates/profil_eleve/profil_eleve.html.twig" afterDir="false" />
     </list>
@@ -266,7 +259,7 @@
       <workItem from="1618998513818" duration="1000" />
       <workItem from="1619009049526" duration="2000" />
       <workItem from="1619038925103" duration="410000" />
-      <workItem from="1619422763574" duration="6079000" />
+      <workItem from="1619422763574" duration="7150000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1612622288257</created>
@@ -380,7 +373,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619039328867</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Première amélioration du rendu glogal du site (home, inscription, connexion, espace élève)">
+      <created>1619428974777</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1619428974777</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -425,7 +425,8 @@
     <MESSAGE value="erreur avec la connexion et l'inscription corrigées" />
     <MESSAGE value="erreur avec la connexion et l'inscription corrigées v2" />
     <MESSAGE value="ajout img background" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajout img background" />
+    <MESSAGE value="Première amélioration du rendu glogal du site (home, inscription, connexion, espace élève)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Première amélioration du rendu glogal du site (home, inscription, connexion, espace élève)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
