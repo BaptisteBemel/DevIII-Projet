@@ -20,7 +20,7 @@ class EditProfileType extends AbstractType
             ->add('adresse', TextType::class, ["attr"=>["class"=>"form-control"]])
             ->add('numero_tel', TextType::class, ["attr"=>["class"=>"form-control"]])
             ->add('situationscolaire', TextareaType::class, ["attr"=>["class"=>"form-control"]])
-            ->add('valider', SubmitType::class, ["attr"=>["class"=>"btn btn-success"]])
+            ->add('valider', SubmitType::class, ["attr"=>["class"=>"btn btn-primary"]])
         ;
     }
 
