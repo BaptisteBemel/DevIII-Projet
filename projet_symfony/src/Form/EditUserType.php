@@ -44,7 +44,8 @@ class EditUserType extends AbstractType
                 'multiple' => true,
                 'label' => "Rôles (Veuillez ne sélectionner qu'un rôle !"
             ])
-            ->add('Valider', SubmitType::class)
+            ->add('Valider', SubmitType::class, [
+                'attr' => ['class'=>'btn btn-primary'],])
             ;
     }
 
