@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8ff665c-929c-4fab-be3f-184eeed1395a" name="Default Changelist" comment="Première amélioration du rendu glogal du site (home, inscription, connexion, espace élève)">
+    <list default="true" id="f8ff665c-929c-4fab-be3f-184eeed1395a" name="Default Changelist" comment="suite de l'amélioration du rendu glogal du site (espace prof)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/src/Form/EditUserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/src/Form/EditUserType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/templates/admin/edit_user.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/templates/admin/edit_user.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/templates/admin/users.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/templates/admin/users.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/templates/espace_eleve/espace_eleve.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/templates/espace_eleve/espace_eleve.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/templates/espace_prof/espace_prof.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/templates/espace_prof/espace_prof.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projet_symfony/templates/espace_prof/profils_eleves.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/templates/espace_prof/profils_eleves.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projet_symfony/templates/espace_prof/profils_eleves_nom.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/templates/espace_prof/profils_eleves_nom.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projet_symfony/templates/espace_prof/profils_eleves_prenom.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/templates/espace_prof/profils_eleves_prenom.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/templates/profil_eleve/profil_eleve.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/templates/profil_eleve/profil_eleve.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -267,7 +261,7 @@
       <workItem from="1619009049526" duration="2000" />
       <workItem from="1619038925103" duration="410000" />
       <workItem from="1619422763574" duration="7380000" />
-      <workItem from="1619511781226" duration="6557000" />
+      <workItem from="1619511781226" duration="10609000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1612622288257</created>
@@ -395,7 +389,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619430083702</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="suite de l'amélioration du rendu glogal du site (espace prof)">
+      <created>1619518514193</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1619518514193</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -441,7 +442,8 @@
     <MESSAGE value="erreur avec la connexion et l'inscription corrigées v2" />
     <MESSAGE value="ajout img background" />
     <MESSAGE value="Première amélioration du rendu glogal du site (home, inscription, connexion, espace élève)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Première amélioration du rendu glogal du site (home, inscription, connexion, espace élève)" />
+    <MESSAGE value="suite de l'amélioration du rendu glogal du site (espace prof)" />
+    <option name="LAST_COMMIT_MESSAGE" value="suite de l'amélioration du rendu glogal du site (espace prof)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
