@@ -37,7 +37,7 @@ class Calendrier
         return $this->dateRdv;
     }
 
-    public function setDateRdv(\DateTime $dateRdv): self
+    public function setDateRdv(\DateTimeInterface $dateRdv): self
     {
         $this->dateRdv = $dateRdv;
 

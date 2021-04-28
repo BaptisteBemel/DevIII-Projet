@@ -34,10 +34,6 @@ class ApiController extends AbstractController
         $this->manager = $manager;
         $this->calendrierRepository = $calendrierRepository;
     }*/
-
-    /**
-     * @Route("/api/ctrl", name="calendrier", methods={"GET"})
-     */
 /*
      public function index2()
      {

@@ -21,7 +21,7 @@ class TestController extends AbstractController
     }
 
     /**
-     * @Route("/api/ctrl", name="calendrier", methods={"GET"})
+     * @Route("/api/ctrl", name="api_calendrier", methods={"GET"})
      */
 
      public function index2()

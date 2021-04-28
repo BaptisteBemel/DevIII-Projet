@@ -18,7 +18,7 @@ class CalendrierController extends AbstractController{
     public function calendrier(Request $request, EntityManagerInterface $manager): Response
     {
         return $this->render('./calendrier/calendrier.html.twig', [
-            'controller_name' => 'calendrierController',
+            'controller_name' => 'calendrierController'
         ]);
     }    
 }
