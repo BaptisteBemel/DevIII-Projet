@@ -26,10 +26,16 @@ class ApiController extends AbstractController
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
     /**
      * @Route("/api/main.css", name="api_css")  
+=======
+
+    /**
+     * @Route("/api/main.css", name="api_css", methods={"GET"})  
+>>>>>>> parent of 2d67b37 ( Changes to be committed:)
 =======
 
     /**
@@ -50,7 +56,10 @@ class ApiController extends AbstractController
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 060c043016cd766857fa17122c9b19a9a4673282
+=======
+>>>>>>> parent of 2d67b37 ( Changes to be committed:)
 =======
 >>>>>>> parent of 2d67b37 ( Changes to be committed:)
 =======
