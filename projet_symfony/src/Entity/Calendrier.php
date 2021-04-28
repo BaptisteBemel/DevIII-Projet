@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use Symfony\Component\Validator\Constraints as Assert;
 use App\Repository\CalendrierRepository;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -36,7 +37,7 @@ class Calendrier
         return $this->dateRdv;
     }
 
-    public function setDateRdv(\DateTimeInterface $dateRdv): self
+    public function setDateRdv(\DateTime $dateRdv): self
     {
         $this->dateRdv = $dateRdv;
 
@@ -78,9 +79,9 @@ class Calendrier
 
         return $this;
     }
-
+    
     public function toArray()
     {
-        return ['dateRdv' => $this->DateRdv];
+        return ['dateRdv' => $this->dateRdv, 'matiere' => $this->matiere, 'status' => $this->status, 'id' => $this->id];
     }
 }
