@@ -9,6 +9,7 @@ use Exception;
 use App\Entity\Disponibilites;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use App\Repository\DisponibilitesRepository;
+use App\Entity\Calendrier;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
@@ -31,7 +32,7 @@ class TestController extends AbstractController
      * @Route("/api/ctrl", name="api_calendrier", methods={"GET"})
      */
 
-     public function index2()
+     public function index2(Request $request): Response
      {
         $todos = $this->calendrierRepository->findAll();
 

@@ -46,3 +46,7 @@ section div.sectionMail {
     display: block;
     text-align: center;
 }
+
+div#calendrierAffichage table {
+    text-align: center;
+}
