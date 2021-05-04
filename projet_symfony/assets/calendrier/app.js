@@ -15,19 +15,16 @@ import '../bootstrap';
 import "../comments/comments.js"
 
 import React from 'react';
+import PostApiDispo from './component/PostApiDispo'
 import ReactDOM from 'react-dom';
 
 
 function App(){
     return (
-        <div>
-            <button onClick={toto}>Ajouter des disponibilites</button>
+        <div className='container'>
+            <PostApiDispo />
         </div>
     )
-}
-
-function toto(){
-    console.log('titi');
 }
 
 export default App
