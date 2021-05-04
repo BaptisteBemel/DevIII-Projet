@@ -13,7 +13,8 @@ class Calendrier
 {
     /**
      * @ORM\Id
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="string")
+     * @var \DateTime
      */
     private $dateRdv;
 
@@ -32,12 +33,15 @@ class Calendrier
      */
     private $id;
 
-    public function getDateRdv(): ?\DateTimeInterface
+    /**
+     * @return \DateTime
+     */
+    public function getDateRdv(): ?\DateTime
     {
-        return $this->dateRdv;
+        return \DateTime::createFromFormat("Y-m-d|", $this->$dateRdv);
     }
 
-    public function setDateRdv(\DateTimeInterface $dateRdv): self
+    public function setDateRdv(\DateTime $dateRdv): self
     {
         $this->dateRdv = $dateRdv;
 
@@ -82,6 +86,6 @@ class Calendrier
     
     public function toArray()
     {
-        return ['dateRdv' => $this->dateRdv, 'matiere' => $this->matiere, 'status' => $this->status, 'id' => $this->id];
+        return ['dateRdv' => $this->dateRdv, 'matiere' => $this->matiere, 'statut' => $this->statut, 'id' => $this->id];
     }
 }

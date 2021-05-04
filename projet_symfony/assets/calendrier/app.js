@@ -17,17 +17,25 @@ import "../comments/comments.js"
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+function gid(id) {
+    return document.getElementById(id);
+}
 
 function App(){
     return (
         <div>
-            <button onClick={toto}>Ajouter des disponibilites</button>
+            <button onClick={testApi}>Ajouter des disponibilites</button>
         </div>
     )
 }
 
-function toto(){
-    console.log('titi');
-}
-
 export default App
+
+function testApi() {
+    let xhr = new XMLHttpRequest();
+    xhr.open("get", '/api/ctrl', true);
+    xhr.onload = function x() {
+        console.log(xhr.responseText);
+    }
+    xhr.send();
+}
