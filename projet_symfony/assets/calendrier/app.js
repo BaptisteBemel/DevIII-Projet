@@ -15,6 +15,7 @@ import '../bootstrap';
 import "../comments/comments.js"
 
 import React from 'react';
+import PostApiDispo from './component/PostApiDispo'
 import ReactDOM from 'react-dom';
 
 function gid(id) {
@@ -23,19 +24,10 @@ function gid(id) {
 
 function App(){
     return (
-        <div>
-            <button onClick={testApi}>Ajouter des disponibilites</button>
+        <div className='container'>
+            <PostApiDispo />
         </div>
     )
 }
 
 export default App
-
-function testApi() {
-    let xhr = new XMLHttpRequest();
-    xhr.open("get", '/api/ctrl', true);
-    xhr.onload = function x() {
-        console.log(xhr.responseText);
-    }
-    xhr.send();
-}
