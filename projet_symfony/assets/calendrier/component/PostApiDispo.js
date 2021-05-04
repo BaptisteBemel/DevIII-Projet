@@ -7,7 +7,7 @@ class PostApiDispo extends Component {
     
         this.state = {
              date_rdv: '',
-             status: 'libre'
+             statut: 'libre'
         }
     }
 
@@ -18,7 +18,15 @@ class PostApiDispo extends Component {
     submitHandler = e => {
         e.preventDefault()
         console.log(this.state)
-        axios.post()
+        axios.post('/api/dispo/post', this.state)
+        .then(response => {
+            console.log(response);
+            let data = new Array();
+            data.push(this.sate)
+        })
+        .catch(error => {
+            console.log(error)
+        })
     }
     
     render() {
@@ -33,4 +41,3 @@ class PostApiDispo extends Component {
 }
 
 export default PostApiDispo
-

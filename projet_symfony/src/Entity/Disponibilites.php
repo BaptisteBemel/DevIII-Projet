@@ -12,6 +12,7 @@ class Disponibilites
 {
     /**
      * @ORM\Id
+     * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
      */
     private $idDispo;
@@ -24,7 +25,7 @@ class Disponibilites
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $statut;
+    private $statut = 'libre';
 
     public function getIdDispo(): ?int
     {
