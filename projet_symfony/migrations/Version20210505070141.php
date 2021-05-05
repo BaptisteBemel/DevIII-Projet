@@ -10,22 +10,22 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20210413161910 extends AbstractMigration
+final class Version20210505070141 extends AbstractMigration
 {
-    public function getDescription() : string
+    public function getDescription(): string
     {
         return '';
     }
 
-    public function up(Schema $schema) : void
+    public function up(Schema $schema): void
     {
         // this up() migration is auto-generated, please modify it to your needs
-        $this->addSql('ALTER TABLE user ADD roles VARCHAR(255) NOT NULL');
+        $this->addSql('ALTER TABLE calendrier CHANGE date_rdv date_rdv VARCHAR(255) NOT NULL');
     }
 
-    public function down(Schema $schema) : void
+    public function down(Schema $schema): void
     {
         // this down() migration is auto-generated, please modify it to your needs
-        $this->addSql('ALTER TABLE user DROP roles');
+        $this->addSql('ALTER TABLE calendrier CHANGE date_rdv date_rdv DATETIME NOT NULL');
     }
 }

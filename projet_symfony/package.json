@@ -32,6 +32,8 @@
         "axentix": "^1.1.0",
         "axios": "^0.21.1",
         "bootstrap": "^5.0.0-beta3",
+        "ext-json": "^1.0.1",
+        "fetch": "^1.1.0",
         "react-router-dom": "^5.2.0",
         "yarn": "^1.22.10"
     }

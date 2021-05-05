@@ -18,11 +18,6 @@ import React from 'react';
 import PostApiDispo from './component/PostApiDispo';
 import ReactDOM from 'react-dom';
 
-
-function GID(id) {
-    return document.getElementById(id);
-}
-
 function App(){
     return (
         <div className='container'>
@@ -87,6 +82,11 @@ ReactDOM.render(
 let objetJSON;
 */
 
+/**
+function GID(id) {
+    return document.getElementById(id);
+}
+
 function getData() {
     let xhr = new XMLHttpRequest();
     xhr.open("get", "/api/ctrl", true);
@@ -100,3 +100,4 @@ function getData() {
     xhr.send();
 }
 getData();
+*/
