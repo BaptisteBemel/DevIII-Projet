@@ -18,7 +18,8 @@ class Disponibilites
     private $idDispo;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="string")
+     * @var \DateTime
      */
     private $dateRdv;
 
@@ -44,10 +45,12 @@ class Disponibilites
         return $this->dateRdv;
     }
 
-    public function setDateRdv(\DateTimeInterface $dateRdv): self
+    /**
+     * @return \DateTime
+     */
+    public function setDateRdv(\DateTime $dateRdv): self
     {
         $this->dateRdv = $dateRdv;
-
         return $this;
     }
 
@@ -61,5 +64,10 @@ class Disponibilites
         $this->statut = $statut;
 
         return $this;
+    }
+
+    public function toArray()
+    {
+        return ['dateRdv' => $this->dateRdv, 'statut' => $this->statut];
     }
 }

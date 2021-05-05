@@ -53,16 +53,16 @@ class TestController extends AbstractController
       public function create(Request $request)
       {
           $content = json_decode($request->getContent());
-          
+
           $dispo = new Disponibilites();
 
-          $dispo->setName($content->name); //setname error
+          $dispo->setDateRdv($content);
 
           try {
             $this->entityManager->persist($dispo);
             $this->entityManager->flush();
             return $this->json([
-                'todo' => $dispo->toArray(),
+                'dispo' => $dispo->toArray(),
             ]);
           } catch (Exception $exception) {
               //error
