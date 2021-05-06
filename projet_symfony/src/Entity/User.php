@@ -7,9 +7,12 @@ use App\Repository\UserRepository;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints\NotBlank;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
+ * 
+ * @UniqueEntity("email", message="Cette adresse mail est déjà utilisée !")
  */
 class User implements UserInterface
 {
@@ -28,21 +31,31 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length(min="3", max="30", minMessage="Votre nom est trop court => {{ limit }} lettres.", maxMessage="Votre nom est trop long => {{ limit }} lettres.")
+     * @Assert\Regex(pattern="/\d/", match=false, message="Votre prénom ne peut contenir de chiffre !")
      */
     private $nom;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Regex(pattern="/\d/", match=false, message="Votre prénom ne peut contenir de chiffre !")
+     * @Assert\Length(min="3", max="30", minMessage="Votre nom est trop court {{ limit }} lettres.", maxMessage="Votre nom est trop long => {{ limit }} lettres.")
      */
     private $prenom;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Regex(pattern="/\w/", message="Votre adresse n'est pas valide !")
+     * @Assert\Regex(pattern="/\d/", message="Votre adresse n'est pas valide !")
+     * @Assert\Length(min="3", max="30", minMessage="Votre nom est trop court => {{ limit }} lettres.", maxMessage="Votre nom est trop long => {{ limit }} lettres.")
      */
     private $adresse;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Regex(pattern="/^\d/", message="Votre numéro ne peut contenir que des chiffres !")
+     * @Assert\Regex(pattern="/\d$/", message="Votre numéro ne peut contenir que des chiffres !")
+     * @Assert\Length(min="10", minMessage="Votre numéro doit comporter 10 numéros !")
      */
     private $numero_tel;
 
