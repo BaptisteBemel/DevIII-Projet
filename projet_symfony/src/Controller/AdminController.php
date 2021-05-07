@@ -53,4 +53,9 @@ class AdminController extends AbstractController
 
         return $this->redirectToRoute("admin_utilisateurs");
     }
+
+    #[Route("/espace_prof/administration_site", name: "administration_site")]
+    public function adminSite(){
+        return $this->render('./admin/edit_site.html.twig');
+    }
 }

@@ -43,4 +43,14 @@ class commentaireController extends AbstractController{
             'utilisateur'=>$user
         ]);
     }
+
+    #[Route("/commentaires/supprimer/{id}", name: "admin_supprimer_commentaire")]
+    public function supprimer_commentaire(Comment $comment)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($comment);
+        $em->flush();
+
+        return $this->redirectToRoute("commentaires");
+    }
 }

@@ -31,12 +31,17 @@
         <div class="comments">
             {% for comment in commentaires %}
             <div class="row"; style="margin-top: 4%"; "margin-bottom": "4%" "margin-right": "10%"; "margin-left":"10%">
-                <div class="col" style="border-bottom: solid black">
+                <div class="col" style="border-bottom: solid #DCDCDC">
                     <h5>{{comment.author}} (<small>{{comment.createdAt | date('d/m/Y à H:i', 'Europe/Brussels')}}</small>)</h5>
                 </div>
-                <div class="col" style="border-bottom: solid black">
+                <div class="col" style="border-bottom: solid #DCDCDC">
                     <h5>{{comment.content | raw}}</h5>
                 </div>
+                {% if is_granted("ROLE_ADMIN") %}
+                    <div class="col" style="border-bottom: solid #DCDCDC">
+                        <a type="button" class="btn btn-danger" href="{{ path('admin_supprimer_commentaire', {'id': comment.id})}}" onclick="return confirm('Êtes-vous sûrs de vouloir supprimer ce commentaire ?')">Supprimer</a>
+                    </div>
+                {% endif %}
             </div>
             {% endfor %}
         </div>
