@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8ff665c-929c-4fab-be3f-184eeed1395a" name="Default Changelist" comment="suite de l'amélioration du rendu glogal du site (espace prof)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/templates/espace_prof/profils_eleves.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/templates/espace_prof/profils_eleves.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/templates/espace_prof/profils_eleves_nom.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/templates/espace_prof/profils_eleves_nom.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/templates/espace_prof/profils_eleves_prenom.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/templates/espace_prof/profils_eleves_prenom.html.twig" afterDir="false" />
-    </list>
+    <list default="true" id="f8ff665c-929c-4fab-be3f-184eeed1395a" name="Default Changelist" comment="suite de l'amélioration du rendu glogal du site (espace prof)" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -262,6 +257,7 @@
       <workItem from="1619038925103" duration="410000" />
       <workItem from="1619422763574" duration="7380000" />
       <workItem from="1619511781226" duration="10609000" />
+      <workItem from="1620333413312" duration="222000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1612622288257</created>
@@ -396,7 +392,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619518514193</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Testing + barre des tâches responsive">
+      <created>1620333623174</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1620333623174</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -443,7 +446,8 @@
     <MESSAGE value="ajout img background" />
     <MESSAGE value="Première amélioration du rendu glogal du site (home, inscription, connexion, espace élève)" />
     <MESSAGE value="suite de l'amélioration du rendu glogal du site (espace prof)" />
-    <option name="LAST_COMMIT_MESSAGE" value="suite de l'amélioration du rendu glogal du site (espace prof)" />
+    <MESSAGE value="Testing + barre des tâches responsive" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testing + barre des tâches responsive" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\User;
 use App\Entity\Comment;
 use App\Form\CommentType;
 use Doctrine\ORM\EntityManagerInterface;
@@ -19,6 +20,7 @@ class commentaireController extends AbstractController{
     //#[Route('/commentaires', name: 'commentaires')]
     public function comment(Request $request, EntityManagerInterface $manager): Response
     {   
+        $user = new User();
         $comment = new Comment();
         $form = $this->createForm(CommentType::class, $comment);
 
@@ -26,7 +28,7 @@ class commentaireController extends AbstractController{
 
         if($form->isSubmitted() && $form->isValid()){
             $comment->setCreatedAt(new \DateTime());
- 
+
             $manager->persist($comment);
             $manager->flush();
 
@@ -37,7 +39,8 @@ class commentaireController extends AbstractController{
 
         return $this->render("commentaires/commentaires.html.twig", [
             'commentForm'=>$form->createView(),
-            'commentaires'=>$commentaires
+            'commentaires'=>$commentaires,
+            'utilisateur'=>$user
         ]);
     }
 }

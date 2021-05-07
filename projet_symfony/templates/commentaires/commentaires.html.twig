@@ -2,41 +2,51 @@
 
 
 {% block body %}
-    <div class="jumbotron">
-        <h1 class="display-3">Espace commentaires</h1>
-        <p class="lead">Déposez un commentaire, avis, recommandation sur les cours de M.Vanzeveren.</p>
-        <hr class="my-4">
-        <p>Veuillez prendre bonne note des règles de commantaires ci-dessous.</p>
-        <p class="lead">
-            <a class="btn btn-primary btn-lg" href="#" role="button">Règles</a>
-        </p>
+    <div style="margin-right: 10%; margin-left: 10%">
+        <div class="jumbotron">
+            <h1 class="display-3">Espace commentaires</h1>
+            <p class="lead">Déposez un commentaire, avis, recommandation sur les cours de M.Vanzeveren.</p>
+            <hr class="my-4">
+            <p>Veuillez rester polis et courtois dans cette section, sans quoi votre commentaire sera supprimée.</p>
+        {% if not app.user %}
+        <section id="ajout_commentaires">
+            <h4>Vous devez vous connecter afin d'ajouter un commentaire !</h4>
+            <a href="{{path('security_login')}}" class="btn btn-primary">Connnexion</a>
+        </section>
+        </div>
     </div>
-    <section id="liste_commentaires">
+        
+
+        {% else %}
+            <section>
+                    {{form_start(commentForm)}}
+                    {{form_row(commentForm.author, {'attr': {'placeholder': 'Votre nom et prénom',  'label': 'Auteur'}})}}
+                    {{form_row(commentForm.content, {'attr': {'placeholder': 'Votre commentaire...', 'label': 'Contenu'}})}}
+
+                    <button type='submit' class='btn btn-success'>Envoyer commentaire</button>
+                    {{form_end(commentForm)}}
+            </section>
+        {% endif %}
+        </div>
         <div class="comments">
             {% for comment in commentaires %}
-            <div class="row">
-                <div class="col">
-                    {{comment.author}} (<small>{{comment.createdAt | date('d/m/Y à H:i')}}</small>)
+            <div class="row"; style="margin-top: 4%"; "margin-bottom": "4%" "margin-right": "10%"; "margin-left":"10%">
+                <div class="col" style="border-bottom: solid black">
+                    <h5>{{comment.author}} (<small>{{comment.createdAt | date('d/m/Y à H:i', 'Europe/Brussels')}}</small>)</h5>
                 </div>
-                <div class="col">
-                    {{comment.content | raw}}
+                <div class="col" style="border-bottom: solid black">
+                    <h5>{{comment.content | raw}}</h5>
                 </div>
             </div>
+            {% endfor %}
         </div>
-        {% endfor %}
-    </section>
-    {% if app.user %}
-    <section id="ajout_commentaires">
-        {{form_start(commentForm)}}
-        {{form_row(commentForm.author, {'attr': {'placeholder': 'Votre nom et prénom'}})}}
-        {{form_row(commentForm.content, {'attr': {'placeholder': 'Votre commentaire...'}})}}
-
-        <button type='submit' class='btn btn-success'>Envoyer commentaire</button>
-        {{form_end(commentForm)}}
-    </section>
-
-    {% else %}
-        <h2>Vous devez vous connecter afin d'ajouter un commentaire !</h2>
-        <a href="{{path('security_login')}}" class="btn btn-primary">Connnexion</a>
-    {% endif %}
+            
+        </section>
+        <script>
+            var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-toogle="popover"]'));
+            var popoverList = popoverTriggerList.map(function(popoverTigger)
+            {
+                return new bootstrap.Popover( popoverTigger);
+            });
+        </script>
 {% endblock %}
