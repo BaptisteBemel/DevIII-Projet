@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8ff665c-929c-4fab-be3f-184eeed1395a" name="Default Changelist" comment="suite de l'amélioration du rendu glogal du site (espace prof)" />
+    <list default="true" id="f8ff665c-929c-4fab-be3f-184eeed1395a" name="Default Changelist" comment="suite de l'amélioration du rendu glogal du site (espace prof)">
+      <change beforePath="$PROJECT_DIR$/.idea/DevIII-Projet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DevIII-Projet.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -153,6 +157,57 @@
       <path value="$PROJECT_DIR$/projet_symfony/vendor/symfony/google-mailer" />
       <path value="$PROJECT_DIR$/projet_symfony/vendor/symfonycasts/verify-email-bundle" />
       <path value="$PROJECT_DIR$/projet_symfony/vendor/symfony/webpack-encore-bundle" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/amphp/amp" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/amphp/hpack" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/amphp/sync" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/amphp/http-client" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/amphp/dns" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/amphp/cache" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/amphp/parser" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/amphp/windows-registry" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/amphp/serialization" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/amphp/http" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/amphp/socket" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/amphp/process" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/amphp/byte-stream" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/limenius/react-bundle" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/limenius/react-renderer" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/doctrine/deprecations" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/kelunik/certificate" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/nacmartin/phpexecjs" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/dama/doctrine-test-bundle" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/phpunit/php-invoker" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/daverandom/libdns" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/sebastian/code-unit" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/league/uri" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/league/uri-interfaces" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/league/uri-parser" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/phar-io/version" />
     </include_path>
   </component>
   <component name="ProjectId" id="1o70ERPrY0NakaPLXSas54IPV58" />
@@ -258,6 +313,7 @@
       <workItem from="1619422763574" duration="7380000" />
       <workItem from="1619511781226" duration="10609000" />
       <workItem from="1620333413312" duration="222000" />
+      <workItem from="1620394405579" duration="1315000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1612622288257</created>
@@ -399,7 +455,21 @@
       <option name="project" value="LOCAL" />
       <updated>1620333623174</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="MAJ section commentaires">
+      <created>1620394425304</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1620394425304</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Administration section commentaires">
+      <created>1620397578301</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1620397578301</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -447,7 +517,9 @@
     <MESSAGE value="Première amélioration du rendu glogal du site (home, inscription, connexion, espace élève)" />
     <MESSAGE value="suite de l'amélioration du rendu glogal du site (espace prof)" />
     <MESSAGE value="Testing + barre des tâches responsive" />
-    <option name="LAST_COMMIT_MESSAGE" value="Testing + barre des tâches responsive" />
+    <MESSAGE value="MAJ section commentaires" />
+    <MESSAGE value="Administration section commentaires" />
+    <option name="LAST_COMMIT_MESSAGE" value="Administration section commentaires" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

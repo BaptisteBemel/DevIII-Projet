@@ -1,0 +1,26 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <body style="background-color: rgba(0,0,0,0.15)">
+        <h1 class="display-4" style="text-align: center; margin-right: 20%; margin-left: 20%; margin-top: 1%">Administration du site</h1>
+        <div class="row" style="text-align: center; margin-right: 20%; margin-left: 20%; margin-top: 1%">
+            <div class="col-sm-6" style="padding: 3%">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Gestion Section Commentaires</h4>
+                        <p class="card-text">Gérez les commentaires de votre site.</p>
+                        <a href="/commentaires" class="btn btn-primary" role="button">Commentaires</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6" style="padding: 3%">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Gestion Section FAQ</h4>
+                        <p class="card-text">Répondez à vos questions ou supprimez-en.</p>
+                        <a href="/commentaires" class="btn btn-primary" role="button">Administration élèves</a>
+                    </div>
+                </div>
+            </div>
+    </body>
+{% endblock %}
