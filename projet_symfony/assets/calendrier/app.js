@@ -82,7 +82,7 @@ ReactDOM.render(
 let objetJSON;
 */
 
-/**
+
 function GID(id) {
     return document.getElementById(id);
 }
@@ -100,4 +100,3 @@ function getData() {
     xhr.send();
 }
 getData();
-*/
