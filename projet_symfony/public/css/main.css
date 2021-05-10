@@ -63,6 +63,7 @@ section div.sectionMail {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 2d67b37 ( Changes to be committed:)
 =======
 >>>>>>> parent of 2d67b37 ( Changes to be committed:)
@@ -70,4 +71,10 @@ section div.sectionMail {
 >>>>>>> parent of 2d67b37 ( Changes to be committed:)
 =======
 >>>>>>> b809d8e20de3b0827d6e2df09b987fc747a6943b
+=======
+}
+
+div#calendrierAffichage table {
+    text-align: center;
+>>>>>>> 8c3259f2f982443e4d701a111c2ce2fc7f401ab3
 }

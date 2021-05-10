@@ -4,12 +4,12 @@
         "@babel/plugin-syntax-jsx": "^7.12.13",
         "@babel/plugin-transform-react-jsx": "^7.13.12",
         "@babel/plugin-transform-react-jsx-self": "^7.12.13",
-        "@babel/preset-react": "^7.0.0",
-        "@symfony/stimulus-bridge": "^2.0.0",
-        "@symfony/webpack-encore": "^1.1.2",
+        "@babel/preset-react": "^7.13.13",
+        "@symfony/stimulus-bridge": "^2.1.0",
+        "@symfony/webpack-encore": "^1.2.0",
         "babel-cli": "^6.26.0",
         "babel-core": "^6.26.3",
-        "core-js": "^3.0.0",
+        "core-js": "^3.12.1",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
         "react-on-rails": "^12.2.0",
@@ -29,8 +29,11 @@
         "start": "http-server"
     },
     "dependencies": {
-        "axentix": "^1.1.0",
-        "bootstrap": "^5.0.0-beta3",
+        "axentix": "^1.2.1",
+        "axios": "^0.21.1",
+        "bootstrap": "^5.0.0",
+        "ext-json": "^1.0.1",
+        "fetch": "^1.1.0",
         "react-router-dom": "^5.2.0",
         "yarn": "^1.22.10"
     }
