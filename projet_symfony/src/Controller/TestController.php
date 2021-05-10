@@ -6,10 +6,11 @@ use App\Repository\CalendrierRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use App\Repository\UserRepository;
 use Exception;
-use App\Entity\Disponibilites;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use App\Repository\DisponibilitesRepository;
 use App\Entity\Calendrier;
+use Doctrine\ORM\EntityManager;
+use Doctrine\ORM\Mapping\Entity;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
@@ -17,16 +18,23 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class TestController extends AbstractController
 {
-    private $manager;
-    private $calendrierRepository;
-    private $disponibilitesRepository;
 
-    public function __construct(EntityManagerInterface $manager, CalendrierRepository $calendrierRepository, DisponibilitesRepository $disponibilitesRepository)
+    private $calendrierRepository;
+    public $name;
+
+
+    public function __construct(EntityManagerInterface $manager,EntityManagerInterface $entityManager, CalendrierRepository $calendrierRepository)
     {
+        $this->entityManager = $entityManager;
         $this->manager = $manager;
         $this->calendrierRepository = $calendrierRepository;
-        $this->disponibilitesRepository = $disponibilitesRepository;
     }
+
+    /**
+    *    public function __toString() {
+    *        return (string) $this->name;
+    *    }
+    */
 
     /**
      * @Route("/api/ctrl", name="api_calendrier", methods={"GET"})
@@ -52,20 +60,22 @@ class TestController extends AbstractController
 
       public function create(Request $request)
       {
-          $content = json_decode($request->getContent());
+        $content = json_decode($request->getContent());
 
-          $dispo = new Disponibilites();
+        $dispo = new Calendrier();
 
-          $dispo->setDateRdv($content);
+        $dispo->setDateRdv($content);
 
-          try {
+        try {
             $this->entityManager->persist($dispo);
             $this->entityManager->flush();
             return $this->json([
                 'dispo' => $dispo->toArray(),
             ]);
-          } catch (Exception $exception) {
-              //error
-          }
+        } catch (Exception $exception) {
+            return $this->json([
+                $exception
+            ]);
+        }
       }
 }
