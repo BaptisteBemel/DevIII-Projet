@@ -20,17 +20,7 @@ class RegistrationType extends AbstractType
             ->add('prenom')
             ->add('adresse')
             ->add('numero_tel')
-            ->add('situation_scolaire')
-            ->add('roles', ChoiceType::class, [
-                'choices' => [
-                    'Utilisateur' => ["ROLE_USER"],
-                    'Editeur' => ["ROLE_EDITOR"],
-                    'Administrateur' => ["ROLE_ADMIN"]
-                ],
-                'expanded'=>true,
-                'label'=>'Rôles',
-                'mapped'=>false
-            ])
+            ->add('situationscolaire')
             ->add('password', PasswordType::class)
             ->add('confirm_password', PasswordType::class)
         ;

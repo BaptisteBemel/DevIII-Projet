@@ -16,7 +16,7 @@ class messages extends React.Component {
         let listMail = [];
         for(let i = 0; i < numberOfMail; i++) {
            listMail.push(React.createElement("button",
-        { className: "mailButton" },
+        { className: "mailButton", id: i },
         i));
         }
         return listMail;
@@ -46,3 +46,6 @@ ReactDOM.render(React.createElement(messages), mail);
 
 let contenu = gid("mailContenu");
 ReactDOM.render(mailContenu, contenu);
+
+//console.log('Test Symfony !')
+

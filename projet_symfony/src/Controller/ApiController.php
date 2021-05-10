@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Repository\CalendrierRepository;
+use Doctrine\ORM\EntityManagerInterface;
 use App\Repository\UserRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -27,7 +29,37 @@ class ApiController extends AbstractController
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+    /*
+    private $manager;
+    private $calendrierRepository;
+
+    public function __construct(EntityManagerInterface $manager, CalendrierRepository $calendrierRepository)
+    {
+        $this->manager = $manager;
+        $this->calendrierRepository = $calendrierRepository;
+    }*/
+/*
+     public function index2()
+     {
+        $todos = $this->calendrierRepository->findAll();
+
+        $arraysoftodos = [];
+
+        foreach ($todos as $todo) {
+            $arraysoftodos[] = $todo->toArray();
+        }
+        return $this->render(json($arraysoftodos));
+     }*/
+
+    /**
+     * @Route("/api/main.css", name="api_css", methods={"GET"})  
+     */
+}
+/*
+>>>>>>> b809d8e20de3b0827d6e2df09b987fc747a6943b
 
     /**
      * @Route("/api/main.css", name="api_css")  
@@ -40,6 +72,7 @@ class ApiController extends AbstractController
 
     /**
      * @Route("/api/main.css", name="api_css", methods={"GET"})  
+<<<<<<< HEAD
 >>>>>>> parent of 2d67b37 ( Changes to be committed:)
 =======
 
@@ -47,6 +80,9 @@ class ApiController extends AbstractController
      * @Route("/api/main.css", name="api_css", methods={"GET"})  
 >>>>>>> parent of 2d67b37 ( Changes to be committed:)
      */
+=======
+     *//*
+>>>>>>> b809d8e20de3b0827d6e2df09b987fc747a6943b
 
     public function css(): Response
     {
@@ -57,6 +93,7 @@ class ApiController extends AbstractController
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 060c043016cd766857fa17122c9b19a9a4673282
 =======
 >>>>>>> parent of 2d67b37 ( Changes to be committed:)
@@ -64,4 +101,8 @@ class ApiController extends AbstractController
 >>>>>>> parent of 2d67b37 ( Changes to be committed:)
 =======
 >>>>>>> parent of 2d67b37 ( Changes to be committed:)
+=======
+>>>>>>> b809d8e20de3b0827d6e2df09b987fc747a6943b
 }
+*/
+?>

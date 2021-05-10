@@ -5,4 +5,4 @@ class CommentsElement extends HTMLElement {
     }
 }
 
-customElements.define('post-comments', 'CommentsElement')
+// Uncaught TypeError: Failed to execute 'define' on 'CustomElementRegistry': parameter 2 is not of type 'Function'.

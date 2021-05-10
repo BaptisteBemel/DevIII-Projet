@@ -7,6 +7,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Validator\Constraints\Json;
 use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -38,16 +39,13 @@ class EditUserType extends AbstractType
             
             
             ->add('roles', ChoiceType::class, [
-                'choices' => [
-                    'Utilisateur' => ["ROLE_USER"],
-                    'Editeur' => ["ROLE_EDITOR"],
-                    'Administrateur' => ["ROLE_ADMIN"]
-                ],
-                'expanded'=>true,
-                'label'=>'Rôles',
-                'mapped'=>false
+                'choices' => ['Administateur' => 'ROLE_ADMIN', 'Utilisateur' => 'ROLE_USER'],
+                'expanded' => true,
+                'multiple' => true,
+                'label' => "Rôles (Veuillez ne sélectionner qu'un rôle !"
             ])
-            ->add('Valider', SubmitType::class)
+            ->add('Valider', SubmitType::class, [
+                'attr' => ['class'=>'btn btn-primary'],])
             ;
     }
 

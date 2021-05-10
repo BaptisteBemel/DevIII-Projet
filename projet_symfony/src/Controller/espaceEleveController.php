@@ -27,13 +27,13 @@ class espaceEleveController extends AbstractController
 
     #[Route('/espace_eleve/profil_eleve/modif_profil', name: 'modif_profil')]
     public function edit_profil(Request $request): Response
-    {
+    {   
         $user = $this->getUser();
         $form = $this->createForm(EditProfileType::class, $user);
 
         $form->handleRequest($request);
 
-        if($form->isSubmitted() && $form->isValid()){
+        if($form->isSubmitted()){
             $em = $this->getDoctrine()->getManager();
             $em->persist($user);
             $em->flush();
@@ -50,7 +50,7 @@ class espaceEleveController extends AbstractController
     #[Route('/espace_eleve/profil_eleve/modif_mdp', name: 'modif_mdp')]
     public function edit_mdp(Request $request, UserPasswordEncoderInterface $passwordEncoder)
     {
-        if($request->isMethod('POST')){
+        if($request->isMethod('post')){
             $em = $this->getDoctrine()->getManager();
 
             $user = $this->getUser();

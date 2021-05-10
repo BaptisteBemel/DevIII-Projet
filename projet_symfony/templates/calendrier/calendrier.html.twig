@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Votre Calendrier{% endblock %}
+
+{% block javascripts %}
+    <script src="../assets/app.js" type="text/babel"></script>
+    {{ encore_entry_script_tags('app') }}
+{% endblock %}
+
+{% block body %}
+    <div id="root" class="jumbotron">
+    </div>
+{% endblock %}
