@@ -18,7 +18,7 @@ import React from 'react';
 import PostApiDispo from './component/PostApiDispo';
 import ReactDOM from 'react-dom';
 
-function App(){
+const App = () => {
     return (
         <div className='container'>
             <PostApiDispo />
@@ -27,61 +27,6 @@ function App(){
 }
 
 export default App;
-/*
-class TakeData extends React.Component {
-    objetJSON = [];
-
-    getData() {
-        let xhr = new XMLHttpRequest();
-        xhr.open("get", "/api/ctrl", true);
-        xhr.onload = function get() {
-            console.log("get");
-            let temp = JSON.parse(xhr.responseText);
-            return temp;
-        }
-        xhr.send();
-    }
-    
-    PutData() {
-        console.log("put");
-        let temp2 = this.getData();
-        console.log(temp2);
-        let listBalise = [];
-        for(let objet of temp2) {
-            listBalise.push(
-                <tr>
-                    <td>
-                        {objet["dateRdv"]}
-                    </td>
-                    <td>
-                        12:00
-                    </td>
-                    <td>
-                        {objet['matiere']}
-                    </td>
-                    <td>
-                        {objet['statut']}
-                    </td>
-                </tr>
-            )
-        }
-        return listBalise;
-    }
-
-    render() {
-        console.log("return");
-        return this.PutData();
-    }
-}
-
-ReactDOM.render(
-    <TakeData/>,
-    GID("tableAffichage"));
-
-
-let objetJSON;
-*/
-
 
 function GID(id) {
     return document.getElementById(id);
@@ -99,4 +44,3 @@ function getData() {
     }
     xhr.send();
 }
-getData();

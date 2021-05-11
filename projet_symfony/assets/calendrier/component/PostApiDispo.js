@@ -22,7 +22,7 @@ class PostApiDispo extends Component {
             .then(response => {
                 console.log(response);
                 let data = new Array();
-                data.push(this.sate)
+                data.push(this.state)
             })
             .catch(error => {
                 console.log(error)
@@ -35,18 +35,6 @@ class PostApiDispo extends Component {
             <div>
                 <input type="datetime-local" name="date_rdv" value={date_rdv} onChange={this.changeHandler} />
                 <button onClick={this.submitHandler}>Ajouter des disponibilites</button>
-                <div id="calendrierAffichage">
-                <table class="table" id="tableAffichage">
-                    <tr>
-                        <td scope="col">Date</td>
-                        <td>Heure</td>
-                        <td>Cours</td>
-                        <td>Status</td>
-                    </tr>
-                    <div>
-                    </div>
-                </table>
-                </div>
             </div>
         )
     }

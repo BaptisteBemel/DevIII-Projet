@@ -6,6 +6,8 @@ use Symfony\Component\Validator\Constraints as Assert;
 use App\Repository\CalendrierRepository;
 use Doctrine\ORM\Mapping as ORM;
 
+use function Amp\Iterator\toArray;
+
 /**
  * @ORM\Entity(repositoryClass=CalendrierRepository::class)
  */
@@ -19,32 +21,35 @@ class Calendrier
     private $dateRdv;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $matiere;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $statut;
+    private $statut = 'libre';
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\OneToOne(targetEntity="App\Entity\User", inversedBy="calendrier")
+     * @ORM\JoinColumn(name="id", referencedColumnName="id", nullable=true)
      */
-    private $id;
+    private $id = null;
 
     /**
      * @return \DateTime
      */
     public function getDateRdv(): ?\DateTime
     {
-        return \DateTime::createFromFormat("Y-m-d|", $this->$dateRdv);
+        return \DateTime::createFromFormat("Y-m-d|", $this->dateRdv);
     }
 
-    public function setDateRdv(\DateTime $dateRdv): self
+    /**
+     * @return \DateTime
+     */
+    public function setDateRdv(\stdClass $dateRdv): self
     {
-        $this->dateRdv = $dateRdv;
-
+        $this->dateRdv = date("Y-m-d H:i:s", strtotime($dateRdv->date_rdv));
         return $this;
     }
 
@@ -77,7 +82,7 @@ class Calendrier
         return $this->id;
     }
 
-    public function setId(string $statut): self
+    public function setId(string $statut, $id): self
     {
         $this->id = $id;
 
