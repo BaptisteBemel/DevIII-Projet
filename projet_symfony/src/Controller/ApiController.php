@@ -25,13 +25,6 @@ class ApiController extends AbstractController
             'controller_name' => 'ApiController',
         ]);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
     /*
     private $manager;
     private $calendrierRepository;
@@ -80,9 +73,7 @@ class ApiController extends AbstractController
      * @Route("/api/main.css", name="api_css", methods={"GET"})  
 >>>>>>> parent of 2d67b37 ( Changes to be committed:)
      */
-=======
-     *//*
->>>>>>> b809d8e20de3b0827d6e2df09b987fc747a6943b
+    /*
 
     public function css(): Response
     {
@@ -90,19 +81,6 @@ class ApiController extends AbstractController
             'controller_name' => 'ApiCSSController',
         ]);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 060c043016cd766857fa17122c9b19a9a4673282
-=======
->>>>>>> parent of 2d67b37 ( Changes to be committed:)
-=======
->>>>>>> parent of 2d67b37 ( Changes to be committed:)
-=======
->>>>>>> parent of 2d67b37 ( Changes to be committed:)
-=======
->>>>>>> b809d8e20de3b0827d6e2df09b987fc747a6943b
 }
 */
 ?>
