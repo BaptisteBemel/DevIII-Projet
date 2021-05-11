@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import { render } from 'react-dom'
 
-class PostApiDispo extends Component {
+class GetApiDispo extends Component {
     constructor(props) {
         super(props)
 
@@ -17,24 +18,19 @@ class PostApiDispo extends Component {
 
     submitHandler = e => {
         e.preventDefault()
-        axios.post('/api/dispo/post', this.state)
+        axios.get('/api/dispo/get', this.state)
             .then(response => {
-                let data = new Array();
-                data.push(this.state)
-            })
-            .catch(error => {
-                null
+                console.log(response.data)
             })
     }
+
     
     render() {
-        const { date_rdv } = this.state
         return (
             <div>
-                <input type="datetime-local" name="date_rdv" value={date_rdv} onChange={this.changeHandler} />
-                <button onClick={this.submitHandler}>Ajouter des disponibilites</button>
+                <button onClick={this.submitHandler}>Afficher des disponibilites</button>
             </div>
         )
     }
 }
-export default PostApiDispo;
+export default GetApiDispo;

@@ -3,8 +3,9 @@
 {% block title %}Votre Calendrier{% endblock %}
 
 {% block javascripts %}
-    <script src="../assets/app.js" type="text/babel"></script>
-    {{ encore_entry_script_tags('app') }}
+    {% if is_granted("ROLE_ADMIN") %}
+        {{ encore_entry_script_tags('app') }}
+    {% endif %}
 {% endblock %}
 
 {% block body %}
