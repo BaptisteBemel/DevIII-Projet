@@ -2,6 +2,12 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { render } from 'react-dom'
 
+function affichage(données){
+    données.forEach(x => {
+        document.getElementById('trAffichage').innerHTML += '<td>x.dateRdv</td>'
+    })
+}
+
 class GetApiDispo extends Component {
     constructor(props) {
         super(props)
@@ -22,15 +28,28 @@ class GetApiDispo extends Component {
             .then(response => {
                 console.log(response.data)
             })
-    }
+    } //console.log(response.data) affichage(response.data)
 
     
     render() {
         return (
             <div>
-                <button onClick={this.submitHandler}>Afficher des disponibilites</button>
+                <div>
+                    <button onClick={this.submitHandler}>Afficher des disponibilites</button>
+                </div>
             </div>
         )
     }
 }
 export default GetApiDispo;
+
+/*
+<div>
+                    <table>
+                        <thead>
+                            <tr id="trAffichage">
+                                <th>Plages horaire disponibles</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>*/

@@ -42,7 +42,7 @@ class TestController extends AbstractController
 
      public function index2(Request $request): Response
      {
-        $dispos = $this->calendrierRepository->findAll(); //pas findAll, juste find date_rdv where statut == libre
+        $dispos = $this->calendrierRepository->findBy(array('statut'=>'libre'));
 
         $arraysofdispos = [];
 
