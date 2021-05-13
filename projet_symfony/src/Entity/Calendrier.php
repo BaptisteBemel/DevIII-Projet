@@ -91,6 +91,6 @@ class Calendrier
     
     public function toArray()
     {
-        return ['dateRdv' => $this->dateRdv, 'matiere' => $this->matiere, 'statut' => $this->statut, 'id' => $this->id];
+        return ['dateRdv' => $this->dateRdv];
     }
 }

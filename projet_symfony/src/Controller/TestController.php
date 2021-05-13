@@ -37,19 +37,19 @@ class TestController extends AbstractController
     */
 
     /**
-     * @Route("/api/ctrl", name="api_calendrier", methods={"GET"})
+     * @Route("/api/dispo/get", name="api_calendrier", methods={"GET"})
      */
 
      public function index2(Request $request): Response
      {
-        $todos = $this->calendrierRepository->findAll();
+        $dispos = $this->calendrierRepository->findBy(array('statut'=>'libre'));
 
-        $arraysoftodos = [];
+        $arraysofdispos = [];
 
-        foreach ($todos as $todo) {
-            $arraysoftodos[] = $todo->toArray();
+        foreach ($dispos as $dispo) {
+            $arraysofdispos[] = $dispo->toArray();
         }
-        return $this->json($arraysoftodos);
+        return $this->json($arraysofdispos);
      }
 
      /**
