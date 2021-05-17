@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8ff665c-929c-4fab-be3f-184eeed1395a" name="Default Changelist" comment="suite de l'amélioration du rendu glogal du site (espace prof)">
-      <change beforePath="$PROJECT_DIR$/.idea/DevIII-Projet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DevIII-Projet.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_symfony/templates/espace_prof/profils_eleves_prenom.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/templates/espace_prof/profils_eleves_prenom.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_symfony/templates/main_crontroller/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/templates/main_crontroller/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +41,6 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -208,6 +207,7 @@
       <path value="$PROJECT_DIR$/projet_symfony/vendor/league/uri-parser" />
       <path value="$PROJECT_DIR$/projet_symfony/vendor/phar-io/manifest" />
       <path value="$PROJECT_DIR$/projet_symfony/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/google/recaptcha" />
     </include_path>
   </component>
   <component name="ProjectId" id="1o70ERPrY0NakaPLXSas54IPV58" />
