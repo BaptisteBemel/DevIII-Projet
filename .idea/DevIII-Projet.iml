@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/projet_symfony/tests" isTestSource="true" packagePrefix="App\Tests\" />
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/projet_symfony/lib/RecaptchaBundle" isTestSource="false" packagePrefix="Bundle\RecaptchaBundle\" />
       <excludeFolder url="file://$MODULE_DIR$/projet_symfony/vendor/symfony/google-mailer" />
       <excludeFolder url="file://$MODULE_DIR$/projet_symfony/vendor/symfonycasts/verify-email-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/projet_symfony/vendor/symfony/webpack-encore-bundle" />
@@ -60,8 +61,10 @@
       <excludeFolder url="file://$MODULE_DIR$/projet_symfony/vendor/league/uri-parser" />
       <excludeFolder url="file://$MODULE_DIR$/projet_symfony/vendor/phar-io/manifest" />
       <excludeFolder url="file://$MODULE_DIR$/projet_symfony/vendor/phar-io/version" />
+      <excludeFolder url="file://$MODULE_DIR$/projet_symfony/vendor/symfony/apache-pack" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="api" level="application" />
   </component>
 </module>
