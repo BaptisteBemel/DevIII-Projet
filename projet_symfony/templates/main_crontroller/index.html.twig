@@ -1,0 +1,51 @@
+{% extends "base.html.twig" %}
+
+
+{% block body %}
+
+    <!doctype html>
+    <html lang="fr">
+        <head>
+            <meta charset="utf-8">
+            <title>Home</title>
+            <link rel="stylesheet" href="style.css">
+            <script src="script.js"></script>
+        </head>
+        <body background="img/tableau.png"><br><br><br>
+            <div class="card" style="width: 30%; background-color:grey; float: left; margin-left: 10%">
+                <img class="card-img-top" src="img/photo.jpg" alt="photo">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-size: 25px"><b>Emmanuel Vanzeveren</b></h5>
+                    <p class="card-text" style="font-size: 20px"></p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" style="font-size: 17px; display: inline"><img src="img/localisation.png" alt="localisation" width="50" height="40">&ensp; Braine-le-Comte</li>
+                    <li class="list-group-item"  style="font-size: 17px; display: inline"><img src="img/etoile.png" alt="localisation" width="40" height="40">&ensp; Retours et témoignages disponibles</li>
+                    <li class="list-group-item" style="font-size: 17px; display: inline"><img src="img/cours.png" alt="localisation" width="40" height="40">&ensp; Cours à distance et en présentiel</li>
+                </ul>
+            </div>
+            
+            <div class="card" style="width: 40%; background-color:grey; float: right; margin-right: 10%; margin-bottom: 2%">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" style="font-size: 20px">Diplômé en ingénierie chimiste en spécialisation agro alimentaire,
+                     M.Vanzeveren a travaillé en collaboration avec des firmes telles que Perlarome, Puratos, avant de décider de travailler en indépendance.<br><br>
+                     Son domaine de prédilection étant l'agro alimentaire, M.Vanzeveren n'a aucune difficulté à s'étendre dans d'autres secteurs,
+                     en effet le client a également travaillé dans l'éducation comme professeur à la haute école de la HelHa de Braine-le-Comte.
+                    </li>
+                </ul>
+            </div>
+        <div class="card" style="width: 40%; background-color:grey; float: right; margin-right: 10%; margin-bottom: 2%">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item" style="font-size: 20px">
+                    - Cours de mathématiques/Sciences.<br>
+                    - Prise de rendez-vous directement depuis le site.<br>
+                    - Messagerie permettant de communiquer plus simplement avec le professeur.<br>
+                    - Inscrivez-vous et connectez-vous afin de prendre rendez-vous.
+                </li>
+            </ul>
+        </div>
+        </body>
+    </html>
+
+{% endblock %}
+

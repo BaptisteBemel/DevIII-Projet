@@ -4,9 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8ff665c-929c-4fab-be3f-184eeed1395a" name="Default Changelist" comment="2-3 modifs sur le rendu">
+    <list default="true" id="f8ff665c-929c-4fab-be3f-184eeed1395a" name="Default Changelist" comment="suite de l'amélioration du rendu glogal du site (espace prof)">
+      <change afterPath="$PROJECT_DIR$/projet_symfony/Procfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/assets/calendrier/component/GetApiDispo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/config/packages/services.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/lib/RecaptchaBundle/Constraints/Recaptcha.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/lib/RecaptchaBundle/Constraints/RecaptchaValidator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/lib/RecaptchaBundle/RecaptchaBundle.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/lib/RecaptchaBundle/RecaptchaCompilerPass.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/lib/RecaptchaBundle/Resources/views/fields.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/lib/RecaptchaBundle/Type/RecaptchaSubmitType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/public/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/DevIII-Projet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DevIII-Projet.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DevIII-Projet" beforeDir="false" afterPath="$PROJECT_DIR$/DevIII-Projet" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_symfony/assets/calendrier/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/assets/calendrier/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_symfony/assets/calendrier/component/PostApiDispo.js" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/assets/calendrier/component/PostApiDispo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_symfony/assets/calendrier/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/assets/calendrier/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_symfony/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_symfony/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_symfony/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_symfony/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_symfony/src/Controller/ApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/src/Controller/ApiController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_symfony/src/Controller/TestController.php" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/src/Controller/TestController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_symfony/src/Entity/Calendrier.php" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/src/Entity/Calendrier.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_symfony/src/Form/RegistrationType.php" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/src/Form/RegistrationType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_symfony/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_symfony/templates/Security/registration.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/templates/Security/registration.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_symfony/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_symfony/templates/calendrier/calendrier.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/templates/calendrier/calendrier.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_symfony/templates/espace_prof/profils_eleves_prenom.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/templates/espace_prof/profils_eleves_prenom.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_symfony/templates/main_crontroller/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/templates/main_crontroller/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +69,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -91,6 +120,7 @@
       <path value="$PROJECT_DIR$/projet_symfony/vendor/symfony/security-core" />
       <path value="$PROJECT_DIR$/projet_symfony/vendor/symfony/security-bundle" />
       <path value="$PROJECT_DIR$/projet_symfony/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/symfony/proxy-manager-bridge" />
       <path value="$PROJECT_DIR$/projet_symfony/vendor/symfony/property-info" />
       <path value="$PROJECT_DIR$/projet_symfony/vendor/symfony/property-access" />
       <path value="$PROJECT_DIR$/projet_symfony/vendor/symfony/process" />
@@ -208,10 +238,10 @@
       <path value="$PROJECT_DIR$/projet_symfony/vendor/phar-io/version" />
       <path value="$PROJECT_DIR$/projet_symfony/vendor/google/recaptcha" />
       <path value="$PROJECT_DIR$/projet_symfony/vendor/symfony/apache-pack" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/symfony/webpack-encore-pack" />
     </include_path>
   </component>
   <component name="ProjectId" id="1o70ERPrY0NakaPLXSas54IPV58" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -229,9 +259,6 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\louis\Documents\Github\BAC2\code projet dev III\front-end" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\louis\Documents\Github\BAC2\DevIII-Projet\projet_symfony\lib" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.index.php">
@@ -318,10 +345,6 @@
       <workItem from="1619511781226" duration="10609000" />
       <workItem from="1620333413312" duration="222000" />
       <workItem from="1620394405579" duration="1315000" />
-      <workItem from="1621238734487" duration="234000" />
-      <workItem from="1621242143124" duration="4367000" />
-      <workItem from="1621358574369" duration="413000" />
-      <workItem from="1621359045954" duration="1076000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1612622288257</created>
@@ -477,35 +500,7 @@
       <option name="project" value="LOCAL" />
       <updated>1620397578301</updated>
     </task>
-    <task id="LOCAL-00023" summary="2-3 modifs sur le rendu">
-      <created>1621238628871</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1621238628871</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Ajout config pour Heroku mais maintenant probleme de droit d'accès au site">
-      <created>1621358652144</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1621358652144</updated>
-    </task>
-    <task id="LOCAL-00025" summary="réparation des bétises">
-      <created>1621358938609</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1621358938609</updated>
-    </task>
-    <task id="LOCAL-00026" summary="test">
-      <created>1621359115837</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1621359115837</updated>
-    </task>
-    <option name="localTasksCounter" value="27" />
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -536,6 +531,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="test" />
     <MESSAGE value="test commit branch work-on" />
     <MESSAGE value="création projet Symfony" />
     <MESSAGE value="vitrine début création" />
@@ -554,11 +550,7 @@
     <MESSAGE value="Testing + barre des tâches responsive" />
     <MESSAGE value="MAJ section commentaires" />
     <MESSAGE value="Administration section commentaires" />
-    <MESSAGE value="2-3 modifs sur le rendu" />
-    <MESSAGE value="Ajout config pour Heroku mais maintenant probleme de droit d'accès au site" />
-    <MESSAGE value="réparation des bétises" />
-    <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Administration section commentaires" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,0 +1,84 @@
+{% extends "base.html.twig" %}
+
+{% block body %}<br>
+    <body style="background-color: rgba(0,0,0,0.15)">
+        <h1 style="text-align: center">Inscription</h1><br><br>
+
+        {{form_start(form) }}
+        <div  class="container">
+
+            <div class="row">
+
+                <div class="col">
+                <h5>Addresse Mail :</h5>
+                {{ form_row(form.email, {'label': ' ', 'attr':{'placeholder':'exemple@gmail.com',
+                    'class': 'form-control'}})}}<br>
+                </div>
+
+                <div class="col">
+                <h5>Numéro de téléphone  :</h5>
+                {{ form_row(form.numero_tel, {'label': ' ', 'attr':{'placeholder':'0410 10 10 10',
+                    'class': 'form-control'}})}}<br>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col">
+                <h5>Nom :</h5>
+                {{ form_row(form.nom, {'label': ' ', 'attr':{'placeholder':'Schamroth',
+                    'class': 'form-control'}})}}<br>
+                </div>
+
+                <div class="col">
+                    <h5>Prénom  :</h5>
+                    {{ form_row(form.prenom, {'label': ' ', 'attr':{'placeholder':'Arthur',
+                        'class': 'form-control'}})}}<br>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col">
+                    <h5>Adresse : </h5>
+                    {{ form_row(form.adresse, {'label': ' ', 'attr':{'placeholder':'1 rue de l\'exemple 1230 Exemple',
+                        'class': 'form-control'}})}}<br>
+                </div>
+
+                <div class="col">
+                    <h5>Situation Scolaire :</h5>
+                    {{ form_row(form.situationscolaire, {'label': ' ',
+                        'attr':{'placeholder':'Elève en deuxième année en technologie de l\'informatique ...',
+                            'class': 'form-control'}})}}<br>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col">
+                    <h5>Mot de passe :</h5>
+                    {{ form_row(form.password, {'label': ' ', 'attr':{'placeholder':'exemple123',
+                        'class': 'form-control'}})}}<br>
+                </div>
+
+                <div class="col">
+                <h5>Répéter Mot de passe  :</h5>
+                {{ form_row(form.confirm_password, {'label': ' ', 'attr':{'placeholder':'exemple123',
+                    'class': 'form-control'}})}}<br>
+                </div>
+
+            </div>
+
+
+
+            <br>
+            <button type="submit" class="btn btn-success" style="display: block; margin: auto">Inscription</button>
+            <br><br>
+
+        </div>
+    </body>
+    {{form_end(form) }}
+{% endblock %}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {# Run `composer require symfony/webpack-encore-bundle`
+        and uncomment the following Encore helpers to start using Symfony UX #}
+        {% block stylesheets %}
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+            <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </head>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary" style="font-size: 25px;">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    {% if not is_granted('IS_AUTHENTICATED_FULLY') %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="/inscription">Inscription</a>
+                        </li>
+                    {% endif %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/commentaires">Commentaires</a>
+                    </li>  
+                    <li class="nav-item">
+                        <a class="nav-link {{ 
+                            is_granted('ROLE_USER') == false ? 'disabled'}}" href="/espace_eleve">Espace élève</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ 
+                            is_granted('IS_AUTHENTICATED_FULLY') == false ? 'disabled'}}" href="/calendrier">Calendrier</a>
+                    </li>                    
+                    {% if is_granted("ROLE_ADMIN") %}
+                        <a class="nav-link" href="/espace_prof">Espace Prof</a>
+                    {% endif %}
+                </ul>
+                <ul class="navbar-naw ml-auto">
+                    <li class="nav-item">
+                    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                        <a class="nav-link" href="/deconnexion">Se déconnecter</a> 
+                    {% else %}
+                        <a class="nav-link" href="/connexion">Se connecter</a>
+                    {% endif %}
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        {% block body %}{% endblock %}
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+    </header>
+</html>
