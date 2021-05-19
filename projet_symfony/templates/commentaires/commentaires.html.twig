@@ -21,8 +21,8 @@
 		<section>
 			{% set auteur = app.user.nom ~ ' ' ~ app.user.prenom %}
 			{{form_start(commentForm)}}
-			{{form_row(commentForm.author, {'attr': {'placeholder': 'Votre nom et prénom',  'value':auteur, readonly:'readonly'}})}}
-			{{form_row(commentForm.content, {'attr': {'placeholder': 'Votre commentaire...', 'label': 'Contenu'}})}}
+			{{form_row(commentForm.author, {'attr': {placeholder: 'Votre nom et prénom',  'value':auteur, readonly:'readonly', display : 'block'}, label:'Auteur'})}}
+			{{form_row(commentForm.content, {'attr': {placeholder: 'Votre commentaire...', display : 'block'}, label:'Contenu'})}}
 
 			<button type='submit' class='btn btn-success'>Envoyer commentaire</button>
 			{{form_end(commentForm)}}

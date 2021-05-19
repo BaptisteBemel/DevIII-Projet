@@ -105,4 +105,14 @@ class espaceEleveController extends AbstractController
         'messages'=>$messages
     ));
     }
+
+    #[Route("/espace_eleve/messagerie_eleve/supprimer/{id}", name: "messagerie_eleve_supprimer")]
+    public function supprimer_message(Message $message)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($message);
+        $em->flush();
+
+        return $this->redirectToRoute("messagerie_eleve");
+    }
 }

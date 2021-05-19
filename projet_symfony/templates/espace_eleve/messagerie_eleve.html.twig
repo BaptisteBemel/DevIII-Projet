@@ -20,7 +20,7 @@
 				<div class="card" style="width: 18rem col;">
 					<div class="card-body">
 						<h5 class="card-title">Auteur : {{i.auteur}}</h5>
-						<p class="card-text">{{i.contenu}}</p>
+						<p class="card-text">{{i.contenu}}<a onclick="return confirm('Êtes-vous sûrs de vouloir supprimer ce message ?')" href="{{ path('messagerie_eleve_supprimer', {'id': i.id}) }}" class="btn btn-light" style="float : right">Supprimer</a></p>
                     </div>
                 </div>
 			{% endif %}

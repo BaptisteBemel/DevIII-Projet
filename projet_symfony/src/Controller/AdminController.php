@@ -107,4 +107,13 @@ class AdminController extends AbstractController
         'messages'=>$messages
     ));
     }
+    #[Route("/espace_prof/messagerie_prof/supprimer/{id}", name: "messagerie_prof_supprimer")]
+    public function supprimer_message(Message $message)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($message);
+        $em->flush();
+
+        return $this->redirectToRoute("messagerie_prof");
+    }
 }
