@@ -14,6 +14,12 @@ class SecurityControllerTest extends WebTestCase{
         $this->assertSelectorTextContains("h1", "Connexion");
     }
 
+    public function testDisplayRegistration(){
+        $client = static::createClient();
+        $client->request("GET", "/inscription");
+        $this->assertResponseStatusCodeSame(Response::HTTP_OK);
+    }
+
     public function testLoginWithBadCredentials(){
         $client = static::createClient();
         $crawler = $client->request("GET", "/connexion");
