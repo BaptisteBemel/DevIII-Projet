@@ -1,0 +1,53 @@
+{% extends "base.html.twig" %}
+
+
+{% block body %}
+	<div style="margin-right: 10%; margin-left: 10%">
+		<div class="jumbotron">
+			<h1 class="display-3">Espace commentaires</h1>
+			<p class="lead">Déposez un commentaire, avis, recommandation sur les cours de M.Vanzeveren.</p>
+			<hr class="my-4">
+			<p>Veuillez rester polis et courtois dans cette section, sans quoi votre commentaire sera supprimée.</p>
+			{% if not app.user %}
+				<section id="ajout_commentaires">
+					<h4>Vous devez vous connecter afin d'ajouter un commentaire !</h4>
+					<a href="{{path('security_login')}}" class="btn btn-primary">Connnexion</a>
+				</section>
+			</div>
+		</div>
+
+
+	{% else %}
+		<section>
+			{% set auteur = app.user.nom ~ ' ' ~ app.user.prenom %}
+			{{form_start(commentForm)}}
+			{{form_row(commentForm.author, {'attr': {'placeholder': 'Votre nom et prénom',  'value':auteur, readonly:'readonly'}})}}
+			{{form_row(commentForm.content, {'attr': {'placeholder': 'Votre commentaire...', 'label': 'Contenu'}})}}
+
+			<button type='submit' class='btn btn-success'>Envoyer commentaire</button>
+			{{form_end(commentForm)}}
+		</section>
+	{% endif %}
+</div>
+<div class="comments">
+	{% for comment in commentaires %}
+		<div class="row" ; style="margin-top: 4%" ; "margin-bottom" : "4%" "margin-right" : "10%" ; "margin-left" :"10%">
+			<div class="col" style="border-bottom: solid #DCDCDC">
+				<h5>{{comment.author}}
+					(<small>{{comment.createdAt | date('d/m/Y à H:i', 'Europe/Brussels')}}</small>)</h5>
+			</div>
+			<div class="col" style="border-bottom: solid #DCDCDC">
+				<h5>{{comment.content | raw}}</h5>
+			</div>
+			{% if is_granted("ROLE_ADMIN") %}
+				<div class="col" style="border-bottom: solid #DCDCDC">
+					<a type="button" class="btn btn-danger" href="{{ path('admin_supprimer_commentaire', {'id': comment.id})}}" onclick="return confirm('Êtes-vous sûrs de vouloir supprimer ce commentaire ?')">Supprimer</a>
+				</div>
+			{% endif %}
+		</div>
+	{% endfor %}
+</div></section><script>
+var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-toogle="popover"]'));
+var popoverList = popoverTriggerList.map(function (popoverTigger) {
+return new bootstrap.Popover(popoverTigger);
+});</script>{% endblock %}

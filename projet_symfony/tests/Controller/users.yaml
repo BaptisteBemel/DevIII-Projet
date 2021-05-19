@@ -1,0 +1,5 @@
+App\Entity\User:
+  user_user:
+    email: "testing@gmail.com"
+    roles: ["ROLE_USER"]
+    password: "$2y$10$lxkRnTAcBKENIynp1EHSYu2M/jZ5ScZ0.HJQMLIh8p3ZPlXe7oeUi"

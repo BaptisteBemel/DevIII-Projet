@@ -1,0 +1,80 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+div.scrollListMail {
+    width: 300px;
+    height: 675px;
+    overflow-y: auto;
+    border: solid gray 1px;
+    float: left;
+}
+
+div button.mailButton {
+    width: 100%;
+    height: 75px;
+    background-color: white;
+}
+
+div.contentMail {
+    border: solid grey 1px;
+    min-width: 700px;
+    max-width: 1500px;
+    height: 675px;
+    float: left;
+}
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b809d8e20de3b0827d6e2df09b987fc747a6943b
+div.sectionMail {
+    margin: auto;
+    width: 70%;
+    background-color: red;
+    display: block;
+    text-align: center;
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+<<<<<<< HEAD
+>>>>>>> 060c043016cd766857fa17122c9b19a9a4673282
+=======
+=======
+>>>>>>> parent of 2d67b37 ( Changes to be committed:)
+=======
+>>>>>>> parent of 2d67b37 ( Changes to be committed:)
+=======
+}
+
+>>>>>>> b809d8e20de3b0827d6e2df09b987fc747a6943b
+section div.sectionMail {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 2d67b37 ( Changes to be committed:)
+=======
+>>>>>>> parent of 2d67b37 ( Changes to be committed:)
+=======
+>>>>>>> parent of 2d67b37 ( Changes to be committed:)
+=======
+>>>>>>> b809d8e20de3b0827d6e2df09b987fc747a6943b
+=======
+}
+
+div#calendrierAffichage table {
+    text-align: center;
+>>>>>>> 8c3259f2f982443e4d701a111c2ce2fc7f401ab3
+}

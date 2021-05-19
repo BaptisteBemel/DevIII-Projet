@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <body style="background-color: rgba(0,0,0,0.15)">
+        <br>
+        <div>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Trier par
+                <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="/espace_prof/profils_eleves_prenom">Prénom</a></li>
+                <li><a href="/espace_prof/profils_eleves_nom">Nom</a></li>
+            </ul>
+        </div>
+
+        <br>
+
+        {% for profil in profils | sort((a, b) => a.nom <=> b.nom) %}
+
+            {% if profil.roles == ["ROLE_USER"] %}
+                <div class="col-sm-6" style="text-align: center; margin-right: auto; margin-left: auto; margin-top: 1%">
+                    <div id="accordion">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne"
+                                            aria-expanded="false" aria-controls="collapseOne">
+                                        <b>Prenom :</b> {{profil.prenom}} <br> <b>Nom :</b> {{profil.nom}}
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                                 data-parent="#accordion">
+                                <div class="card-body">
+                                    <b>Email :</b> {{profil.email}}
+                                    <br> <b>Adresse :</b> {{profil.adresse}} <br> <b>Numéro de téléphone :</b>
+                                    {{profil.numerotel}}
+                                    <br> <b>Situation Scolaire :</b> {{profil.situationscolaire}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            {% endif %}
+
+        {% endfor %}
+
+        <br><br><br><br><br>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                crossorigin="anonymous"></script>
+    </body>
+{% endblock %}

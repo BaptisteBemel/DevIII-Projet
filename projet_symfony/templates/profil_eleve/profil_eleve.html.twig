@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <body style="background-color: rgba(0,0,0,0.15)">
+        <main class="jumbotron" style="text-align: center; margin-right: 20%; margin-left: 20%; margin-top: 5%">
+            <div class="grix xs7 container">
+                {% for message in app.flashes('message') %}
+                    <div class="col-xs4">
+                        <div class="alert alert-success" role="alert">
+                            {{message}}
+                        </div>
+                    </div>
+                {% endfor %}
+
+                <div class="col-xs6"><h1>Profil de {{app.user.prenom}} {{app.user.nom}} </h1></div>
+                <div class="col-xs5">Nom :&nbsp {{app.user.nom}}</div>
+                <div class="col-xs5">Prénom :&nbsp {{app.user.prenom}}</div>
+                <div class="col-xs5">Adresse Mail :&nbsp {{app.user.email}}</div>
+                <div class="col-xs5">Adresse :&nbsp {{app.user.adresse}}</div>
+                <div class="col-xs5">Situation Scolaire :&nbsp {{app.user.situationscolaire}}</div>
+                <div class="col-xs5">Numéro de Téléphone :&nbsp {{app.user.numerotel}}</div><br>
+                <div class="col-xs5">
+                    <a class="btn btn-primary" href="/espace_eleve/profil_eleve/modif_profil" role="button">Modifier Profil</a>
+                    <a class="btn btn-primary" href="/espace_eleve/profil_eleve/modif_mdp" role="button">Modifier MDP</a>
+                </div>
+
+            </div>
+        </main>
+    </body>
+
+{% endblock %}

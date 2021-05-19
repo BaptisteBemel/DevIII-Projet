@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Espace élève{% endblock %}
+
+{% block body %}
+    <body style="background-color: rgba(0,0,0,0.15)">
+        <div class="jumbotron" style="text-align: center; margin-right: 20%; margin-left: 20%; margin-top: 5%">
+            <h1 class="display-4">Bienvenue</h1><br>
+            <p class="lead">Ceci est votre espace élève, vous retrouverez ici votre profil, vos rendez-vous, ...</p>
+            <hr class="my-4">
+            <p>Veuillez respecter les règles mises en place quant à l'utilisation de cette section.</p><br>
+            <p class="lead">
+                <a class="btn btn-primary btn-lg" href="espace_eleve/profil_eleve" role="button">Voir Profil</a>
+                <a class="btn btn-primary btn-lg" href="espace_eleve/ressources" role="button">Voir Ressources</a>
+                <a class="btn btn-primary btn-lg" href="espace_eleve/messagerie_eleve" role="button">Voir Messagerie</a>
+            </p>
+        </div>
+    </body>
+{% endblock %}

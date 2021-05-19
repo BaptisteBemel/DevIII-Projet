@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Modification de l'utilisateur{% endblock %}
+
+{% block body %}
+    <body style="background-color: rgba(0,0,0,0.15)"><br>
+    <h1 style="text-align: center">Modification de l'utilisateur</h1><br>
+    {{ form(userForm,  {'attr': {'class': 'jumbotron col-sm-6 mx-auto'}}) }}
+    </body>
+{% endblock %}

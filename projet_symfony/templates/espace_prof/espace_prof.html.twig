@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Espace Prof{% endblock %}
+
+{% block body %}
+    <body style="background-color: rgba(0,0,0,0.15)">
+        <h1 class="display-4" style="text-align: center; margin-right: 20%; margin-left: 20%; margin-top: 1%">Espace Prof</h1>
+        <div class="row" style="text-align: center; margin-right: 20%; margin-left: 20%; margin-top: 1%">
+            <div class="col-sm-6" style="padding: 3%">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Profils des élèves</h4>
+                        <p class="card-text">Dans cette section, vous retrouverez toutes les infos concernant les élèves inscrits au cours.</p>
+                        <a href="/espace_prof/profils_eleves" class="btn btn-primary" role="button">Profils des élèves</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6" style="padding: 3%">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Administration élèves</h4>
+                        <p class="card-text">Dans cette section, vous avez la possibilité de "gérer" la liste des
+                            utilisateurs du site (modification des comptes, suppressions de ceux-ci).</p>
+                        <a href="/espace_prof/utilisateurs" class="btn btn-primary" role="button">Administration élèves</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6" style="padding: 3%">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Messagerie</h4>
+                        <p class="card-text">Retrouvez ici tous vos messages.</p>
+                        <a href="/espace_prof/messagerie_prof" class="btn btn-primary" role="button">Messagerie</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6" style="padding: 3%">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Administration Site</h4>
+                        <p class="card-text">Administrer votre site ici.</p>
+                        <a href="/espace_prof/administration_site" class="btn btn-primary" role="button">Administration Site</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6" style="padding: 3%">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Envoi de ressources</h4>
+                        <p class="card-text">Envoyez des documents à vos élèves ici.</p>
+                        <a href="/espace_prof/envoi_fichier" class="btn btn-primary" role="button">Envoi ressources</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+{% endblock %}

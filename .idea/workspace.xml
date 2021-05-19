@@ -4,38 +4,134 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8ff665c-929c-4fab-be3f-184eeed1395a" name="Default Changelist" comment="suite de l'amélioration du rendu glogal du site (espace prof)">
-      <change afterPath="$PROJECT_DIR$/projet_symfony/Procfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projet_symfony/assets/calendrier/component/GetApiDispo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projet_symfony/config/packages/services.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projet_symfony/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projet_symfony/lib/RecaptchaBundle/Constraints/Recaptcha.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projet_symfony/lib/RecaptchaBundle/Constraints/RecaptchaValidator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projet_symfony/lib/RecaptchaBundle/RecaptchaBundle.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projet_symfony/lib/RecaptchaBundle/RecaptchaCompilerPass.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projet_symfony/lib/RecaptchaBundle/Resources/views/fields.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projet_symfony/lib/RecaptchaBundle/Type/RecaptchaSubmitType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projet_symfony/php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projet_symfony/public/.htaccess" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/DevIII-Projet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DevIII-Projet.iml" afterDir="false" />
+    <list default="true" id="f8ff665c-929c-4fab-be3f-184eeed1395a" name="Default Changelist" comment="essai de réparation">
+      <change afterPath="$PROJECT_DIR$/projet_symfony/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/.env.test" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/.idea/commandlinetools/Symfony_25_03_2021_16_05.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/.idea/commandlinetools/schemas/frameworkDescriptionVersion1.1.4.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/.idea/projet_symfony.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/.php-version" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/assets/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/assets/comments/comments.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/assets/controllers.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/assets/controllers/hello_controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/assets/styles/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/bin/console" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/bin/phpunit" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/config/packages/assets.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/config/packages/cache.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/config/packages/dev/debug.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/config/packages/dev/monolog.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/config/packages/dev/web_profiler.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/config/packages/doctrine.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/config/packages/doctrine_migrations.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/config/packages/framework.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/config/packages/mailer.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/config/packages/notifier.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/config/packages/prod/deprecations.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/config/packages/prod/doctrine.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/config/packages/prod/monolog.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/config/packages/prod/routing.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/config/packages/prod/webpack_encore.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/config/packages/routing.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/config/packages/security.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/config/packages/sensio_framework_extra.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/config/packages/test/dama_doctrine_test_bundle.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/config/packages/test/framework.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/config/packages/test/monolog.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/config/packages/test/twig.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/config/packages/test/validator.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/config/packages/test/web_profiler.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/config/packages/test/webpack_encore.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/config/packages/translation.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/config/packages/twig.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/config/packages/validator.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/config/packages/webpack_encore.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/config/preload.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/config/routes.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/config/routes/annotations.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/config/routes/dev/framework.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/config/routes/dev/web_profiler.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/config/services.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/migrations/Version20210510124729.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/migrations/Version20210510135034.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/migrations/Version20210511165129.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/migrations/Version20210513102501.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/phpunit.xml.dist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/public/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/public/img/cours.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/public/img/etoile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/public/img/localisation.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/public/img/photo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/public/img/tableau.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/public/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/public/js/messagerie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/src/Controller/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/src/Controller/Admin/espaceProfController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/src/Controller/AdminController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/src/Controller/CalendrierController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/src/Controller/MainCrontrollerController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/src/Controller/MessagerieController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/src/Controller/SecurityController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/src/Controller/commentaireController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/src/Controller/espaceEleveController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/src/Entity/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/src/Entity/Comment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/src/Entity/Message.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/src/Entity/Upload.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/src/Entity/User.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/src/Entity/Users.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/src/Form/CommentType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/src/Form/EditProfileType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/src/Form/EditUserType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/src/Form/MessageType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/src/Form/UploadType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/src/Kernel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/src/Repository/CalendrierRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/src/Repository/CommentRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/src/Repository/MessageRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/src/Repository/UploadRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/src/Repository/UserRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/src/Repository/UsersRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/src/Security/LoginAuthenticator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/templates/Security/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/templates/Security/login.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/templates/admin/edit_site.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/templates/admin/edit_user.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/templates/admin/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/templates/admin/users.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/templates/api/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/templates/commentaires/commentaires.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/templates/espace_eleve/espace_eleve.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/templates/espace_eleve/messagerie_eleve.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/templates/espace_eleve/modif_mdp.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/templates/espace_eleve/modif_prof.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/templates/espace_eleve/ressources.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/templates/espace_prof/envoi_fichier.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/templates/espace_prof/espace_prof.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/templates/espace_prof/messagerie.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/templates/espace_prof/messagerie_prof.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/templates/espace_prof/profils_eleves.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/templates/espace_prof/profils_eleves_nom.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/templates/faq/faq.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/templates/profil_eleve/profil_eleve.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/tests/Controller/PageControllerTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/tests/Controller/SecurityControllerTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/tests/Controller/users.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/tests/Entity/UserTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/tests/bootstrap.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/translations/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/webpack.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/yarn.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/assets/calendrier/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/assets/calendrier/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/assets/calendrier/component/PostApiDispo.js" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/assets/calendrier/component/PostApiDispo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/assets/calendrier/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/assets/calendrier/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/src/Controller/ApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/src/Controller/ApiController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/src/Controller/TestController.php" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/src/Controller/TestController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/src/Entity/Calendrier.php" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/src/Entity/Calendrier.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/src/Form/RegistrationType.php" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/src/Form/RegistrationType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/templates/Security/registration.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/templates/Security/registration.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/templates/calendrier/calendrier.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/templates/calendrier/calendrier.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/templates/espace_prof/profils_eleves_prenom.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/templates/espace_prof/profils_eleves_prenom.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_symfony/templates/main_crontroller/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/templates/main_crontroller/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DevIII-Projet" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +216,6 @@
       <path value="$PROJECT_DIR$/projet_symfony/vendor/symfony/security-core" />
       <path value="$PROJECT_DIR$/projet_symfony/vendor/symfony/security-bundle" />
       <path value="$PROJECT_DIR$/projet_symfony/vendor/symfony/routing" />
-      <path value="$PROJECT_DIR$/projet_symfony/vendor/symfony/proxy-manager-bridge" />
       <path value="$PROJECT_DIR$/projet_symfony/vendor/symfony/property-info" />
       <path value="$PROJECT_DIR$/projet_symfony/vendor/symfony/property-access" />
       <path value="$PROJECT_DIR$/projet_symfony/vendor/symfony/process" />
@@ -238,6 +333,7 @@
       <path value="$PROJECT_DIR$/projet_symfony/vendor/phar-io/version" />
       <path value="$PROJECT_DIR$/projet_symfony/vendor/google/recaptcha" />
       <path value="$PROJECT_DIR$/projet_symfony/vendor/symfony/apache-pack" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/symfony/proxy-manager-bridge" />
       <path value="$PROJECT_DIR$/projet_symfony/vendor/symfony/webpack-encore-pack" />
     </include_path>
   </component>
@@ -500,7 +596,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620397578301</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="essai de réparation">
+      <created>1621433276072</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1621433276072</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -550,7 +653,8 @@
     <MESSAGE value="Testing + barre des tâches responsive" />
     <MESSAGE value="MAJ section commentaires" />
     <MESSAGE value="Administration section commentaires" />
-    <option name="LAST_COMMIT_MESSAGE" value="Administration section commentaires" />
+    <MESSAGE value="essai de réparation" />
+    <option name="LAST_COMMIT_MESSAGE" value="essai de réparation" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
