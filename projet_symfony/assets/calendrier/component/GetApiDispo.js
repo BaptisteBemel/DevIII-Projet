@@ -2,11 +2,12 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { render } from 'react-dom'
 
+
 function affichage(données){
     document.getElementById('titre').innerHTML = '<th>Plages horaire disponibles</th>';
     document.getElementById('tbAffichage').innerHTML = '';
     données.forEach(x => {
-        document.getElementById('tbAffichage').innerHTML += '<tr>'+ x.dateRdv + '</tr>'
+        document.getElementById('tbAffichage').innerHTML += '<tr>'+ x.dateRdv.substring(0,16) + '</tr>'
     })
 }
 
@@ -30,7 +31,7 @@ class GetApiDispo extends Component {
             .then(response => {
                 affichage(response.data)
             })
-    } //console.log(response.data) affichage(response.data)
+    }
 
     
     render() {
@@ -56,18 +57,3 @@ class GetApiDispo extends Component {
     }
 }
 export default GetApiDispo;
-
-/*
-<div>
-                    <table>
-                        <thead>
-                            <tr id='titre'>
-                                <th>Plages horaire disponibles</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr id="trAffichage">
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>*/

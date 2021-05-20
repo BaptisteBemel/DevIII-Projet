@@ -3,12 +3,16 @@
 {% block title %}Votre Calendrier{% endblock %}
 
 {% block javascripts %}
-    {% if is_granted("ROLE_ADMIN") %}
-        {{ encore_entry_script_tags('app') }}
-    {% endif %}
+    {{ encore_entry_script_tags('app') }}
 {% endblock %}
 
 {% block body %}
-    <div id="root" class="jumbotron">
-    </div>
+    {% if is_granted("ROLE_ADMIN") %}
+        <div id="root" class="jumbotron" data-id="true">
+        </div>
+    {% endif %}
+    {% if not is_granted("ROLE_ADMIN") %}
+        <div id="root" class="jumbotron" data-id="false">
+        </div>
+    {% endif %}
 {% endblock %}

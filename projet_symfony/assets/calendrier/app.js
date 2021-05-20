@@ -20,12 +20,21 @@ import GetApiDispo from './component/GetApiDispo';
 import ReactDOM from 'react-dom';
 
 const App = () => {
-    return (
-        <div className='container'>
-            <PostApiDispo />
-            <GetApiDispo />
-        </div>
-    )
+    if(document.getElementById("root").dataset.id == "true"){
+        return (
+            <div className='container'>
+                <PostApiDispo />
+                <GetApiDispo />
+            </div>
+        )
+    }
+    else{
+        return (
+            <div className='container'>
+                <GetApiDispo />
+            </div>
+        )
+    }
 }
 
 export default App;
