@@ -1,0 +1,17 @@
+{% extends "base.html.twig" %}
+
+
+{% block body %}
+
+    <div style="margin-right: 10%; margin-left: 10%">
+            <div class="jumbotron">
+                <h1 class="display-3">Espace Ressources</h1>
+                <p class="lead">Voici les documents envoyés par M.Vanzeveren.</p>
+            </div>
+    <div>
+        {% for ressource in ressources %}
+            <a href={{ressource.nom}})>oui</p>
+        {% endfor %}
+    </div>
+
+{% endblock %}

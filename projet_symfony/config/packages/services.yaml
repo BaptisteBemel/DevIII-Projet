@@ -1,0 +1,17 @@
+services:
+  recaptcha.type:
+    class: Bundle\RecaptchaBundle\Type\RecaptchaSubmitType
+    tags: ['form.type']
+    arguments:
+      $key: '6Lfsus8aAAAAAAby-LQllfGxfzcUIKpB8IsYQxGE'
+  recaptcha.validator:
+    class: Bundle\RecaptchaBundle\Constraints\RecaptchaValidator
+    tags: ['validator.constraint_validator']
+    autowire: true
+  ReCaptcha\ReCaptcha:
+    class: ReCaptcha\ReCaptcha
+    arguments:
+      $secret: '6Lfsus8aAAAAAFgtiKHqrGPJpJNknl2P5l7KaVy3'
+      $requestMethod: '@ReCaptcha\RequestMethod'
+  ReCaptcha\RequestMethod: '@ReCaptcha\RequestMethod\CurlPost'
+  ReCaptcha\RequestMethod\CurlPost: ~

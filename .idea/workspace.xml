@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8ff665c-929c-4fab-be3f-184eeed1395a" name="Default Changelist" comment="suite de l'amélioration du rendu glogal du site (espace prof)">
-      <change beforePath="$PROJECT_DIR$/.idea/DevIII-Projet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DevIII-Projet.iml" afterDir="false" />
+    <list default="true" id="f8ff665c-929c-4fab-be3f-184eeed1395a" name="Default Changelist" comment="essai de réparation">
+      <change afterPath="$PROJECT_DIR$/projet_symfony/tests/Controller/espaceEleveControllerTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_symfony/tests/Controller/espaceProfControllerTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_symfony/assets/controllers.json" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/assets/controllers.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_symfony/tests/Controller/SecurityControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/projet_symfony/tests/Controller/SecurityControllerTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +95,6 @@
       <path value="$PROJECT_DIR$/projet_symfony/vendor/symfony/security-core" />
       <path value="$PROJECT_DIR$/projet_symfony/vendor/symfony/security-bundle" />
       <path value="$PROJECT_DIR$/projet_symfony/vendor/symfony/routing" />
-      <path value="$PROJECT_DIR$/projet_symfony/vendor/symfony/proxy-manager-bridge" />
       <path value="$PROJECT_DIR$/projet_symfony/vendor/symfony/property-info" />
       <path value="$PROJECT_DIR$/projet_symfony/vendor/symfony/property-access" />
       <path value="$PROJECT_DIR$/projet_symfony/vendor/symfony/process" />
@@ -208,6 +210,9 @@
       <path value="$PROJECT_DIR$/projet_symfony/vendor/league/uri-parser" />
       <path value="$PROJECT_DIR$/projet_symfony/vendor/phar-io/manifest" />
       <path value="$PROJECT_DIR$/projet_symfony/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/google/recaptcha" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/symfony/apache-pack" />
+      <path value="$PROJECT_DIR$/projet_symfony/vendor/symfony/proxy-manager-bridge" />
     </include_path>
   </component>
   <component name="ProjectId" id="1o70ERPrY0NakaPLXSas54IPV58" />
@@ -469,7 +474,21 @@
       <option name="project" value="LOCAL" />
       <updated>1620397578301</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="essai de réparation">
+      <created>1621433276072</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1621433276072</updated>
+    </task>
+    <task id="LOCAL-00024" summary="essai de réparation">
+      <created>1621433865840</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1621433865840</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -519,7 +538,8 @@
     <MESSAGE value="Testing + barre des tâches responsive" />
     <MESSAGE value="MAJ section commentaires" />
     <MESSAGE value="Administration section commentaires" />
-    <option name="LAST_COMMIT_MESSAGE" value="Administration section commentaires" />
+    <MESSAGE value="essai de réparation" />
+    <option name="LAST_COMMIT_MESSAGE" value="essai de réparation" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

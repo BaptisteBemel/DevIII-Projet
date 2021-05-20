@@ -3,6 +3,7 @@
 namespace App\Form;
 
 use App\Entity\User;
+use Bundle\RecaptchaBundle\Type\RecaptchaSubmitType;
 use Doctrine\DBAL\Types\JsonType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -23,6 +24,7 @@ class RegistrationType extends AbstractType
             ->add('situationscolaire')
             ->add('password', PasswordType::class)
             ->add('confirm_password', PasswordType::class)
+
         ;
         
     }

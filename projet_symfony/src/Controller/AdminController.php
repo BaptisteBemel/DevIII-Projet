@@ -3,8 +3,13 @@
 namespace App\Controller;
 
 use App\Entity\User;
+use App\Entity\Upload;
+use App\Entity\Message;
+use App\Form\UploadType;
+use App\Form\MessageType;
 use App\Form\EditUserType;
 use App\Repository\UserRepository;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -57,5 +62,58 @@ class AdminController extends AbstractController
     #[Route("/espace_prof/administration_site", name: "administration_site")]
     public function adminSite(){
         return $this->render('./admin/edit_site.html.twig');
+    }
+
+    #[Route("/espace_prof/envoi_fichier", name: "envoi_fichier")]
+    public function envoi_fichiers(Request $request, EntityManagerInterface $manager)
+    {
+        $upload = new Upload();
+        $form = $this->createForm(UploadType::class, $upload);
+        
+        $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid()){
+            $manager->persist($upload);
+            $manager->flush();
+
+            return $this->redirectToRoute('espace_prof');
+        }
+
+        return $this->render("./espace_prof/envoi_fichier.html.twig", array(
+            'form'=>$form->createView(),
+        ));
+    }
+
+    #[Route("/espace_prof/messagerie_prof", name: "messagerie_prof")]
+    public function messagerie_prof(Request $request, EntityManagerInterface $manager)
+    {   
+        $message = new Message();
+        $form = $this->createForm(MessageType::class, $message);
+
+        $form->handleRequest($request);
+
+        $messages = $this->getDoctrine()->getRepository(Message::class)->findAll();
+
+        if($form->isSubmitted() && $form->isValid()){
+            $manager->persist($message);
+            $manager->flush();
+
+            return $this->redirectToRoute('espace_prof');
+        }
+
+    return $this->render("./espace_prof/messagerie_prof.html.twig", array(
+        'form'=>$form->createView(),
+        'message'=>$message,
+        'messages'=>$messages
+    ));
+    }
+    #[Route("/espace_prof/messagerie_prof/supprimer/{id}", name: "messagerie_prof_supprimer")]
+    public function supprimer_message(Message $message)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($message);
+        $em->flush();
+
+        return $this->redirectToRoute("messagerie_prof");
     }
 }

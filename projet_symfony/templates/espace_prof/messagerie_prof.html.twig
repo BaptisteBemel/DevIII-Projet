@@ -1,0 +1,29 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+	{% set auteur = app.user.nom ~ ' ' ~ app.user.prenom %}
+	<div class='jumbotron col-sm-6 mx-auto' }}>
+		<h3>Envoyez un message à un élève</h3>
+		{{form_start(form)}}
+		{{form_row(form.Auteur, {'attr': {'value':auteur, readonly:"readonly"}})}}
+		{{form_row(form.Contenu)}}
+		{{form_row(form.Date, {'attr': {'value': message.Date|date("d/m/Y à H:i", "Europe/Paris"), readonly:"readonly"}})}}
+		{{form_row(form.Destinataire)}}
+		<button type='submit' class='btn btn-success'>Envoyer</button>
+		{{form_end(form)}}
+	</div>
+
+	<div class='jumbotron col-sm-6 mx-auto'>
+		<h3>Voici vos messages</h3>
+		{% for i in messages %}
+			{% if i.Destinataire == auteur %}
+				<div class="card" style="width: 18rem col;">
+					<div class="card-body">
+						<h5 class="card-title">Auteur : {{i.auteur}}</h5>
+						<p class="card-text">{{i.contenu}} <a onclick="return confirm('Êtes-vous sûrs de vouloir supprimer ce message ?')" href="{{ path('messagerie_prof_supprimer', {'id': i.id}) }}" class="btn btn-light" style="float : right">Supprimer</a></p>
+                    </div>
+                </div>
+			{% endif %}
+		{% endfor %}
+	</div>
+		{% endblock %}

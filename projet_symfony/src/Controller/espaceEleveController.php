@@ -2,14 +2,18 @@
 
 namespace App\Controller;
 
+use App\Entity\Upload;
+use App\Entity\Message;
+use App\Form\MessageType;
 use App\Form\EditProfileType;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpFoundation\Request;
 
+use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Security\Core\Validator\Constraints\UserPassword;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class espaceEleveController extends AbstractController
 {
@@ -70,4 +74,45 @@ class espaceEleveController extends AbstractController
         return $this->render('./espace_eleve/modif_mdp.html.twig');
     }
 
+    #[Route('/espace_eleve/ressources', name: 'ressources')]
+    public function recup_fichier()
+    {
+        $ressources = $this->getDoctrine()->getRepository(Upload::class)->findAll();
+
+        return $this->render("espace_eleve/ressources.html.twig", [
+            'ressources'=>$ressources]);
+    }
+
+    #[Route('/espace_eleve/messagerie_eleve', name: 'messagerie_eleve')]
+    public function messagerie_eleve(Request $request, EntityManagerInterface $manager){
+        $message = new Message();
+        $form = $this->createForm(MessageType::class, $message);
+
+        $form->handleRequest($request);
+
+        $messages = $this->getDoctrine()->getRepository(Message::class)->findAll();
+
+        if($form->isSubmitted() && $form->isValid()){
+            $manager->persist($message);
+            $manager->flush();
+
+            return $this->redirectToRoute('espace_eleve');
+        }
+
+    return $this->render("./espace_eleve/messagerie_eleve.html.twig", array(
+        'form'=>$form->createView(),
+        'message'=>$message,
+        'messages'=>$messages
+    ));
+    }
+
+    #[Route("/espace_eleve/messagerie_eleve/supprimer/{id}", name: "messagerie_eleve_supprimer")]
+    public function supprimer_message(Message $message)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($message);
+        $em->flush();
+
+        return $this->redirectToRoute("messagerie_eleve");
+    }
 }
