@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\User;
 use App\Repository\CalendrierRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use App\Repository\UserRepository;
@@ -77,5 +78,37 @@ class TestController extends AbstractController
                 $exception
             ]);
         }
+      }
+      /**
+      * @Route("/api/dispo/put", name="api_dispo_eleve_post", methods={"PUT"})
+      * @param Request $request
+      * @return JsonResponse
+      */
+
+      public function inscrire(Request $request)
+      {
+        print("toto1");
+        $content = json_decode($request->getContent());
+
+        //$idUser->getId();
+
+        print("toto");
+
+        $matiere->setMatiere($content->matiere);
+        $statut->setStatut($content->statut);
+        //$date->setId($idUser);
+
+        try {
+            $content;
+            $this->entityManager->flush();
+            
+        } catch (Exception $exception) {
+            return $this->json([
+                $exception
+            ]);
+        }
+        return $this->json([
+                'message' => "La date a été inscrite !",
+            ]);
       }
 }

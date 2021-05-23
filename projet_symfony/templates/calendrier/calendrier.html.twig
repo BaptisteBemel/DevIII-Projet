@@ -10,9 +10,12 @@
     {% if is_granted("ROLE_ADMIN") %}
         <div id="root" class="jumbotron" data-id="true">
         </div>
-    {% endif %}
-    {% if not is_granted("ROLE_ADMIN") %}
+    
+    {% elseif is_granted("ROLE_USER") %}
         <div id="root" class="jumbotron" data-id="false">
         </div>
+    {% endif %}
+    {% if not is_granted("ROLE_ADMIN") and not is_granted("ROLE_USER") %}
+        <a class="nav-link" href="/inscription">Inscription</a>
     {% endif %}
 {% endblock %}

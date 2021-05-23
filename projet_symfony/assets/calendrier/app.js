@@ -17,6 +17,8 @@ import "../comments/comments.js"
 import React from 'react';
 import PostApiDispo from './component/PostApiDispo';
 import GetApiDispo from './component/GetApiDispo';
+import GetDispoEleve from './component/GetDispoEleve';
+import PutDispoEleve from './component/PutDispoEleve';
 import ReactDOM from 'react-dom';
 
 const App = () => {
@@ -31,7 +33,8 @@ const App = () => {
     else{
         return (
             <div className='container'>
-                <GetApiDispo />
+                <GetDispoEleve />
+                <PutDispoEleve />
             </div>
         )
     }
