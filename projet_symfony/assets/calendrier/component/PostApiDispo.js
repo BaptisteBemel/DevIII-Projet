@@ -1,14 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-/**
-function pile(date){
-    if(date.substring(15, 16) == '00' || date.substring(15, 16) == '15' || date.substring(15, 16) == '30' || date.substring(15, 16) == '45'){
-        return true;
-    }
-    else{
-        return
-    }
-}*/
+
 class PostApiDispo extends Component {
     constructor(props) {
         super(props)
