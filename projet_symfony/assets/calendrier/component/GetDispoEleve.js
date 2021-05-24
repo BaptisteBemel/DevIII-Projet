@@ -32,58 +32,6 @@ class GetDispoEleve extends Component {
         gid("tbAffichage").innerHTML += '<tr><td></td></tr><tr><td><input type="radio" name="cours" value="math"> Math</td></tr><tr><td><input type="radio" name="cours" value="sciences"> Sciences</td><tr>';
     }
 
-    /*submitDate() {
-        let messageErreur = gid("messageErreur");
-        let checkboxes = document.querySelectorAll('input[name=date]:checked');
-        let radios = document.querySelectorAll('input[name=cours]:checked');
-        
-        let coursCheck = false;
-        let coursSelect;
-        let dateCheck = false;
-        let dateSelect;
-
-        for(let rad of radios) {
-            if(rad.checked) {
-                coursCheck = true;
-                coursSelect = rad.value;
-                break;
-            }
-        }
-
-        for(let box of checkboxes) {
-            if(box.checked) {
-                dateCheck = true;
-                dateSelect = box.value;
-                break;
-            }
-        }
-        
-        if(!dateSelect) {
-            messageErreur.innerText = "Il n'y a pas de date sélectionné !";
-        }
-        else if(!coursCheck) {
-            messageErreur.innerText = "Il n'y a pas de cours sélectionné !";
-        }
-        else {
-            console.log(dateSelect, coursSelect);
-            messageErreur.innerText = '';
-            //this.changeHandler(dateSelect, "occupé", coursSelect);
-            /*this.setState({
-                [dateRdv]: dateSelect,
-                [statut]: "occupé",
-                [matiere]: coursSelect
-            });//
-            //this.submitHandler(dateSelect, "occupé", coursSelect);
-            let datas = {
-                dateRdv: dateSelect,
-                statut: "occupé",
-                matiere: coursSelect
-            }
-            console.log(this);
-            //this.putDispo(datas);
-        }
-    }*/
-
     changeHandler = (e) => {
         this.setState({ [e.target.name]: e.target.value })
     }
@@ -118,8 +66,6 @@ class GetDispoEleve extends Component {
                             </tr>
                         </tfoot>
                     </table>
-                    <div id="validation">
-                    </div>
                 </div>
             </div>
         )

@@ -10,7 +10,8 @@ class PutDispoEleve extends Component {
         this.state = {
             date_rdv: '',
             statut: 'libre',
-            matiere: ''
+            matiere: '',
+            user: ''
         }
     }
 
@@ -18,6 +19,7 @@ class PutDispoEleve extends Component {
         let messageErreur = gid("messageErreur");
         let checkboxes = document.querySelectorAll('input[name=date]:checked');
         let radios = document.querySelectorAll('input[name=cours]:checked');
+        let userId = parseInt(gid("user").value);
         
         let coursCheck = false;
         let coursSelect;
@@ -48,31 +50,24 @@ class PutDispoEleve extends Component {
         }
         else {
             messageErreur.innerText = '';
-            //this.changeHandler(dateSelect, "occupé", coursSelect);
-            /*this.setState({
-                [dateRdv]: dateSelect,
-                [statut]: "occupé",
-                [matiere]: coursSelect
-            });*/
-            //this.submitHandler(dateSelect, "occupé", coursSelect);
-            let datas = {
-                dateRdv: dateSelect,
-                statut: "occupé",
-                matiere: coursSelect
-            }
-            //this.putDispo(datas);
-            return [dateSelect, "occupé", coursSelect];
+            return [dateSelect, "occupé", coursSelect, userId];
         }
     }
 
     submitHandler = e => {
         var tab = this.submitDate();
-        let date, statut, matiere;
+        let date, statut, matiere, userId;
         date = tab[0];
         statut = tab[1];
         matiere = tab[2];
-        console.log(e.date_rdv);
-        axios.put('/api/dispo/put', this.state)
+        userId = tab[3];
+        let datas = {
+            date_rdv: date,
+            statut: statut,
+            matiere: matiere,
+            id: userId
+        }
+        axios.put('/api/dispo/put/' + date, datas)
             .then(response => {
                 this.setState({
                     date_rdv: date,

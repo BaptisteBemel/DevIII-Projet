@@ -33,6 +33,7 @@ class Calendrier
     /**
      * @ORM\OneToOne(targetEntity="App\Entity\User", inversedBy="calendrier")
      * @ORM\JoinColumn(name="id", referencedColumnName="id", nullable=true)
+     * @ORM\Column(type="string")
      */
     private $id = null;
 
@@ -82,7 +83,7 @@ class Calendrier
         return $this->id;
     }
 
-    public function setId(string $statut, $id): self
+    public function setId($id): self
     {
         $this->id = $id;
 

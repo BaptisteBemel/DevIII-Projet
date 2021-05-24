@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Controller\AdminController;
 use App\Entity\User;
 use App\Repository\CalendrierRepository;
 use Doctrine\ORM\EntityManagerInterface;
@@ -61,7 +62,7 @@ class TestController extends AbstractController
 
       public function create(Request $request)
       {
-        $content = json_decode($request->getContent());
+        $content = json_decode($request->getContent(), true);
 
         $dispo = new Calendrier();
 
@@ -80,26 +81,30 @@ class TestController extends AbstractController
         }
       }
       /**
-      * @Route("/api/dispo/put", name="api_dispo_eleve_post", methods={"PUT"})
+      * @Route("/api/dispo/put/{dateId}", name="api_dispo_eleve_post", methods={"PUT"})
       * @param Request $request
       * @return JsonResponse
       */
 
-      public function inscrire(Request $request)
+      public function inscrire(Request $request, $dateId)
       {
-        print("toto1");
-        $content = json_decode($request->getContent());
+        $content = json_decode($request->getContent(), true);
+        $trueDate = date("Y-m-d H:i:s", strtotime($dateId));
+        
+        $entityManager = $this->getDoctrine()->getManager();
+        $date = $entityManager->getRepository(Calendrier::class)->find($trueDate);
 
-        //$idUser->getId();
-
-        print("toto");
-
-        $matiere->setMatiere($content->matiere);
-        $statut->setStatut($content->statut);
-        //$date->setId($idUser);
+        if (!$date) {
+            throw $this->createNotFoundException(
+                'Pas de date trouvée : '. $trueDate
+            );
+        }
+        
+        $date->setMatiere($content["matiere"]);
+        $date->setStatut($content["statut"]);
+        //$date->setId($content["id"]);
 
         try {
-            $content;
             $this->entityManager->flush();
             
         } catch (Exception $exception) {
