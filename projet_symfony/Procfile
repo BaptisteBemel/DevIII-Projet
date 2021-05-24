@@ -1,1 +1,1 @@
-web: heroku-php-apache2 template/base.html.twig
+web: heroku-php-apache2 public/
