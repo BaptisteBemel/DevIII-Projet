@@ -62,7 +62,7 @@ class TestController extends AbstractController
 
       public function create(Request $request)
       {
-        $content = json_decode($request->getContent(), true);
+        $content = json_decode($request->getContent());
 
         $dispo = new Calendrier();
 

@@ -33,7 +33,6 @@ class Calendrier
     /**
      * @ORM\OneToOne(targetEntity="App\Entity\User", inversedBy="calendrier")
      * @ORM\JoinColumn(name="id", referencedColumnName="id", nullable=true)
-     * @ORM\Column(type="string")
      */
     private $id = null;
 
