@@ -44,13 +44,13 @@ class GetDispoEleve extends Component {
             })
     }
 
+    componentDidMount() {
+        window.addEventListener('load', this.submitHandler);
+    }
     
     render() {
         return (
             <div>
-                <div>
-                    <button onClick={this.submitHandler}>Afficher des disponibilites</button>
-                </div>
                 <div>
                     <table id="tableSelectDate">
                         <thead>
