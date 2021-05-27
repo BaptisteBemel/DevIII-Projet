@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'a3f59997f868d433b95221a2c9065e4483fbaa4a',
+    'reference' => 'aa3d7f16d8d568c1b8ab714185a52e1124dfb213',
     'name' => 'some/name',
   ),
   'versions' => 
@@ -676,8 +676,8 @@
     array (
       'provided' => 
       array (
-        0 => '1.0',
-        1 => '1.0.0',
+        0 => '1.0.0',
+        1 => '1.0',
       ),
     ),
     'psr/simple-cache-implementation' => 
@@ -847,7 +847,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'a3f59997f868d433b95221a2c9065e4483fbaa4a',
+      'reference' => 'aa3d7f16d8d568c1b8ab714185a52e1124dfb213',
     ),
     'symfony/apache-pack' => 
     array (
