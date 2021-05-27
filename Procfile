@@ -1,1 +1,1 @@
-web: heroku-php-apache2 templates/main_crontroller/
+web: vendor/bin/heroku-php-apache2 public/
