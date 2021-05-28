@@ -48,6 +48,7 @@ class espaceEleveController extends AbstractController
 
         return $this->render('./espace_eleve/modif_prof.html.twig', [
             'form' => $form->createView(),
+            'user' =>$user
         ]);
     }
 

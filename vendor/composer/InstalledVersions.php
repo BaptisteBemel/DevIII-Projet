@@ -32,7 +32,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'aa3d7f16d8d568c1b8ab714185a52e1124dfb213',
+    'reference' => '5c2f9e366121e38426d3643e33d17d6e584b4709',
     'name' => 'some/name',
   ),
   'versions' => 
@@ -180,6 +180,15 @@ private static $installed = array (
       array (
       ),
       'reference' => 'e8b6d6593d18ac3a6a14666d8a68a4703b2e05f9',
+    ),
+    'dbrekelmans/bdi' => 
+    array (
+      'pretty_version' => '0.3',
+      'version' => '0.3.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'd94d818ebe20b419a7d9f17dc21e9c66a10b171f',
     ),
     'doctrine/annotations' => 
     array (
@@ -333,6 +342,13 @@ private static $installed = array (
       array (
       ),
       'reference' => 'c81f18a3efb941d8c4d2e025f6183b5c6d697307',
+    ),
+    'facebook/webdriver' => 
+    array (
+      'replaced' => 
+      array (
+        0 => '*',
+      ),
     ),
     'friendsofphp/proxy-manager-lts' => 
     array (
@@ -518,6 +534,15 @@ private static $installed = array (
       array (
         0 => '*',
       ),
+    ),
+    'php-webdriver/webdriver' => 
+    array (
+      'pretty_version' => '1.11.1',
+      'version' => '1.11.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'da16e39968f8dd5cfb7d07eef91dc2b731c69880',
     ),
     'phpdocumentor/reflection-common' => 
     array (
@@ -873,7 +898,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'aa3d7f16d8d568c1b8ab714185a52e1124dfb213',
+      'reference' => '5c2f9e366121e38426d3643e33d17d6e584b4709',
     ),
     'symfony/apache-pack' => 
     array (
@@ -1219,6 +1244,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '5d0f633f9bbfcf7ec642a2b5037268e61b0a62ce',
+    ),
+    'symfony/panther' => 
+    array (
+      'pretty_version' => 'v1.0.1',
+      'version' => '1.0.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'd129434b09c3cf920618471e094c928d3d320df8',
     ),
     'symfony/phpunit-bridge' => 
     array (
