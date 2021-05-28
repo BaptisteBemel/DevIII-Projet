@@ -30,19 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-<<<<<<< HEAD
-    'reference' => '0207f308fc3e4016fe0d15784be1e05c738cc88c',
-=======
-<<<<<<< HEAD
-    'reference' => '5c2f9e366121e38426d3643e33d17d6e584b4709',
-=======
-<<<<<<< HEAD
-    'reference' => '979c64683c434f9e663938efd409834fb4552cfb',
-=======
     'reference' => 'aa3d7f16d8d568c1b8ab714185a52e1124dfb213',
->>>>>>> 5c2f9e366121e38426d3643e33d17d6e584b4709
->>>>>>> 0207f308fc3e4016fe0d15784be1e05c738cc88c
->>>>>>> ac2062b99d5fd9981f955822045d9ef86e49501b
     'name' => 'some/name',
   ),
   'versions' => 
@@ -908,21 +896,8 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-<<<<<<< HEAD
-      'reference' => '0207f308fc3e4016fe0d15784be1e05c738cc88c',
-=======
-<<<<<<< HEAD
-      'reference' => '5c2f9e366121e38426d3643e33d17d6e584b4709',
-=======
-<<<<<<< HEAD
-      'reference' => '979c64683c434f9e663938efd409834fb4552cfb',
-=======
-      'reference' => 'aa3d7f16d8d568c1b8ab714185a52e1124dfb213',
->>>>>>> 5c2f9e366121e38426d3643e33d17d6e584b4709
->>>>>>> 0207f308fc3e4016fe0d15784be1e05c738cc88c
->>>>>>> ac2062b99d5fd9981f955822045d9ef86e49501b
-    ),
-    'symfony/apache-pack' => 
+      'reference' => 'aa3d7f16d8d568c1b8ab714185a52e1124dfb213',),
+      'symfony/apache-pack' => 
     array (
       'pretty_version' => 'v1.0.1',
       'version' => '1.0.1.0',
