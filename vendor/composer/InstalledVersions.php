@@ -20,8 +20,6 @@ use Composer\Semver\VersionParser;
 
 
 
-
-
 class InstalledVersions
 {
 private static $installed = array (
@@ -32,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'aa3d7f16d8d568c1b8ab714185a52e1124dfb213',
+    'reference' => '4b24d78fb1c70e425fb9632c3b2f58811d36c53e',
     'name' => 'some/name',
   ),
   'versions' => 
@@ -180,6 +178,15 @@ private static $installed = array (
       array (
       ),
       'reference' => 'e8b6d6593d18ac3a6a14666d8a68a4703b2e05f9',
+    ),
+    'dbrekelmans/bdi' => 
+    array (
+      'pretty_version' => '0.3',
+      'version' => '0.3.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'd94d818ebe20b419a7d9f17dc21e9c66a10b171f',
     ),
     'doctrine/annotations' => 
     array (
@@ -333,6 +340,13 @@ private static $installed = array (
       array (
       ),
       'reference' => 'c81f18a3efb941d8c4d2e025f6183b5c6d697307',
+    ),
+    'facebook/webdriver' => 
+    array (
+      'replaced' => 
+      array (
+        0 => '*',
+      ),
     ),
     'friendsofphp/proxy-manager-lts' => 
     array (
@@ -518,6 +532,15 @@ private static $installed = array (
       array (
         0 => '*',
       ),
+    ),
+    'php-webdriver/webdriver' => 
+    array (
+      'pretty_version' => '1.11.1',
+      'version' => '1.11.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'da16e39968f8dd5cfb7d07eef91dc2b731c69880',
     ),
     'phpdocumentor/reflection-common' => 
     array (
@@ -873,7 +896,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'aa3d7f16d8d568c1b8ab714185a52e1124dfb213',
+      'reference' => '4b24d78fb1c70e425fb9632c3b2f58811d36c53e',
     ),
     'symfony/apache-pack' => 
     array (
@@ -1220,6 +1243,15 @@ private static $installed = array (
       ),
       'reference' => '5d0f633f9bbfcf7ec642a2b5037268e61b0a62ce',
     ),
+    'symfony/panther' => 
+    array (
+      'pretty_version' => 'v1.0.1',
+      'version' => '1.0.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'd129434b09c3cf920618471e094c928d3d320df8',
+    ),
     'symfony/phpunit-bridge' => 
     array (
       'pretty_version' => 'v5.2.9',
@@ -1543,6 +1575,15 @@ private static $installed = array (
       ),
       'reference' => 'f282fb17ffa4839ba491eb7e3f5ffdd40c86f969',
     ),
+    'symfony/webpack-encore-pack' => 
+    array (
+      'pretty_version' => 'v1.0.2',
+      'version' => '1.0.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'f9f4e91659e5f55de370d6aebe77e64bce35e4d3',
+    ),
     'symfony/yaml' => 
     array (
       'pretty_version' => 'v5.2.9',
@@ -1628,6 +1669,7 @@ $packages = array();
 foreach (self::getInstalled() as $installed) {
 $packages[] = array_keys($installed['versions']);
 }
+
 
 if (1 === \count($packages)) {
 return $packages[0];
@@ -1824,7 +1866,6 @@ self::$installedByVendor = array();
 
 
 
-
 private static function getInstalled()
 {
 if (null === self::$canGetVendors) {
@@ -1834,6 +1875,7 @@ self::$canGetVendors = method_exists('Composer\Autoload\ClassLoader', 'getRegist
 $installed = array();
 
 if (self::$canGetVendors) {
+
 foreach (ClassLoader::getRegisteredLoaders() as $vendorDir => $loader) {
 if (isset(self::$installedByVendor[$vendorDir])) {
 $installed[] = self::$installedByVendor[$vendorDir];
