@@ -981,10 +981,7 @@ class ComposerStaticInit9373bd2066bc58ade4eb3232c34ab208
         'Amp\\WindowsRegistry\\WindowsRegistry' => __DIR__ . '/..' . '/amphp/windows-registry/lib/WindowsRegistry.php',
         'App\\Controller\\AdminController' => __DIR__ . '/../..' . '/src/Controller/AdminController.php',
         'App\\Controller\\Admin\\espaceProfController' => __DIR__ . '/../..' . '/src/Controller/Admin/espaceProfController.php',
-<<<<<<< HEAD
         'App\\Controller\\AjoutDispoGetallPostController' => __DIR__ . '/../..' . '/src/Controller/AjoutDispoGetallPostController.php',
-=======
->>>>>>> ac2062b99d5fd9981f955822045d9ef86e49501b
         'App\\Controller\\CalendrierController' => __DIR__ . '/../..' . '/src/Controller/CalendrierController.php',
         'App\\Controller\\MainCrontrollerController' => __DIR__ . '/../..' . '/src/Controller/MainCrontrollerController.php',
         'App\\Controller\\MessagerieController' => __DIR__ . '/../..' . '/src/Controller/MessagerieController.php',
@@ -1010,10 +1007,6 @@ class ComposerStaticInit9373bd2066bc58ade4eb3232c34ab208
         'App\\Repository\\UploadRepository' => __DIR__ . '/../..' . '/src/Repository/UploadRepository.php',
         'App\\Repository\\UserRepository' => __DIR__ . '/../..' . '/src/Repository/UserRepository.php',
         'App\\Security\\LoginAuthenticator' => __DIR__ . '/../..' . '/src/Security/LoginAuthenticator.php',
-        'App\\Tests\\Controller\\PageControllerTest' => __DIR__ . '/../..' . '/tests/Controller/PageControllerTest.php',
-        'App\\Tests\\Controller\\SecurityControllerTest' => __DIR__ . '/../..' . '/tests/Controller/SecurityControllerTest.php',
-        'App\\Tests\\Controller\\espaceEleveControllerTest' => __DIR__ . '/../..' . '/tests/Controller/espaceEleveControllerTest.php',
-        'App\\Tests\\Controller\\espaceProfControllerTest' => __DIR__ . '/../..' . '/tests/Controller/espaceProfControllerTest.php',
         'App\\Tests\\DB\\UserRepositoryTest' => __DIR__ . '/../..' . '/tests/DB/UserRepositoryTest.php',
         'App\\Tests\\Entity\\CommentTest' => __DIR__ . '/../..' . '/tests/Entity/CommentTest.php',
         'App\\Tests\\Entity\\UserTest' => __DIR__ . '/../..' . '/tests/Entity/UserTest.php',

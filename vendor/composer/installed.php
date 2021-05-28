@@ -6,11 +6,7 @@
     'aliases' => 
     array (
     ),
-<<<<<<< HEAD
-    'reference' => '0207f308fc3e4016fe0d15784be1e05c738cc88c',
-=======
-    'reference' => '5c2f9e366121e38426d3643e33d17d6e584b4709',
->>>>>>> ac2062b99d5fd9981f955822045d9ef86e49501b
+    'reference' => '4b24d78fb1c70e425fb9632c3b2f58811d36c53e',
     'name' => 'some/name',
   ),
   'versions' => 
@@ -876,11 +872,7 @@
       'aliases' => 
       array (
       ),
-<<<<<<< HEAD
-      'reference' => '0207f308fc3e4016fe0d15784be1e05c738cc88c',
-=======
-      'reference' => '5c2f9e366121e38426d3643e33d17d6e584b4709',
->>>>>>> ac2062b99d5fd9981f955822045d9ef86e49501b
+      'reference' => '4b24d78fb1c70e425fb9632c3b2f58811d36c53e',
     ),
     'symfony/apache-pack' => 
     array (
