@@ -32,7 +32,15 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
+<<<<<<< HEAD
     'reference' => '5c2f9e366121e38426d3643e33d17d6e584b4709',
+=======
+<<<<<<< HEAD
+    'reference' => '979c64683c434f9e663938efd409834fb4552cfb',
+=======
+    'reference' => 'aa3d7f16d8d568c1b8ab714185a52e1124dfb213',
+>>>>>>> 5c2f9e366121e38426d3643e33d17d6e584b4709
+>>>>>>> 0207f308fc3e4016fe0d15784be1e05c738cc88c
     'name' => 'some/name',
   ),
   'versions' => 
@@ -898,7 +906,15 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
+<<<<<<< HEAD
       'reference' => '5c2f9e366121e38426d3643e33d17d6e584b4709',
+=======
+<<<<<<< HEAD
+      'reference' => '979c64683c434f9e663938efd409834fb4552cfb',
+=======
+      'reference' => 'aa3d7f16d8d568c1b8ab714185a52e1124dfb213',
+>>>>>>> 5c2f9e366121e38426d3643e33d17d6e584b4709
+>>>>>>> 0207f308fc3e4016fe0d15784be1e05c738cc88c
     ),
     'symfony/apache-pack' => 
     array (
@@ -1576,6 +1592,15 @@ private static $installed = array (
       array (
       ),
       'reference' => 'f282fb17ffa4839ba491eb7e3f5ffdd40c86f969',
+    ),
+    'symfony/webpack-encore-pack' => 
+    array (
+      'pretty_version' => 'v1.0.2',
+      'version' => '1.0.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'f9f4e91659e5f55de370d6aebe77e64bce35e4d3',
     ),
     'symfony/yaml' => 
     array (

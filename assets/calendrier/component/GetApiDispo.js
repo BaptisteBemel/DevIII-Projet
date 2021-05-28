@@ -2,14 +2,6 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { render } from 'react-dom'
 import * as ReactBootStrap from "react-bootstrap"
-/*
-function affichage(données){
-    document.getElementById('titre').innerHTML = '<th>Plages horaire disponibles</th>';
-    document.getElementById('tbAffichage').innerHTML = '';
-    données.forEach(x => {
-        document.getElementById('tbAffichage').innerHTML += '<tr><td>' + x.dateRdv.substring(0,16) + '</td></tr>'
-    })
-}*/
 
 class GetApiDispo extends Component {
     constructor(props) {
@@ -41,9 +33,9 @@ class GetApiDispo extends Component {
         données = données.map(champ => 
            champ = {dateRdv : champ.dateRdv.substring(8,10) + '/' + champ.dateRdv.substring(5,7) + ' ' + champ.dateRdv.substring(11,16), jour : champ.dateRdv.substring(8,10), mois : champ.dateRdv.substring(5,7), heure : champ.dateRdv.substring(11,16), annee : champ.dateRdv.substring(0,4)}
         ).sort((a, b) => new Date(...a.dateRdv.split('/').reverse()) - new Date(...b.dateRdv.split('/').reverse()))
-        return document.getElementById('tbAffichage').innerHTML = données.map(champ => {
+        return document.getElementById('trAffichage').innerHTML = données.map(champ => {
             return (
-                '<tr><td>' + champ.dateRdv + '</td></tr>'
+                '<td>' + champ.dateRdv + '</td>'
             )
         }).join('')
     }
@@ -52,12 +44,9 @@ class GetApiDispo extends Component {
         return (
             <div>
                 <div>
-                    <ReactBootStrap.Table>
-                        <thead>
-                            <tr id='titre'>
-                            </tr>
-                        </thead>
-                        <tbody id='tbAffichage'></tbody>
+                    <h3 style={{fontFamily: 'rockwell', fontSize: '150%', marginBottom: '1%'}}>Plages horaire disponibles: </h3>
+                    <ReactBootStrap.Table responsive variant="info" striped bordered hover size="xl">
+                        <tbody ><tr id='trAffichage'></tr></tbody>
                     </ReactBootStrap.Table>
                 </div>
             </div>
