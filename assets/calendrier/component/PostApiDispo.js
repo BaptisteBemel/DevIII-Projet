@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Button } from 'react-bootstrap'
+import { forEach } from 'core-js/core/array'
 
 class PostApiDispo extends Component {
     constructor(props) {
@@ -12,12 +13,29 @@ class PostApiDispo extends Component {
         }
     }
 
-    bonneValeur(date){/*
+    testHeure(tab){
+        let annee1 = tab.dateRdv.substring(0,4)
+        let mois1 = tab.dateRdv.substring(5,7)
+        let jour1 = tab.dateRdv.substring(8,10)
+        if(annee1 == annee && mois1 == mois && jour1 == jour && heure1 == heure || annee1 == annee && mois1 == mois && jour1 == jour && heure1 > (Number(heure.substring(0,2))-1).toString() || annee1 == annee && mois1 == mois && jour1 == jour && heure1 < (Number(heure.substring(0,2))+1).toString()){
+            return True
+        }
+    }
+
+    bonneValeur(date){
+        let tab;
+        let annee = date.substring(0,4)
+        let mois = date.substring(5,7)
+        let jour = date.substring(8,10)
+        let heure = date.substring(11,16)
         axios.get('/api/dispo_all/get')
-                .then(response => {
-                    console.log(response.data)
-                })*/
-        if(document.getElementById("inputH").value ==""){
+            .then(response => {
+                tab = response.data
+            })
+        if(document.getElementById("inputH").value == ""){
+            return false
+        }
+        else if(tab.forEach(x => this.testHeure(tab))){
             return false
         }
         return true

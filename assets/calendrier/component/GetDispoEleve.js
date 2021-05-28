@@ -3,6 +3,7 @@ import axios from 'axios';
 import { render } from 'react-dom';
 import "../utils";
 import * as ReactBootStrap from "react-bootstrap"
+import { Button } from 'react-bootstrap'
 
 class GetDispoEleve extends Component {
     constructor(props) {
@@ -42,6 +43,17 @@ class GetDispoEleve extends Component {
         }).join('')
         gid("trAffichage").innerHTML += '<tr><td><input type="radio" name="cours" value="math"> Math</td></tr><tr><td><input type="radio" name="cours" value="sciences"> Sciences</td><tr>';
     }
+
+    afficherRdv() {
+        axios.get('/api/dispo_cours/get')
+            .then(response => {
+                document.getElementById('trAffichageCours').innerHTML = response.data.map(champ => {
+                    return (
+                        '<tr><td>'+ champ.dateRdv.substring(0,16) + '</td></tr>'
+                    )
+                })
+            })
+    }
     
     render() {
         return (
@@ -50,6 +62,10 @@ class GetDispoEleve extends Component {
                 <h3 style={{fontFamily: 'rockwell', fontSize: '150%', marginBottom: '1%'}}>Plages horaire disponibles: </h3>
                     <ReactBootStrap.Table responsive variant="info" striped bordered hover size="xl" id="tableSelectDate">
                         <tbody ><tr id='trAffichage'></tr></tbody>
+                    </ReactBootStrap.Table>
+                    <Button onClick={this.afficherRdv} style={{margin: '2%'}}>Afficher mes rendez-vous</Button>
+                    <ReactBootStrap.Table responsive variant="info" striped bordered hover size="xl" id="tableSelectDate">
+                        <tbody ><tr id='trAffichageCours'></tr></tbody>
                     </ReactBootStrap.Table>
                     <div id="msg"></div>
                     <div id="messageErreur"></div>

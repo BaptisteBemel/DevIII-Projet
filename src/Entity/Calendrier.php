@@ -31,7 +31,7 @@ class Calendrier
     private $statut = 'libre';
 
     /**
-     * @ORM\OneToOne(targetEntity="App\Entity\User", inversedBy="id")
+     * @ORM\OneToOne(targetEntity="App\Entity\User")
      * @ORM\JoinColumn(name="id", referencedColumnName="id", nullable=true)
      */
     private $id = null;
