@@ -41,7 +41,7 @@ class TestController extends AbstractController
      * @Route("/api/dispo/get", name="api_calendrier", methods={"GET"})
      */
 
-    public function index1(Request $request): Response
+    public function index2(Request $request): Response
     {
     $dispos1 = $this->calendrierRepository->findBy(array('statut'=>'libre'));
 
@@ -51,22 +51,6 @@ class TestController extends AbstractController
         $arraysofdispos1[] = $dispo1->toArray();
     }
     return $this->json($arraysofdispos1);
-    }
-
-    /**
-     * @Route("/api/dispo_cours/get", name="api_calendrier_cours", methods={"GET"})
-     */
-
-    public function index2(Request $request): Response
-    {
-    $dispos2 = $this->calendrierRepository->findBy(array('id'=>24));
-
-    $arraysofdispos2 = [];
-
-    foreach ($dispos2 as $dispo2) {
-        $arraysofdispos2[] = $dispo2->toArray();
-    }
-    return $this->json($arraysofdispos2);
     }
     
     /**
