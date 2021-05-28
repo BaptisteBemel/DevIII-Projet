@@ -38,7 +38,7 @@ class AjoutDispoGetallPostController extends AbstractController
 
     public function index3(Request $request): Response
     {
-    $dispos = $this->calendrierRepository->findBy(array('statut'=>'libre'));
+    $dispos = $this->calendrierRepository->findAll();
 
     $arraysofdispos = [];
 
