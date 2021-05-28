@@ -41,78 +41,52 @@ class TestController extends AbstractController
      * @Route("/api/dispo/get", name="api_calendrier", methods={"GET"})
      */
 
-     public function index2(Request $request): Response
-     {
-        $dispos = $this->calendrierRepository->findBy(array('statut'=>'libre'));
+    public function index2(Request $request): Response
+    {
+    $dispos1 = $this->calendrierRepository->findBy(array('statut'=>'libre'));
 
-        $arraysofdispos = [];
+    $arraysofdispos1 = [];
 
-        foreach ($dispos as $dispo) {
-            $arraysofdispos[] = $dispo->toArray();
-        }
-        return $this->json($arraysofdispos);
-     }
+    foreach ($dispos1 as $dispo1) {
+        $arraysofdispos1[] = $dispo1->toArray();
+    }
+    return $this->json($arraysofdispos1);
+    }
+    
+    /**
+     * @Route("/api/dispo/put/{dateId}", name="api_dispo_eleve_post", methods={"PUT"})
+    * @param Request $request
+    * @return JsonResponse
+    */
 
-     /**
-      * @Route("/api/dispo/post", name="api_dispo_post", methods={"POST"})
-      * @param Request $request
-      * @return JsonResponse
-      */
+    public function inscrire(Request $request, $dateId)
+    {
+    $content = json_decode($request->getContent(), true);
+    $trueDate = date("Y-m-d H:i:s", strtotime($dateId));
+    
+    $entityManager = $this->getDoctrine()->getManager();
+    $date = $entityManager->getRepository(Calendrier::class)->find($trueDate);
 
-      public function create(Request $request)
-      {
-        $content = json_decode($request->getContent());
+    if (!$date) {
+        throw $this->createNotFoundException(
+            'Pas de date trouvée : '. $trueDate
+        );
+    }
+    
+    $date->setMatiere($content["matiere"]);
+    $date->setStatut($content["statut"]);
+    //$date->setId($content["id"]);
 
-        $dispo = new Calendrier();
-
-        $dispo->setDateRdv($content);
-
-        try {
-            $this->entityManager->persist($dispo);
-            $this->entityManager->flush();
-            return $this->json([
-                'dispo' => $dispo->toArray(),
-            ]);
-        } catch (Exception $exception) {
-            return $this->json([
-                $exception
-            ]);
-        }
-      }
-      /**
-      * @Route("/api/dispo/put/{dateId}", name="api_dispo_eleve_post", methods={"PUT"})
-      * @param Request $request
-      * @return JsonResponse
-      */
-
-      public function inscrire(Request $request, $dateId)
-      {
-        $content = json_decode($request->getContent(), true);
-        $trueDate = date("Y-m-d H:i:s", strtotime($dateId));
+    try {
+        $this->entityManager->flush();
         
-        $entityManager = $this->getDoctrine()->getManager();
-        $date = $entityManager->getRepository(Calendrier::class)->find($trueDate);
-
-        if (!$date) {
-            throw $this->createNotFoundException(
-                'Pas de date trouvée : '. $trueDate
-            );
-        }
-        
-        $date->setMatiere($content["matiere"]);
-        $date->setStatut($content["statut"]);
-        //$date->setId($content["id"]);
-
-        try {
-            $this->entityManager->flush();
-            
-        } catch (Exception $exception) {
-            return $this->json([
-                $exception
-            ]);
-        }
+    } catch (Exception $exception) {
         return $this->json([
-                'message' => "La date a été inscrite !",
-            ]);
-      }
+            $exception
+        ]);
+    }
+    return $this->json([
+            'message' => "La date a été inscrite !",
+        ]);
+    }
 }
