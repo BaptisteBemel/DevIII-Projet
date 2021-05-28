@@ -20,6 +20,8 @@ use Composer\Semver\VersionParser;
 
 
 
+
+
 class InstalledVersions
 {
 private static $installed = array (
@@ -30,7 +32,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '4b24d78fb1c70e425fb9632c3b2f58811d36c53e',
+    'reference' => '88d1733c4d394dbda9ac36d54ff1661178a2fa12',
     'name' => 'some/name',
   ),
   'versions' => 
@@ -896,7 +898,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '4b24d78fb1c70e425fb9632c3b2f58811d36c53e',
+      'reference' => '88d1733c4d394dbda9ac36d54ff1661178a2fa12',
     ),
     'symfony/apache-pack' => 
     array (
@@ -1670,7 +1672,6 @@ foreach (self::getInstalled() as $installed) {
 $packages[] = array_keys($installed['versions']);
 }
 
-
 if (1 === \count($packages)) {
 return $packages[0];
 }
@@ -1866,6 +1867,7 @@ self::$installedByVendor = array();
 
 
 
+
 private static function getInstalled()
 {
 if (null === self::$canGetVendors) {
@@ -1875,7 +1877,6 @@ self::$canGetVendors = method_exists('Composer\Autoload\ClassLoader', 'getRegist
 $installed = array();
 
 if (self::$canGetVendors) {
-
 foreach (ClassLoader::getRegisteredLoaders() as $vendorDir => $loader) {
 if (isset(self::$installedByVendor[$vendorDir])) {
 $installed[] = self::$installedByVendor[$vendorDir];
