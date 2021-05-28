@@ -33,7 +33,7 @@ class AjoutDispoGetallPostController extends AbstractController
     }
 
     /**
-     * @Route("/api/dispo_all/get", name="api_calendrier", methods={"GET"})
+     * @Route("/api/dispo_all/get", name="api_calendrier_all", methods={"GET"})
      */
 
     public function index3(Request $request): Response

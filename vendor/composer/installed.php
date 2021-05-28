@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'aa3d7f16d8d568c1b8ab714185a52e1124dfb213',
+    'reference' => '0207f308fc3e4016fe0d15784be1e05c738cc88c',
     'name' => 'some/name',
   ),
   'versions' => 
@@ -847,7 +847,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'aa3d7f16d8d568c1b8ab714185a52e1124dfb213',
+      'reference' => '0207f308fc3e4016fe0d15784be1e05c738cc88c',
     ),
     'symfony/apache-pack' => 
     array (
@@ -1516,6 +1516,15 @@
       array (
       ),
       'reference' => 'f282fb17ffa4839ba491eb7e3f5ffdd40c86f969',
+    ),
+    'symfony/webpack-encore-pack' => 
+    array (
+      'pretty_version' => 'v1.0.2',
+      'version' => '1.0.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'f9f4e91659e5f55de370d6aebe77e64bce35e4d3',
     ),
     'symfony/yaml' => 
     array (
