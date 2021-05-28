@@ -35,4 +35,5 @@ return array(
     '3da389f428d8ee50333e4391c3f45046' => $vendorDir . '/amphp/serialization/src/functions.php',
     '3d8ee50db78074a9235f0c2008c26b42' => $vendorDir . '/amphp/http/src/functions.php',
     'e1e8b49c332434256b5df11b0f0c2a62' => $vendorDir . '/league/uri-parser/src/functions_include.php',
+    '2a3c2110e8e0295330dc3d11a4cbc4cb' => $vendorDir . '/php-webdriver/webdriver/lib/Exception/TimeoutException.php',
 );

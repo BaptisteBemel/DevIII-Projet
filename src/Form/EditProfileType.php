@@ -17,8 +17,8 @@ class EditProfileType extends AbstractType
         $builder
             ->add('nom', TextType::class, ["attr"=>["class"=>"form-control"]])
             ->add('prenom', TextType::class, ["attr"=>["class"=>"form-control"]])
-            ->add('adresse', TextType::class, ["attr"=>["class"=>"form-control"]])
-            ->add('numero_tel', TextType::class, ["attr"=>["class"=>"form-control"]])
+            ->add('adresse')
+            ->add('numero_tel')
             ->add('situationscolaire', TextareaType::class, ["attr"=>["class"=>"form-control"]])
             ->add('valider', SubmitType::class, ["attr"=>["class"=>"btn btn-primary"]])
         ;
