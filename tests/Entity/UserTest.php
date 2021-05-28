@@ -60,5 +60,8 @@ class UserTest extends KernelTestCase
         $this->assertHasErrors($this->getEntity()->setNumeroTel("0471.01.01.01a"), 1);
         $this->assertHasErrors($this->getEntity()->setNumeroTel("04"), 1);
     }
-    
+
+    public function testValidRole(){
+        $this->assertHasErrors($this->getEntity()->setRoles(["Coucou"]), 0);
+    }
 }
