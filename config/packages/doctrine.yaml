@@ -3,7 +3,7 @@ doctrine:
         driver: 'pdo_mysql'
         server_version: 'mariadb-10.5.8'
         charset: UTF8
-        url: "mysql://ephec:Ephec123@rf273562-001.dbaas.ovh.net:35156/ephec_projet_dev3"
+        url: "mysql://ephec:Ephec123@bb803920-001.dbaas.ovh.net:35762/mysql1"
 
         # IMPORTANT: You MUST configure your server version,
         # either here or in the DATABASE_URL env var (see .env file)

@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Dépôt de ressources{% endblock %}
+
+{% block javascripts %}
+    {{ encore_entry_script_tags('depot') }}
+{% endblock %}
+
+{% block body %}
+    {% if is_granted("ROLE_ADMIN") %}
+        <div id="depot" class="jumbotron" data-id="true">
+        </div>
+    
+    {% elseif is_granted("ROLE_USER") %}
+        <div id="depot" class="jumbotron" data-id="false">
+        </div>
+    {% endif %}
+    {% if not is_granted("ROLE_ADMIN") and not is_granted("ROLE_USER") %}
+        <a class="nav-link" href="/inscription">Inscription</a>
+    {% endif %}
+{% endblock %}

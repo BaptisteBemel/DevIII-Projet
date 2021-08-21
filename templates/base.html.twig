@@ -30,27 +30,29 @@
                             <a class="nav-link" href="/inscription">Inscription</a>
                         </li>
                     {% endif %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="/commentaires">Commentaires</a>
-                    </li>  
-                    <li class="nav-item">
-                        <a class="nav-link {{ 
-                            is_granted('ROLE_USER') == false ? 'disabled'}}" href="/espace_eleve">Espace élève</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {{ 
-                            is_granted('IS_AUTHENTICATED_FULLY') == false ? 'disabled'}}" href="/calendrier">Calendrier</a>
-                    </li>                    
+                        <li class="nav-item">
+                            <a class="nav-link" href="/commentaires">Commentaires</a>
+                        </li>  
+                        <li class="nav-item">
+                            <a class="nav-link {{ 
+                                is_granted('ROLE_USER') == false ? 'disabled'}}" href="/espace_eleve">Espace élève</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{ 
+                                is_granted('IS_AUTHENTICATED_FULLY') == false ? 'disabled'}}" href="/calendrier">Calendrier</a>
+                        </li>                    
                     {% if is_granted("ROLE_ADMIN") %}
                         <a class="nav-link" href="/espace_prof">Espace Prof</a>
                     {% endif %}
-                </ul>
-                <ul class="navbar-naw ml-auto">
+                    <a class="nav-link" href="/depot">Dépôt</a>
+                    </ul>
+                    <ul class="navbar-naw ml-auto">
                     <li class="nav-item">
                     {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                         <a class="nav-link" href="/deconnexion">Se déconnecter</a> 
                     {% else %}
                         <a class="nav-link" href="/connexion">Se connecter</a>
+                        <a class="nav-link" href="/inscription">S'inscrire</a>
                     {% endif %}
                     </li>
                 </ul>
