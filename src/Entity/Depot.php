@@ -39,7 +39,7 @@ class Depot
     private $closing_date;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="string", length=10, nullable=false)
      */
     private $is_open;
 
@@ -106,7 +106,7 @@ class Depot
         return $this->is_open;
     }
 
-    public function setIsOpen(bool $is_open): self
+    public function setIsOpen(string $is_open): self
     {
         $this->is_open = $is_open;
 
@@ -123,5 +123,10 @@ class Depot
         $this->file_name = $file_name;
 
         return $this;
+    }
+
+    public function toArray()
+    {
+        return ['id' => $this->id, 'id_eleve' => $this->id_eleve, 'titre' => $this->titre, 'description' => $this->description, 'closing_date' => $this->closing_date, 'is_open' => $this->is_open];
     }
 }

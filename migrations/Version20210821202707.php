@@ -10,7 +10,7 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20210821154725 extends AbstractMigration
+final class Version20210821202707 extends AbstractMigration
 {
     public function getDescription(): string
     {
@@ -20,12 +20,12 @@ final class Version20210821154725 extends AbstractMigration
     public function up(Schema $schema): void
     {
         // this up() migration is auto-generated, please modify it to your needs
-        $this->addSql('ALTER TABLE depot ADD file_name VARCHAR(255) DEFAULT NULL');
+        $this->addSql('ALTER TABLE depot CHANGE is_open is_open VARCHAR(10) NOT NULL');
     }
 
     public function down(Schema $schema): void
     {
         // this down() migration is auto-generated, please modify it to your needs
-        $this->addSql('ALTER TABLE depot DROP file_name');
+        $this->addSql('ALTER TABLE depot CHANGE is_open is_open TINYINT(1) NOT NULL');
     }
 }

@@ -23,7 +23,11 @@ class DepotProf extends Component {
     isAgree() {
         if(window.confirm("Souhaitez vous réellement ouvrir ce dépôt pour Michel ?")) {
             gid("error-p").innerText = "";
-            let mailValue = gid("email").value
+            let mailValue = gid("email").value;
+            let titreValue = gid("titre").value;
+            let dateValue = gid("date").value;
+
+            //Vérifications des champs vides (utiles) ou mauvais
             if(mailValue.length < 3) {
                 gid("error-p").innerText = "Adresse trop courte !";
                 return "Adresse trop courte";
@@ -36,6 +40,16 @@ class DepotProf extends Component {
                 gid("error-p").innerText = "L'adresse mail ne peut pas terminer par le signe '@' !";
                 return "Ne peut pas terminer par un '@' !";
             }
+
+            if(titreValue.length < 1) {
+                gid("error-p").innerText = "Il manque un titre !";
+                return "Il manque un titre !";
+            }
+            if(dateValue.length < 1) {
+                gid("error-p").innerText = "Il manque une date !";
+                return "Il manque une date !";
+            }
+
             for(let i in mailValue) {
                 if(mailValue[i] == "@") {
                     break;
@@ -58,7 +72,7 @@ class DepotProf extends Component {
                 </div>
                 <div class="mb-3">
                     <label className="form-label">Titre du dépôt</label>
-                    <input type="text" className="form-control"></input>
+                    <input id="titre" type="text" className="form-control"></input>
                 </div>
                 <div class="mb-3">
                     <label className="form-label">Description (max. 255 caractères)</label>
@@ -66,7 +80,7 @@ class DepotProf extends Component {
                 </div>
                 <div class="mb-3">
                     <label className="form-label">Date de fermeture du dépôt</label>
-                    <input style={{width: 200}} className="form-control" type="datetime-local" name="date_rdv"></input>
+                    <input id="date" style={{width: 200}} className="form-control" type="datetime-local" name="date_rdv"></input>
                 </div>
                 <button className="btn btn-primary" type="submit" onClick={this.isAgree}>Ouvrir le dépôt</button>
                 <p id="error-p" className="text-danger" style={{marginTop: "20px"}}>

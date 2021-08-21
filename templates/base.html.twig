@@ -40,11 +40,14 @@
                         <li class="nav-item">
                             <a class="nav-link {{ 
                                 is_granted('IS_AUTHENTICATED_FULLY') == false ? 'disabled'}}" href="/calendrier">Calendrier</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{ 
+                                is_granted('IS_AUTHENTICATED_FULLY') == false ? 'disabled'}}" href="/depot">Dépôt</a>
                         </li>                    
                     {% if is_granted("ROLE_ADMIN") %}
                         <a class="nav-link" href="/espace_prof">Espace Prof</a>
                     {% endif %}
-                    <a class="nav-link" href="/depot">Dépôt</a>
                     </ul>
                     <ul class="navbar-naw ml-auto">
                     <li class="nav-item">

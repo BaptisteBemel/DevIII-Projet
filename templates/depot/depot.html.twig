@@ -12,7 +12,7 @@
         </div>
     
     {% elseif is_granted("ROLE_USER") %}
-        <div id="depot" class="jumbotron" data-id="false">
+        <div id="depot" class="m-4" data-id="false">
         </div>
     {% endif %}
     {% if not is_granted("ROLE_ADMIN") and not is_granted("ROLE_USER") %}
