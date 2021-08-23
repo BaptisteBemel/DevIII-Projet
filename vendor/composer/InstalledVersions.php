@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'a5f65d4dff303ed3f1af13bd81f22fe96253f311',
+    'reference' => 'b739baf31d23a45e39a2105517859bda85948203',
     'name' => 'some/name',
   ),
   'versions' => 
@@ -707,8 +707,8 @@ private static $installed = array (
     array (
       'provided' => 
       array (
-        0 => '1.0|2.0',
-        1 => '1.0.0',
+        0 => '1.0.0',
+        1 => '1.0|2.0',
       ),
     ),
     'psr/simple-cache-implementation' => 
@@ -878,7 +878,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'a5f65d4dff303ed3f1af13bd81f22fe96253f311',
+      'reference' => 'b739baf31d23a45e39a2105517859bda85948203',
     ),
     'symfony/apache-pack' => 
     array (

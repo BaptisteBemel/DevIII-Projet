@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import { Button } from 'react-bootstrap'
+import { Button, ToggleButton } from 'react-bootstrap'
 
 class PostApiDispo extends Component {
     constructor(props) {
@@ -30,6 +30,8 @@ class PostApiDispo extends Component {
 
     submitHandler = e => {
         e.preventDefault()
+        document.getElementById('msg').innerHTML = ''
+        document.getElementById('messageErreur').innerHTML = ''
         if(this.bonneValeur(this.state.date_rdv)){
             axios.post('/api/dispo/post', this.state)
                 .then(response => {
@@ -39,24 +41,28 @@ class PostApiDispo extends Component {
                 .catch(error => {
                     null //une erreur s'est produite
                 })
-            axios.get('/api/dispo/get', this.state)
+            /*axios.get('/api/dispo/get', this.state)
                 .then(response => {
                     this.renderTable(response.data)
-                })
+                })*/
             document.getElementById('msg').innerHTML = '<p variation="success" style={{margin: "3%"}}>La nouvelle disponibilité a bien été encodée.</p>'
         }
         else{
-            document.getElementById('msg').innerHTML = '<p variation="danger" style={margin: "3%"}}>Cette plage horaire n\'est pas valide ou disponible. Veuillez choisir une plage horaire d\'une durée d\'une heure qui n\'est pas déjà prise et qui ne chevauche pas une autre plage horaire déjà prise.</p>'
+            document.getElementById('messageErreur').innerHTML = '<p variation="danger" style={margin: "3%"}}>Cette plage horaire n\'est pas valide ou disponible. Veuillez choisir une plage horaire d\'une durée d\'une heure qui n\'est pas déjà prise et qui ne chevauche pas une autre plage horaire déjà prise.</p>'
         }
+        axios.get('/api/dispo/get', this.state)
+                .then(response => {
+                    this.renderTable(response.data)
+                })
     }
 
     renderTable(données) {
         données = données.map(champ => 
-           champ = {dateRdv : champ.dateRdv.substring(8,10) + '/' + champ.dateRdv.substring(5,7) + ' ' + champ.dateRdv.substring(11,16), jour : champ.dateRdv.substring(8,10), mois : champ.dateRdv.substring(5,7), heure : champ.dateRdv.substring(11,16), annee : champ.dateRdv.substring(0,4)}
+           champ = {dateRdv : champ.dateRdv.substring(8,10) + '/' + champ.dateRdv.substring(5,7) + ' ' + champ.dateRdv.substring(11,16), jour : champ.dateRdv.substring(8,10), mois : champ.dateRdv.substring(5,7), heure : champ.dateRdv.substring(11,16), annee : champ.dateRdv.substring(0,4), idDate: champ.dateRdv.substring(0,16)}
         ).sort((a, b) => new Date(...a.dateRdv.split('/').reverse()) - new Date(...b.dateRdv.split('/').reverse()))
         return document.getElementById('trAffichage').innerHTML = données.map(champ => {
             return (
-                '<td>' + champ.dateRdv + '</td>'
+                '<td><input type="radio" id="' + champ.idDate.substring(0,16) + '" class="date" name="date" value="' + champ.dateRdv + '"> ' + champ.dateRdv + '</td>'
             )
         }).join('')
     }
