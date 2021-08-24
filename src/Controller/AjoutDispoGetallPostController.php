@@ -58,4 +58,20 @@ class AjoutDispoGetallPostController extends AbstractController
             ]);
         }
     }
+
+    /**
+    * @Route("/api/dispo/get/all", name="api_dispo_post_verif", methods={"GET"})
+    */
+
+    public function index3(Request $request): Response
+    {
+    $dispos1 = $this->calendrierRepository->findAll();
+
+    $arraysofdispos1 = [];
+
+    foreach ($dispos1 as $dispo1) {
+        $arraysofdispos1[] = $dispo1->toArray();
+    }
+    return $this->json($arraysofdispos1);
+    }
 }

@@ -57,21 +57,24 @@ class GetApiDispo extends Component {
         document.getElementById('msg').innerHTML = ''
         document.getElementById('messageErreur').innerHTML = ''
         let date = this.submitDate();
+        if(date == undefined){
+            return false
+        }
         axios.delete('/api/dispo/delete/' + date)
             .then(response => {
                 this.setState({
                     date_rdv: '',
                     statut: 'libre',
                 })
+                axios.get('/api/dispo/get', this.state)
+                .then(response => {
+                    this.renderTable(response.data)
+                })
+                document.getElementById('msg').innerHTML = 'La plage horaire a été supprimée'
             })
             .catch(error => {
                 //console.error(error);
             })
-        axios.get('/api/dispo/get', this.state)
-            .then(response => {
-                this.renderTable(response.data)
-            })
-        document.getElementById('msg').innerHTML = 'La plage horaire a été supprimée'
     }
 
     componentDidMount() {
