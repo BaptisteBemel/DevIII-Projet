@@ -73,7 +73,7 @@ class TestController extends AbstractController
         );
     }
     
-    $date->setMatiere($content["matiere"]);
+    //$date->setMatiere($content["matiere"]);
     $date->setStatut($content["statut"]);
     //$date->setId($content["id"]);
 

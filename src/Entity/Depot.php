@@ -34,17 +34,7 @@ class Depot
     private $description;
 
     /**
-     * @ORM\Column(type="datetime")
-     */
-    private $closing_date;
-
-    /**
-     * @ORM\Column(type="string", length=10, nullable=false)
-     */
-    private $is_open;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=255)
      */
     private $file_name;
 
@@ -89,44 +79,20 @@ class Depot
         return $this;
     }
 
-    public function getClosingDate(): ?\DateTimeInterface
-    {
-        return $this->closing_date;
-    }
-
-    public function setClosingDate(\DateTimeInterface $closing_date): self
-    {
-        $this->closing_date = $closing_date;
-
-        return $this;
-    }
-
-    public function getIsOpen(): ?bool
-    {
-        return $this->is_open;
-    }
-
-    public function setIsOpen(string $is_open): self
-    {
-        $this->is_open = $is_open;
-
-        return $this;
-    }
-
     public function getFileName(): ?string
     {
         return $this->file_name;
     }
 
-    public function setFileName(?string $file_name): self
+    public function setFileName(string $file_name): self
     {
         $this->file_name = $file_name;
 
         return $this;
     }
-
+    
     public function toArray()
     {
-        return ['id' => $this->id, 'id_eleve' => $this->id_eleve, 'titre' => $this->titre, 'description' => $this->description, 'closing_date' => $this->closing_date, 'is_open' => $this->is_open];
+        return ['id' => $this->id, 'id_eleve' => $this->id_eleve, 'titre' => $this->titre, 'description' => $this->description];
     }
 }

@@ -116,4 +116,20 @@ class AdminController extends AbstractController
 
         return $this->redirectToRoute("messagerie_prof");
     }
+
+    /**
+     * @Route("/api/user/depot", name="api_user_depot", methods={"GET"})
+     */
+
+    public function getUserToDepot(Request $request): Response
+    {
+    $dispos1 = $this->calendrierRepository->findBy(array('statut'=>'libre'));
+
+    $arraysofdispos1 = [];
+
+    foreach ($dispos1 as $dispo1) {
+        $arraysofdispos1[] = $dispo1->toArray();
+    }
+    return $this->json($arraysofdispos1);
+    }
 }

@@ -6,7 +6,7 @@ import * as ReactBootStrap from "react-bootstrap"
 function gid(id) {
     return document.getElementById(id);
 }
-
+//Travail commencé pour la réception des données mais du coup us 13 et pas 12
 class DepotEleve extends Component {
     constructor(props) {
         super(props)

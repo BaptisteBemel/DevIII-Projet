@@ -12,20 +12,71 @@ class DepotProf extends Component {
         super(props)
 
         this.state = {
-            emailAddress: "",
+            emailAdress: "",
             title: "",
             description: "",
-            ClosingDate: "",
-            isOpen: false
+            file_name: "",
+            file: null
+        }
+    }
+
+    changeHandler = (e) => {
+        this.setState({ [e.target.name]: e.target.value })
+    }
+
+    getData() {
+        return [gid("email").value, gid("titre").value, gid("description").value, gid("file").value];
+    }
+
+    getFileName(name) {
+        let transformedName = name.split("//");
+        let finalName = transformedName[0].split("\\");
+        return finalName[finalName.length - 1];
+    }
+
+    onFileChange = event => {
+        this.setState({ file: event.target.files[0] });
+    }
+
+    submitHandler = e => {
+        if(this.isAgree()) {
+            var tab = this.getData();
+            var name = this.getFileName(tab[3]);
+
+            let mail, title, desc, fileName;
+            mail = tab[0];
+            title = tab[1];
+            desc = tab[2];
+            fileName = name;
+
+            let datas = {
+                emailAdress: mail,
+                title: title,
+                description: desc,
+                file_name: fileName,
+                file: this.state.file
+            }
+
+            //e.preventDefault();
+            axios.post('/api/depot/ajoutDepot', datas);
+            console.log(datas);
+                /*.then(response => {
+                    let data = new Array();
+                    data.push(datas)
+                })
+                .catch(error => {
+                    null //une erreur s'est produite
+                })*/
         }
     }
 
     isAgree() {
-        if(window.confirm("Souhaitez vous réellement ouvrir ce dépôt pour Michel ?")) {
+        let mailValue = gid("email").value;
+        if(window.confirm("Souhaitez vous réellement envoyer ce fichier à " + mailValue + " ?")) {
             gid("error-p").innerText = "";
-            let mailValue = gid("email").value;
             let titreValue = gid("titre").value;
-            let dateValue = gid("date").value;
+            let fileValue = gid("file").value;
+            let descValue = gid("description").value;
 
             //Vérifications des champs vides (utiles) ou mauvais
             if(mailValue.length < 3) {
@@ -45,10 +96,15 @@ class DepotProf extends Component {
                 gid("error-p").innerText = "Il manque un titre !";
                 return "Il manque un titre !";
             }
-            if(dateValue.length < 1) {
-                gid("error-p").innerText = "Il manque une date !";
-                return "Il manque une date !";
+            if(fileValue.length < 1) {
+                gid("error-p").innerText = "Il manque le fichier !";
+                return "Il manque le fichier !";
             }
+            if(descValue.length > 255) {
+                gid("error-p").innerText = "La description fait plus de 255 caractères !";
+                return "La description fait plus de 255 caractères !";
+            }
+
 
             for(let i in mailValue) {
                 if(mailValue[i] == "@") {
@@ -59,7 +115,7 @@ class DepotProf extends Component {
                     return "L'adresse mail est mauvaise, il faut au minium le signe '@' !";
                 }
             }
-            
+            return true;
         }
     }
 
@@ -68,21 +124,21 @@ class DepotProf extends Component {
             <div className="depot-cadre">
                 <div class="mb-3">
                     <label className="form-label">Adresse mail</label>
-                    <input id="email" type="email" className="form-control" placeholder="eleve@adresse.com"></input>
+                    <input id="email" type="email" className="form-control" placeholder="eleve@adresse.com" value="eleve@gmail.com"></input>
                 </div>
                 <div class="mb-3">
                     <label className="form-label">Titre du dépôt</label>
-                    <input id="titre" type="text" className="form-control"></input>
+                    <input id="titre" type="text" className="form-control" value="Test"></input>
                 </div>
                 <div class="mb-3">
                     <label className="form-label">Description (max. 255 caractères)</label>
-                    <textarea className="form-control" rows="3"></textarea>
+                    <textarea id="description" className="form-control" rows="3"></textarea>
                 </div>
-                <div class="mb-3">
-                    <label className="form-label">Date de fermeture du dépôt</label>
-                    <input id="date" style={{width: 200}} className="form-control" type="datetime-local" name="date_rdv"></input>
+                <div class="form-group">
+                    <label className="form-label">Choisissez votre fichier à envoyer</label>
+                    <input id="file" type="file" class="form-control-file" onChange={this.onFileChange}></input>
                 </div>
-                <button className="btn btn-primary" type="submit" onClick={this.isAgree}>Ouvrir le dépôt</button>
+                <button className="btn btn-primary" type="submit" onClick={this.submitHandler}>Envoyer la ressource</button>
                 <p id="error-p" className="text-danger" style={{marginTop: "20px"}}>
                 </p>
             </div>

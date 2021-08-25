@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'a5f65d4dff303ed3f1af13bd81f22fe96253f311',
+    'reference' => 'b739baf31d23a45e39a2105517859bda85948203',
     'name' => 'some/name',
   ),
   'versions' => 
@@ -307,12 +307,12 @@ private static $installed = array (
     ),
     'doctrine/orm' => 
     array (
-      'pretty_version' => '2.9.4',
-      'version' => '2.9.4.0',
+      'pretty_version' => '2.9.5',
+      'version' => '2.9.5.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'b19a13f4edfaa5806109cd899f5912a7df1547b5',
+      'reference' => '77cc86ed880e3f1f6c9c5819e131a8aaeeeee0da',
     ),
     'doctrine/persistence' => 
     array (
@@ -707,8 +707,8 @@ private static $installed = array (
     array (
       'provided' => 
       array (
-        0 => '1.0|2.0',
-        1 => '1.0.0',
+        0 => '1.0.0',
+        1 => '1.0|2.0',
       ),
     ),
     'psr/simple-cache-implementation' => 
@@ -878,7 +878,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'a5f65d4dff303ed3f1af13bd81f22fe96253f311',
+      'reference' => 'b739baf31d23a45e39a2105517859bda85948203',
     ),
     'symfony/apache-pack' => 
     array (
@@ -1076,12 +1076,12 @@ private static $installed = array (
     ),
     'symfony/flex' => 
     array (
-      'pretty_version' => 'v1.14.0',
-      'version' => '1.14.0.0',
+      'pretty_version' => 'v1.14.4',
+      'version' => '1.14.4.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'b298435b9df8d7c7d7d5473d4b9f850a7844d7ea',
+      'reference' => 'ddddba0343a225ba5fa638b64b132fc8754a9579',
     ),
     'symfony/form' => 
     array (

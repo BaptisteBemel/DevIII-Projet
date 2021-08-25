@@ -56,6 +56,7 @@ class PutDispoEleve extends Component {
 
     submitHandler = e => {
         var tab = this.submitDate();
+        console.log(tab);
         let date, statut, matiere, userId;
         date = tab[0];
         statut = tab[1];
@@ -67,6 +68,7 @@ class PutDispoEleve extends Component {
             matiere: matiere,
             id: userId
         }
+        console.log(datas);
         axios.put('/api/dispo/put/' + date, datas)
             .then(response => {
                 this.setState({
@@ -93,7 +95,7 @@ class PutDispoEleve extends Component {
                 '<tr><td><input type="radio" id="' + champ.idDate.substring(0,16) + '" class="date" name="date" value="' + champ.dateRdv + '"> ' + champ.dateRdv + '</td></tr>'
             )
         }).join('')
-        gid("trAffichage").innerHTML += '<tr><td><input type="radio" name="cours" value="math"> Math</td></tr><tr><td><input type="radio" name="cours" value="sciences"> Sciences</td><tr>';
+        gid("trAffichage").innerHTML += '<tr><td><input id="math" type="radio" name="cours" value="math"> Math</input></td></tr><tr><td><input id="sciences" type="radio" name="cours" value="sciences"> Sciences</input></td><tr>';
     }
 
     changeHandler = (e) => {
