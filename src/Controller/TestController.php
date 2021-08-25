@@ -38,8 +38,8 @@ class TestController extends AbstractController
     */
 
     /**
-     * @Route("/api/dispo/get", name="api_calendrier", methods={"GET"})
-     */
+    * @Route("/api/dispo/get", name="api_calendrier", methods={"GET"})
+    */
 
     public function index2(Request $request): Response
     {
@@ -53,8 +53,9 @@ class TestController extends AbstractController
     return $this->json($arraysofdispos1);
     }
     
+
     /**
-     * @Route("/api/dispo/put/{dateId}", name="api_dispo_eleve_post", methods={"PUT"})
+    * @Route("/api/dispo/put/{dateId}", name="api_dispo_eleve_post", methods={"PUT"})
     * @param Request $request
     * @return JsonResponse
     */
@@ -89,4 +90,38 @@ class TestController extends AbstractController
             'message' => "La date a été inscrite !",
         ]);
     }
+
+    /**
+    * @Route("/api/dispo/delete/{dateId}", name="api_dispo_delete", methods={"DELETE"})
+    * @param $dateId
+    * @return void
+    */
+
+    public function supprimer($dateId)
+    {
+        //$content = json_decode($request->getContent(), true);
+        $trueDate = date("Y-m-d H:i:s", strtotime($dateId));
+        
+        $entityManager = $this->getDoctrine()->getManager();
+        $date = $entityManager->getRepository(Calendrier::class)->find($trueDate);
+
+        if (!$date) {
+            throw $this->createNotFoundException(
+                'Pas de date trouvée : '. $trueDate
+            );
+        }
+
+        try {
+            $this->entityManager->remove($date);
+            $this->entityManager->flush();
+        } catch (Exception $exception) {
+            return $this->json([
+                $exception
+            ]);
+        }
+
+        return $this->json([
+            'message' => "La plage horaire a été supprimée.",
+        ]);       
+}
 }

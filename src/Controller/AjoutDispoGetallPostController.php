@@ -33,22 +33,6 @@ class AjoutDispoGetallPostController extends AbstractController
     }
 
     /**
-     * @Route("/api/dispo_all/get", name="api_calendrier_all", methods={"GET"})
-     */
-
-    public function index3(Request $request): Response
-    {
-    $dispos = $this->calendrierRepository->findAll();
-
-    $arraysofdispos = [];
-
-    foreach ($dispos as $dispo) {
-        $arraysofdispos[] = $dispo->toArray();
-    }
-    return $this->json($arraysofdispos);
-    }
-
-    /**
      * @Route("/api/dispo/post", name="api_dispo_post", methods={"POST"})
     * @param Request $request
     * @return JsonResponse
@@ -56,11 +40,11 @@ class AjoutDispoGetallPostController extends AbstractController
 
     public function create(Request $request)
     {
-    $content = json_decode($request->getContent());
+        $content = json_decode($request->getContent());
 
-    $dispo = new Calendrier();
+        $dispo = new Calendrier();
 
-    $dispo->setDateRdv($content);
+        $dispo->setDateRdv($content);
 
         try {
             $this->entityManager->persist($dispo);
@@ -73,5 +57,21 @@ class AjoutDispoGetallPostController extends AbstractController
                 $exception
             ]);
         }
+    }
+
+    /**
+    * @Route("/api/dispo/get/all", name="api_dispo_post_verif", methods={"GET"})
+    */
+
+    public function index3(Request $request): Response
+    {
+    $dispos1 = $this->calendrierRepository->findAll();
+
+    $arraysofdispos1 = [];
+
+    foreach ($dispos1 as $dispo1) {
+        $arraysofdispos1[] = $dispo1->toArray();
+    }
+    return $this->json($arraysofdispos1);
     }
 }
