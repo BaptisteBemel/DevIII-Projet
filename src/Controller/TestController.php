@@ -16,19 +16,22 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Core\Security;
 
 class TestController extends AbstractController
 {
 
     private $calendrierRepository;
     public $name;
+    private $security;
 
 
-    public function __construct(EntityManagerInterface $manager,EntityManagerInterface $entityManager, CalendrierRepository $calendrierRepository)
+    public function __construct(EntityManagerInterface $manager,EntityManagerInterface $entityManager, CalendrierRepository $calendrierRepository, Security $security)
     {
         $this->entityManager = $entityManager;
         $this->manager = $manager;
         $this->calendrierRepository = $calendrierRepository;
+        $this->security = $security;
     }
 
     /**
@@ -52,6 +55,24 @@ class TestController extends AbstractController
     }
     return $this->json($arraysofdispos1);
     }
+
+    /**
+    * @Route("/api/dispo/user", name="api_user_calendrier", methods={"GET"})
+    */
+
+    public function getOccupedDate(Request $request): Response
+    {
+    $user = $this->security->getUser();
+
+    $dispos1 = $this->calendrierRepository->findBy(['statut'=>'occupé', "id"=> $user]);//["email"=>$user]]);
+
+    $arraysofdispos1 = [];
+
+    foreach ($dispos1 as $dispo1) {
+        $arraysofdispos1[] = $dispo1->userDate();
+    }
+    return $this->json($arraysofdispos1);
+    }
     
 
     /**
@@ -64,8 +85,9 @@ class TestController extends AbstractController
     {
     $content = json_decode($request->getContent(), true);
     $trueDate = date("Y-m-d H:i:s", strtotime($dateId));
-    
+
     $entityManager = $this->getDoctrine()->getManager();
+    $id = $entityManager->getRepository(User::class)->findOneBy(['id'=> $content["id"]]);
     $date = $entityManager->getRepository(Calendrier::class)->find($trueDate);
 
     if (!$date) {
@@ -74,9 +96,9 @@ class TestController extends AbstractController
         );
     }
     
-    //$date->setMatiere($content["matiere"]);
+    $date->setMatiere($content["matiere"]);
     $date->setStatut($content["statut"]);
-    //$date->setId($content["id"]);
+    $date->setId($id);
 
     try {
         $this->entityManager->flush();

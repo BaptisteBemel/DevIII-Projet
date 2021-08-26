@@ -93,4 +93,9 @@ class Calendrier
     {
         return ['dateRdv' => $this->dateRdv];
     }
+
+    public function userDate()
+    {
+        return ['dateRdv' => $this->dateRdv, 'matiere' => $this->matiere];
+    }
 }
