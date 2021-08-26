@@ -17,6 +17,7 @@ import "../comments/comments.js"
 import React from 'react';
 import PostApiDispo from './component/PostApiDispo';
 import GetApiDispo from './component/GetApiDispo';
+import GetData from './component/GetData';
 import GetDispoEleve from './component/GetDispoEleve';
 import PutDispoEleve from './component/PutDispoEleve';
 import GetEleveData from './component/GetEleveData';
@@ -28,6 +29,7 @@ const App = () => {
             <div className='container'>
                 <PostApiDispo />
                 <GetApiDispo />
+                <GetData />
             </div>
         )
     }

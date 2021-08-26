@@ -95,7 +95,7 @@ class PostApiDispo extends Component {
         e.preventDefault()
         document.getElementById('msg').innerHTML = ''
         document.getElementById('messageErreur').innerHTML = ''
-        axios.get('/api/dispo/get/all', this.state)
+        axios.get('/all', this.state)
             .then(response => {
                 if(this.bonneValeur(response.data)){
                     axios.post('/api/dispo/post', this.state)

@@ -60,10 +60,10 @@ class AjoutDispoGetallPostController extends AbstractController
     }
 
     /**
-    * @Route("/api/dispo/get/all", name="api_dispo_post_verif", methods={"GET"})
+    * @Route("/all", name="api_dispo_post_verif", methods={"GET"})
     */
 
-    public function index3(Request $request): Response
+    public function all(Request $request): Response
     {
     $dispos1 = $this->calendrierRepository->findAll();
 
@@ -71,6 +71,22 @@ class AjoutDispoGetallPostController extends AbstractController
 
     foreach ($dispos1 as $dispo1) {
         $arraysofdispos1[] = $dispo1->toArray();
+    }
+    return $this->json($arraysofdispos1);
+    }
+
+    /**
+    * @Route("/reservations", name="api_dispo_post_verif", methods={"GET"})
+    */
+
+    public function reservations(Request $request): Response
+    {
+    $dispos1 = $this->calendrierRepository->findBy(array('statut'=>'occupé'));
+
+    $arraysofdispos1 = [];
+
+    foreach ($dispos1 as $dispo1) {
+        $arraysofdispos1[] = $dispo1->getRdv();
     }
     return $this->json($arraysofdispos1);
     }
