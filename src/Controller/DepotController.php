@@ -94,22 +94,16 @@ class DepotController extends AbstractController
     }*/
 
     /**
-     * @Route("/api/depot", name="depot_get")
-     */
-    /*
-    public function get_depot(Request $request): Response
-    {
+    * @Route("/ressources", name="get_depot", methods={"GET"})
+    */
 
+    public function depotGet()
+    {
+    
     $user = $this->security->getUser();
 
-    $depots = $this->depotRepository->findBy(['id_eleve'=> ["email" => $user], 'is_open' => "true"]);
+    $fichiers = $this->depotRepository->findBy(array('id_eleve' => $user));
 
-    $arraysofdepot = [];
-
-        foreach ($depots as $depot) {
-            $arraysofdepot[] = $depot->toArray();
-        }
-    return $this->json($arraysofdepot);
+    return $this->json($fichiers);
     }
-    */
 }

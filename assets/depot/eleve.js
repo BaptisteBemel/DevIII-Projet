@@ -2,21 +2,16 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { render } from 'react-dom'
 import * as ReactBootStrap from "react-bootstrap"
+import { Link } from 'react-router-dom'
 
-function gid(id) {
-    return document.getElementById(id);
-}
-//Travail commencé pour la réception des données mais du coup us 13 et pas 12
 class DepotEleve extends Component {
     constructor(props) {
         super(props)
 
         this.state = {
-            emailAddress: "",
             title: "",
             description: "",
-            ClosingDate: "",
-            isOpen: false
+            fileName: ""
         }
     }
 
@@ -26,9 +21,9 @@ class DepotEleve extends Component {
 
     submitHandler = e => {
         e.preventDefault()
-        axios.get('/api/depot', this.state)
+        axios.get('/ressources', this.state)
             .then(response => {
-                this.renderTable(response.data)
+                this.renderFiles(response.data)
             })
     }
 
@@ -36,40 +31,26 @@ class DepotEleve extends Component {
         window.addEventListener('load', this.submitHandler);
     }    
 
-    renderTable(données) {
-        données = données.map(champ => 
-           champ = {dateRdv : champ.dateRdv.substring(8,10) + '/' + champ.dateRdv.substring(5,7) + ' ' + champ.dateRdv.substring(11,16), jour : champ.dateRdv.substring(8,10), mois : champ.dateRdv.substring(5,7), heure : champ.dateRdv.substring(11,16), annee : champ.dateRdv.substring(0,4), idDate: champ.dateRdv.substring(0,16)}
-        ).sort((a, b) => new Date(...a.dateRdv.split('/').reverse()) - new Date(...b.dateRdv.split('/').reverse()))
-        document.getElementById('trAffichage').innerHTML = données.map(champ => {
-            return (
-                '<tr><td><input type="radio" id="' + champ.idDate.substring(0,16) + '" class="date" name="date" value="' + champ.dateRdv + '"> ' + champ.dateRdv + '</td></tr>'
-            )
-        }).join('')
+    renderFiles(données) {
+        console.log(données)
+        if(données.length == 0){
+            document.getElementById('divRoot').innerHTML = '<p variation="success" style={{margin: "3%", font-size: "150%"}}>Il n\'y a pas de ressources disponibles.</p>'
+        }
+        else{
+            document.getElementById('divRoot').innerHTML = données.map(champ => {
+                return (
+                    '<div onClick><a href='+ champ.fileName + ' target="_blank" download><h3>' + champ.titre + '</h3></a><p>' + champ.description + '</p></div>'
+                )
+            })
+        }
     }
 
     render() {
         return (
             <div>
-                <table class="table">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th scope="col">Id</th>
-                            <th scope="col">Titre</th>
-                            <th scope="col">Description</th>
-                            <th scope="col">A finir pour le</th>
-                            <th scope="col">Fichier</th>
-                        </tr>
-                    </thead>
-                    <tbody id="table-donnee">
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>file</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <h2 style={{fontFamily: 'rockwell', fontSize: '200%', marginBottom: '1%'}}>Ressources disponibles: </h2>
+                <div id='divRoot'>
+                </div>
             </div>
         )
     } 

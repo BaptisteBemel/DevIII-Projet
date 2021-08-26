@@ -108,7 +108,8 @@ class PostApiDispo extends Component {
                         })
                         })
                         .catch(error => {
-                            null //une erreur s'est produite
+                            //une erreur s'est produite
+                            null
                         })
                     document.getElementById('msg').innerHTML = '<p variation="success" style={{margin: "3%"}}>La nouvelle disponibilité a bien été encodée.</p>'
                 }
