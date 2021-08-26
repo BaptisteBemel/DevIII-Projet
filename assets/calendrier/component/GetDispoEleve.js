@@ -39,8 +39,8 @@ class GetDispoEleve extends Component {
             return (
                 '<tr><td><input type="radio" id="' + champ.idDate.substring(0,16) + '" class="date" name="date" value="' + champ.dateRdv + '"> ' + champ.dateRdv + '</td></tr>'
             )
-        }).join('')
-        gid("trAffichage").innerHTML += '<tr><td><input type="radio" name="cours" value="math"> Math</td></tr><tr><td><input type="radio" name="cours" value="sciences"> Sciences</td><tr>';
+        }).join('');
+        gid("form-cours").innerHTML += '<input id="math" type="radio" name="cours" value="math"> Math</input><br><input id="sciences" type="radio" name="cours" value="sciences"> Sciences</input>';
     }
 
     
@@ -48,11 +48,11 @@ class GetDispoEleve extends Component {
         return (
             <div>
                 <div>
-                <h3 style={{fontFamily: 'rockwell', fontSize: '150%', marginBottom: '1%'}}>Plages horaire disponibles: </h3>
+                <h3 style={{fontFamily: 'rockwell', fontSize: '150%', marginBottom: '1%'}}>Plages horaire disponibles : </h3>
                     <ReactBootStrap.Table responsive variant="info" striped bordered hover size="xl" id="tableSelectDate">
                         <tbody ><tr id='trAffichage'></tr></tbody>
                     </ReactBootStrap.Table>
-                    
+                    <div style={{marginBottom: "2%"}} id="form-cours"></div>
                     <div id="msg"></div>
                     <div id="messageErreur"></div>
                 </div>

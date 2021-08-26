@@ -80,22 +80,6 @@ class PutDispoEleve extends Component {
             .catch(error => {
                 console.error(error);
             })
-        axios.get('/api/dispo/get', this.state)
-            .then(response => {
-                this.renderTable(response.data)
-            })
-    }
-
-    renderTable(données) {
-        données = données.map(champ => 
-           champ = {dateRdv : champ.dateRdv.substring(8,10) + '/' + champ.dateRdv.substring(5,7) + ' ' + champ.dateRdv.substring(11,16), jour : champ.dateRdv.substring(8,10), mois : champ.dateRdv.substring(5,7), heure : champ.dateRdv.substring(11,16), annee : champ.dateRdv.substring(0,4), idDate: champ.dateRdv.substring(0,16)}
-        ).sort((a, b) => new Date(...a.dateRdv.split('/').reverse()) - new Date(...b.dateRdv.split('/').reverse()))
-        document.getElementById('trAffichage').innerHTML = données.map(champ => {
-            return (
-                '<tr><td><input type="radio" id="' + champ.idDate.substring(0,16) + '" class="date" name="date" value="' + champ.dateRdv + '"> ' + champ.dateRdv + '</td></tr>'
-            )
-        }).join('')
-        gid("trAffichage").innerHTML += '<tr><td><input id="math" type="radio" name="cours" value="math"> Math</input></td></tr><tr><td><input id="sciences" type="radio" name="cours" value="sciences"> Sciences</input></td><tr>';
     }
 
     changeHandler = (e) => {
@@ -105,9 +89,11 @@ class PutDispoEleve extends Component {
     render() {
         return (
             <div id="validation">
-                <button onClick={this.submitHandler}>
+                <button class="btn btn-primary" onClick={this.submitHandler}>
                     Valider
                 </button>
+                <div id="user-date">
+                </div>
             </div>
         )
     }

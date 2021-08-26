@@ -19,6 +19,7 @@ import PostApiDispo from './component/PostApiDispo';
 import GetApiDispo from './component/GetApiDispo';
 import GetDispoEleve from './component/GetDispoEleve';
 import PutDispoEleve from './component/PutDispoEleve';
+import GetEleveData from './component/GetEleveData';
 import ReactDOM from 'react-dom';
 
 const App = () => {
@@ -35,6 +36,7 @@ const App = () => {
             <div className='container'>
                 <GetDispoEleve />
                 <PutDispoEleve />
+                <GetEleveData />
             </div>
         )
     }
