@@ -34,14 +34,14 @@ class DepotEleve extends Component {
     renderFiles(données) {
         console.log(données)
         if(données.length == 0){
-            document.getElementById('divRoot').innerHTML = '<p variation="success" style={{margin: "3%", font-size: "150%"}}>Il n\'y a pas de ressources disponibles.</p>'
+            document.getElementById('divRoot').innerHTML = '<p variation="success" style="margin: 3%; font-size: 150%;">Il n\'y a pas de ressources disponibles.</p>'
         }
         else{
             document.getElementById('divRoot').innerHTML = données.map(champ => {
                 return (
-                    '<div onClick><a href='+ champ.fileName + ' target="_blank" download><h3>' + champ.titre + '</h3></a><p>' + champ.description + '</p></div>'
+                    '<div style="margin: 1%; margin-left: 2%; padding-right: 2%; width: min-content; border: solid; border-width:2px; border-color: AliceBlue;"><a href='+ champ.fileName + ' target="_blank" download><h3 style="margin: 3%;">' + champ.titre + '</h3></a><p style="margin: 3%; font-size: 150%;">' + champ.description + '</p></div>'
                 )
-            })
+            }).join('')
         }
     }
 
