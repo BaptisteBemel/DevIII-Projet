@@ -132,11 +132,11 @@ class DepotProf extends Component {
                 </div>
                 <div class="mb-3">
                     <label className="form-label">Description (max. 255 caractères)</label>
-                    <textarea id="description" className="form-control" rows="3"></textarea>
+                    <textarea id="description" className="form-control" rows="3">Test de description</textarea>
                 </div>
                 <div class="form-group">
                     <label className="form-label">Choisissez votre fichier à envoyer</label>
-                    <input id="file" type="file" class="form-control-file" onChange={this.onFileChange}></input>
+                    <input id="file" enctype="multipart/form-data" type="file" class="form-control-file" onChange={this.onFileChange}></input>
                 </div>
                 <button className="btn btn-primary" type="submit" onClick={this.submitHandler}>Envoyer la ressource</button>
                 <p id="error-p" className="text-danger" style={{marginTop: "20px"}}>

@@ -40,26 +40,29 @@ class DepotController extends AbstractController
     /**
      * @Route("/api/depot/ajoutDepot", methods="POST")
      */
-    public function createDepot(Request $request)
+    public function createDepot(Request $request, $file)
     {
         $depot = new Depot;
-        $requ = json_decode($request->getContent());
-        $id = $this->getDoctrine()->getRepository(User::class)->findOneBy(['id' => ["email" => $request->get('emailAdress')]]);
+        $entityManager = $this->getDoctrine()->getManager();
+
+        $requ = json_decode($request->getContent(), true);
+        $id = $entityManager->getRepository(User::class)->findOneBy(['id' => ["email" => $requ['emailAdress']]]);
         //$user = $this->security->getId()->findByOne(['id' => intval(implode($id))]);
         $depot->setIdEleve($id);
-        $depot->setTitre("Test"/*$request->get('title')*/);
-        $depot->setDescription($request->get('description'));
+        $depot->setTitre($requ['title']);
+        $depot->setDescription($requ['description']);
 
         //Get file, take name and move it to the storage directory
-        //$file = $request->get('file')->getData();
+        //$file = $requ['file'];
         //$req->handleRequest($request);
 
         //$file = $req->get("file")->getData();
-        $fileName = $request->get("file_name");
+        $file = $request->files->all();
+        $fileName = $requ["file_name"];
 
-        $depot->setFileName("/public/ressources/".$fileName);
+        $depot->setFileName("/ressources/".$fileName);
 
-        //$file->move($this->getParameter('depot_directory'), $fileName);
+        $file[0]->move($this->getParameter('depot_directory'), $fileName);
         $this->entityManager->persist($depot);
         $this->entityManager->flush();
         return $this->json([

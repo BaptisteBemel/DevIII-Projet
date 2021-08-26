@@ -14,7 +14,6 @@ class GetDispoEleve extends Component {
         }
     }
 
-
     changeHandler = (e) => {
         this.setState({ [e.target.name]: e.target.value })
     }
@@ -43,7 +42,6 @@ class GetDispoEleve extends Component {
         gid("form-cours").innerHTML += '<input id="math" type="radio" name="cours" value="math"> Math</input><br><input id="sciences" type="radio" name="cours" value="sciences"> Sciences</input>';
     }
 
-    
     render() {
         return (
             <div>

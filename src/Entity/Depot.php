@@ -29,7 +29,7 @@ class Depot
     private $id_eleve;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=255, nullable=false)
      */
     private $description;
 
