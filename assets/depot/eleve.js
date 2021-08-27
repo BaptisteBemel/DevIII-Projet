@@ -21,7 +21,7 @@ class DepotEleve extends Component {
 
     submitHandler = e => {
         e.preventDefault()
-        axios.get('/ressources', this.state)
+        axios.get('https://siteinternetcoursparticulier.herokuapp.com/ressources', this.state)
             .then(response => {
                 this.renderFiles(response.data)
             })
