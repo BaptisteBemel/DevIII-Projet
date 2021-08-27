@@ -94,7 +94,7 @@ class DepotController extends AbstractController
     }*/
 
     /**
-    * @Route("/ressources", name="get_depot", methods={"GET"})
+    * @Route("/ressources", name="ressources_depot", methods={"GET"})
     */
 
     public function depotGet()

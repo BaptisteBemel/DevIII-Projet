@@ -21,7 +21,7 @@ class GetDispoEleve extends Component {
 
     submitHandler = e => {
         e.preventDefault()
-        axios.get('/api/dispo/get', this.state)
+        axios.get('/dispo', this.state)
             .then(response => {
                 this.renderTable(response.data)
             })

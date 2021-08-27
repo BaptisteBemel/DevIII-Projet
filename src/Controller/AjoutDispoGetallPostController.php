@@ -33,7 +33,7 @@ class AjoutDispoGetallPostController extends AbstractController
     }
 
     /**
-     * @Route("/api/dispo/post", name="api_dispo_post", methods={"POST"})
+     * @Route("/dispo", name="api_dispo_post", methods={"POST"})
     * @param Request $request
     * @return JsonResponse
     */
@@ -60,7 +60,7 @@ class AjoutDispoGetallPostController extends AbstractController
     }
 
     /**
-    * @Route("/all", name="api_dispo_post_verif", methods={"GET"})
+    * @Route("/all", name="api_dispo_all", methods={"GET"})
     */
 
     public function all(Request $request): Response
@@ -76,7 +76,7 @@ class AjoutDispoGetallPostController extends AbstractController
     }
 
     /**
-    * @Route("/reservations", name="api_dispo_post_verif", methods={"GET"})
+    * @Route("/reservations", name="reservations", methods={"GET"})
     */
 
     public function reservations(Request $request): Response

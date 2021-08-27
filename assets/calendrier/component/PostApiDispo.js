@@ -98,11 +98,11 @@ class PostApiDispo extends Component {
         axios.get('/all', this.state)
             .then(response => {
                 if(this.bonneValeur(response.data)){
-                    axios.post('/api/dispo/post', this.state)
+                    axios.post('/dispo', this.state)
                         .then(response => {
                             let data = new Array()
                             data.push(this.state)
-                            axios.get('/api/dispo/get', this.state)
+                            axios.get('/dispo', this.state)
                             .then(response => {
                                 this.renderTable(response.data)
                         })

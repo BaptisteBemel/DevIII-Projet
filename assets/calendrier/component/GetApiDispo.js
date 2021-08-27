@@ -22,7 +22,7 @@ class GetApiDispo extends Component {
 
     submitHandler = e => {
         e.preventDefault()
-        axios.get('/api/dispo/get', this.state)
+        axios.get('/dispo', this.state)
             .then(response => {
                 this.renderTable(response.data)
                 this.données = response.data
@@ -60,13 +60,13 @@ class GetApiDispo extends Component {
         if(date == undefined){
             return false
         }
-        axios.delete('/api/dispo/delete/' + date)
+        axios.delete('/dispo/' + date)
             .then(response => {
                 this.setState({
                     date_rdv: '',
                     statut: 'libre',
                 })
-                axios.get('/api/dispo/get', this.state)
+                axios.get('/dispo', this.state)
                 .then(response => {
                     this.renderTable(response.data)
                 })

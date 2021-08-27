@@ -41,7 +41,7 @@ class TestController extends AbstractController
     */
 
     /**
-    * @Route("/api/dispo/get", name="api_calendrier", methods={"GET"})
+    * @Route("/dispo", name="api_calendrier", methods={"GET"})
     */
 
     public function index2(Request $request): Response
@@ -114,9 +114,8 @@ class TestController extends AbstractController
     }
 
     /**
-    * @Route("/api/dispo/delete/{dateId}", name="api_dispo_delete", methods={"DELETE"})
+    * @Route("/dispo/{dateId}", name="dispo_delete", methods={"DELETE"})
     * @param $dateId
-    * @return void
     */
 
     public function supprimer($dateId)
