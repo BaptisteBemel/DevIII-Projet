@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '3e243b275cd247d5536460cf3a7ab3194434bff7',
+    'reference' => 'fc17598f2a1e0fee5e9aad5dbfb2e6706534e775',
     'name' => 'some/name',
   ),
   'versions' => 
@@ -878,7 +878,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '3e243b275cd247d5536460cf3a7ab3194434bff7',
+      'reference' => 'fc17598f2a1e0fee5e9aad5dbfb2e6706534e775',
     ),
     'symfony/apache-pack' => 
     array (

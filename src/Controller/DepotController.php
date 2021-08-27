@@ -14,6 +14,7 @@ use App\Entity\Depot;
 use App\Form\DepotType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use App\Entity\User;
+use Symfony\Component\Filesystem\Filesystem;
 
 class DepotController extends AbstractController
 {
@@ -38,28 +39,25 @@ class DepotController extends AbstractController
     }
 
     /**
-     * @Route("/api/depot/ajoutDepot", methods="POST")
+     * @Route("/api/depot", name="depot_post", methods="POST")
      */
     public function createDepot(Request $request)
     {
         $depot = new Depot;
-        $requ = json_decode($request->getContent());
-        $id = $this->getDoctrine()->getRepository(User::class)->findOneBy(['id' => ["email" => $request->get('emailAdress')]]);
-        //$user = $this->security->getId()->findByOne(['id' => intval(implode($id))]);
+        $entityManager = $this->getDoctrine()->getManager();
+
+        $requ = json_decode($request->getContent(), true);
+        $id = $entityManager->getRepository(User::class)->findOneByEmail($request->get('emailAdress'));
         $depot->setIdEleve($id);
-        $depot->setTitre("Test"/*$request->get('title')*/);
+        $depot->setTitre($request->get('title'));
         $depot->setDescription($request->get('description'));
 
         //Get file, take name and move it to the storage directory
-        //$file = $request->get('file')->getData();
-        //$req->handleRequest($request);
-
-        //$file = $req->get("file")->getData();
+        $file = $request->files->get("file");
         $fileName = $request->get("file_name");
+        $depot->setFileName("/ressources/".$fileName);
 
-        $depot->setFileName("/public/ressources/".$fileName);
-
-        //$file->move($this->getParameter('depot_directory'), $fileName);
+        $file->move($this->getParameter('depot_directory'), $fileName);
         $this->entityManager->persist($depot);
         $this->entityManager->flush();
         return $this->json([
@@ -68,6 +66,7 @@ class DepotController extends AbstractController
     }
 
     /**
+<<<<<<< HEAD
      * @Route("/depot/SSJAOI", name="depot_post")
      */
     /*
@@ -95,6 +94,9 @@ class DepotController extends AbstractController
 
     /**
     * @Route("/ressources", name="ressources_depot", methods={"GET"})
+=======
+    * @Route("/ressources", name="get_depot", methods={"GET"})
+>>>>>>> ebf995e394cd32eeb5c1c11a803f62f68dab26dc
     */
 
     public function depotGet()

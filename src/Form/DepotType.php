@@ -14,20 +14,6 @@ class DepotType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder
-            // ...
-            ->add('depot', FileType::class, [
-                'label' => 'Fichier (PDF)',
-
-                // unmapped means that this field is not associated to any entity property
-                'mapped' => false,
-
-                // make it optional so you don't have to re-upload the PDF file
-                // every time you edit the Product details
-                'required' => true,
-            ])
-            // ...
-        ;
     }
 
     public function configureOptions(OptionsResolver $resolver)
@@ -36,4 +22,13 @@ class DepotType extends AbstractType
             'data_class' => Depot::class,
         ]);
     }
+
+    public function findOneByEmail($email)
+{
+    $q = $this->createQueryBuilder('c')
+        ->where('c.email = :email')
+        ->setParameter('email', $email)
+        ->getQuery();
+    return $q->getOneOrNullResult(); 
+}
 }

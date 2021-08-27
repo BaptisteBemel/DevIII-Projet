@@ -8,29 +8,6 @@
 
 {% block body %}
     {% if is_granted("ROLE_ADMIN") %}
-    <!--
-        <div className="depot-cadre" style="margin: 2%">
-                <div class="mb-3">
-                    <label class="form-label">Adresse mail</label>
-                    <input id="email" type="email" class="form-control" placeholder="eleve@adresse.com" value="eleve@gmail.com"></input>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Titre du dépôt</label>
-                    <input id="titre" type="text" class="form-control" value="Test"></input>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Description (max. 255 caractères)</label>
-                    <textarea id="description" class="form-control" rows="3"></textarea>
-                </div>
-                <div style="margin: 10px">
-                { form_start(form) }}
-                    { form(form.depot, {label_attr: {class: 'form-label'} }) }}
-                    <button class="btn btn-primary" type="submit">Envoyer la ressource</button>
-                { form_end(form) }}
-                </div>
-                <p id="error-p" class="text-danger" style="marginTop: 20px">
-                </p>
-            </div>-->
         <div id="depot" class='m-4' data-id="true">
         </div>
     {% elseif is_granted("ROLE_USER") %}

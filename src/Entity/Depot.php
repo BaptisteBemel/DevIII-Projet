@@ -29,7 +29,7 @@ class Depot
     private $id_eleve;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=255, nullable=false)
      */
     private $description;
 
@@ -94,5 +94,10 @@ class Depot
     public function toArray()
     {
         return ['id' => $this->id, 'id_eleve' => $this->id_eleve, 'titre' => $this->titre, 'description' => $this->description];
+    }
+
+    public function depotPost()
+    {
+        return ['id_eleve' => $this->id_eleve, 'titre' => $this->titre, 'description' => $this->description, 'file_name' => $this->file_name];
     }
 }
