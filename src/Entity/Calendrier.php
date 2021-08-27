@@ -5,6 +5,7 @@ namespace App\Entity;
 use Symfony\Component\Validator\Constraints as Assert;
 use App\Repository\CalendrierRepository;
 use Doctrine\ORM\Mapping as ORM;
+use stdClass;
 
 use function Amp\Iterator\toArray;
 
@@ -52,7 +53,7 @@ class Calendrier
         $this->dateRdv = date("Y-m-d H:i:s", strtotime($dateRdv->date_rdv));
         return $this;
     }
-
+    
     public function getMatiere(): ?string
     {
         return $this->matiere;

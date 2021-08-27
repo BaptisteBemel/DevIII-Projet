@@ -9,7 +9,7 @@ use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 
 class CommentTest extends KernelTestCase
 {
-    public function getEntity() : Comment{
+    /*public function getEntity() : Comment{
         return (new Comment())
         ->setAuthor("Arthur Schamroth")
         ->setContent("Bonjour je suis un test")
@@ -24,5 +24,5 @@ class CommentTest extends KernelTestCase
 
     public function testValid(){
         $this->assertHasErrors($this->getEntity(), 0); 
-    }
+    }*/
 }

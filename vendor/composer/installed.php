@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'fc17598f2a1e0fee5e9aad5dbfb2e6706534e775',
+    'reference' => '0b153028b90295f8d619e0f0551e73768ae0ea27',
     'name' => 'some/name',
   ),
   'versions' => 
@@ -854,7 +854,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'fc17598f2a1e0fee5e9aad5dbfb2e6706534e775',
+      'reference' => '0b153028b90295f8d619e0f0551e73768ae0ea27',
     ),
     'symfony/apache-pack' => 
     array (
