@@ -98,4 +98,9 @@ class Calendrier
     {
         return ['dateRdv' => $this->dateRdv, 'matiere' => $this->matiere];
     }
+
+    public function getRdv()
+    {
+        return ['dateRdv' => $this->dateRdv, 'id' => $this->id, 'matiere' => $this->matiere];
+    }
 }
