@@ -95,4 +95,9 @@ class Depot
     {
         return ['id' => $this->id, 'id_eleve' => $this->id_eleve, 'titre' => $this->titre, 'description' => $this->description];
     }
+
+    public function depotPost()
+    {
+        return ['id_eleve' => $this->id_eleve, 'titre' => $this->titre, 'description' => $this->description, 'file_name' => $this->file_name];
+    }
 }

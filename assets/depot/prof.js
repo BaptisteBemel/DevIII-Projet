@@ -3,6 +3,7 @@ import axios from 'axios'
 import { render } from 'react-dom'
 import * as ReactBootStrap from "react-bootstrap"
 
+
 function gid(id) {
     return document.getElementById(id);
 }
@@ -40,6 +41,9 @@ class DepotProf extends Component {
 
     submitHandler = e => {
         if(this.isAgree()) {
+            const FormData = require('form-data');
+            const form = new FormData();
+            
             var tab = this.getData();
             var name = this.getFileName(tab[3]);
 
@@ -49,24 +53,13 @@ class DepotProf extends Component {
             desc = tab[2];
             fileName = name;
 
-            let datas = {
-                emailAdress: mail,
-                title: title,
-                description: desc,
-                file_name: fileName,
-                file: this.state.file
-            }
+            form.append('file', this.state.file, fileName);
+            form.append("emailAdress", mail);
+            form.append("title", title);
+            form.append("description", desc);
+            form.append("file_name", fileName);
 
-            //e.preventDefault();
-            axios.post('/api/depot/ajoutDepot', datas);
-            console.log(datas);
-                /*.then(response => {
-                    let data = new Array();
-                    data.push(datas)
-                })
-                .catch(error => {
-                    null //une erreur s'est produite
-                })*/
+            axios.post('/api/depot', form);
         }
     }
 
@@ -78,7 +71,7 @@ class DepotProf extends Component {
             let fileValue = gid("file").value;
             let descValue = gid("description").value;
 
-            //Vérifications des champs vides (utiles) ou mauvais
+            //Vérifications des champs vides ou mauvais
             if(mailValue.length < 3) {
                 gid("error-p").innerText = "Adresse trop courte !";
                 return "Adresse trop courte";
@@ -104,6 +97,10 @@ class DepotProf extends Component {
                 gid("error-p").innerText = "La description fait plus de 255 caractères !";
                 return "La description fait plus de 255 caractères !";
             }
+            else if(descValue.length < 1) {
+                gid("error-p").innerText = "La description est vide !";
+                return "La description est vide !";
+            }
 
 
             for(let i in mailValue) {
@@ -124,15 +121,15 @@ class DepotProf extends Component {
             <div className="depot-cadre">
                 <div class="mb-3">
                     <label className="form-label">Adresse mail</label>
-                    <input id="email" type="email" className="form-control" placeholder="eleve@adresse.com" value="eleve@gmail.com"></input>
+                    <input id="email" type="email" className="form-control" placeholder="eleve@adresse.com"></input>
                 </div>
                 <div class="mb-3">
                     <label className="form-label">Titre du dépôt</label>
-                    <input id="titre" type="text" className="form-control" value="Test"></input>
+                    <input id="titre" type="text" className="form-control"></input>
                 </div>
                 <div class="mb-3">
                     <label className="form-label">Description (max. 255 caractères)</label>
-                    <textarea id="description" className="form-control" rows="3">Test de description</textarea>
+                    <textarea id="description" className="form-control" rows="3"></textarea>
                 </div>
                 <div class="form-group">
                     <label className="form-label">Choisissez votre fichier à envoyer</label>

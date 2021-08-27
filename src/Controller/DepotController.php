@@ -14,6 +14,7 @@ use App\Entity\Depot;
 use App\Form\DepotType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use App\Entity\User;
+use Symfony\Component\Filesystem\Filesystem;
 
 class DepotController extends AbstractController
 {
@@ -38,63 +39,31 @@ class DepotController extends AbstractController
     }
 
     /**
-     * @Route("/api/depot/ajoutDepot", methods="POST")
+     * @Route("/api/depot", name="depot_post", methods="POST")
      */
-    public function createDepot(Request $request, $file)
+    public function createDepot(Request $request)
     {
         $depot = new Depot;
         $entityManager = $this->getDoctrine()->getManager();
 
         $requ = json_decode($request->getContent(), true);
-        $id = $entityManager->getRepository(User::class)->findOneBy(['id' => ["email" => $requ['emailAdress']]]);
-        //$user = $this->security->getId()->findByOne(['id' => intval(implode($id))]);
+        $id = $entityManager->getRepository(User::class)->findOneByEmail($request->get('emailAdress'));
         $depot->setIdEleve($id);
-        $depot->setTitre($requ['title']);
-        $depot->setDescription($requ['description']);
+        $depot->setTitre($request->get('title'));
+        $depot->setDescription($request->get('description'));
 
         //Get file, take name and move it to the storage directory
-        //$file = $requ['file'];
-        //$req->handleRequest($request);
-
-        //$file = $req->get("file")->getData();
-        $file = $request->files->all();
-        $fileName = $requ["file_name"];
-
+        $file = $request->files->get("file");
+        $fileName = $request->get("file_name");
         $depot->setFileName("/ressources/".$fileName);
 
-        $file[0]->move($this->getParameter('depot_directory'), $fileName);
+        $file->move($this->getParameter('depot_directory'), $fileName);
         $this->entityManager->persist($depot);
         $this->entityManager->flush();
         return $this->json([
             'titre' => $depot->toArray(),
         ]);
     }
-
-    /**
-     * @Route("/depot/SSJAOI", name="depot_post")
-     */
-    /*
-    public function new(Request $request, SluggerInterface $slugger)
-    {
-        $depot = new Depot();
-        $form = $this->createForm(DepotType::class, $depot);
-        $form->handleRequest($request);
-
-        
-        if ($form->isSubmitted() && $form->isValid()) {
-            
-            $file = $form->$depot->getFileName();
-            $fileName = md5(uniqid()).'.'.$file->guessExtension();
-            $file->move($this->getParameter('depot_repository'), $fileName);
-            $depot->setFileName($fileName);
-            
-            return $depot->setFileName($newFilename);
-        }
-
-        return $this->render('depot/depot.html.twig', [
-            'form' => $form->createView(),
-        ]);
-    }*/
 
     /**
     * @Route("/ressources", name="get_depot", methods={"GET"})
