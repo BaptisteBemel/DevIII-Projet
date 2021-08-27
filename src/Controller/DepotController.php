@@ -66,7 +66,7 @@ class DepotController extends AbstractController
     }
 
     /**
-    * @Route("/ressources", name="ressources_depot", methods={"GET"})
+    * @Route("/ressources", name="ressources_depot", methods={"GET"}, schemes={"https"})
     */
 
     public function depotGet()
