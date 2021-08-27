@@ -19,6 +19,7 @@ DirectoryIndex index.html
 
 <IfModule mod_rewrite.c>
     RewriteEngine On
+    RewriteCond %{HTTP:X-Forwarded-Proto} !https 
 
     # Determine the RewriteBase automatically and set it as environment variable.
     # If you are using Apache aliases to do mass virtual hosting or installed the
@@ -31,7 +32,6 @@ DirectoryIndex index.html
     RewriteRule .* - [E=BASE:%1]
 
     # Sets the HTTP_AUTHORIZATION header removed by Apache
-    RewriteCond %{HTTP:X-Forwarded-Proto} !https 
     RewriteCond %{HTTP:Authorization} .+
     RewriteRule ^ - [E=HTTPS_AUTHORIZATION:%0]
 
