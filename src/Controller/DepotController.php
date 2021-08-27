@@ -66,37 +66,7 @@ class DepotController extends AbstractController
     }
 
     /**
-<<<<<<< HEAD
-     * @Route("/depot/SSJAOI", name="depot_post")
-     */
-    /*
-    public function new(Request $request, SluggerInterface $slugger)
-    {
-        $depot = new Depot();
-        $form = $this->createForm(DepotType::class, $depot);
-        $form->handleRequest($request);
-
-        
-        if ($form->isSubmitted() && $form->isValid()) {
-            
-            $file = $form->$depot->getFileName();
-            $fileName = md5(uniqid()).'.'.$file->guessExtension();
-            $file->move($this->getParameter('depot_repository'), $fileName);
-            $depot->setFileName($fileName);
-            
-            return $depot->setFileName($newFilename);
-        }
-
-        return $this->render('depot/depot.html.twig', [
-            'form' => $form->createView(),
-        ]);
-    }*/
-
-    /**
     * @Route("/ressources", name="ressources_depot", methods={"GET"})
-=======
-    * @Route("/ressources", name="get_depot", methods={"GET"})
->>>>>>> ebf995e394cd32eeb5c1c11a803f62f68dab26dc
     */
 
     public function depotGet()

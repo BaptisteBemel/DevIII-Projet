@@ -26,7 +26,8 @@
         "watch": "encore dev --watch",
         "build": "encore production --progress",
         "webpack": "webpack",
-        "start": "http-server"
+        "start": "http-server",
+        "heroku-postbuild": "npm run build"
     },
     "dependencies": {
         "axentix": "^1.2.1",
